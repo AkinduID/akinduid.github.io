@@ -29,12 +29,12 @@ body, html{
 
 .pimg2{
   background-image:url('../images/image2.jpg');
-  min-height:100%;
+  min-height:575px;
 }
 
 .pimg3{
   background-image:url('../images/image3.jpg');
-  min-height:100%;
+  min-height:575px;
 }
 
 .section{
