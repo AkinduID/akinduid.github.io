@@ -112,3 +112,64 @@ body, html{
       height: 30px;
   }
 }
+
+/* Styles for logo */
+.logo {
+  display: inline-block; /* Display the logo inline with the navbar */
+  margin-right: 20px; /* Adjust margin between logo and navbar */
+  padding: 5px; /* Adjust padding around logo */
+}
+
+.logo img {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: #000 0px 0px 10px; /* Add shadow to logo */
+}
+
+/* Styles for navbar */
+.navbar {
+  text-shadow: #000 0px 0px 10px; /* Add shadow to text */
+  background-color: transparent; /* Transparent background color */
+   /* Display navbar inline */
+  float: right;
+}
+
+.navbar nav ul {
+  list-style-type: none; /* Remove bullet points from list */
+  padding: 7;
+  margin: 0;
+}
+
+.navbar nav ul li {
+  display: inline-block; /* Display navbar items inline */
+  margin-right: 10px; /* Adjust spacing between navbar items */
+}
+
+.navbar nav ul li a {
+  display: block; /* Display navbar items as blocks */
+  color: white; /* Text color of navbar items */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px; /* Padding around navbar items */
+}
+
+.navbar nav ul li a:hover {
+  background-color: #2b52ff; /* Background color on hover */
+}
+/* Responsive styles */
+@media screen and (max-width: 700px) {
+  .logo img {
+    width: 30px; /* Adjust logo width for smaller screens */
+  }
+  
+  .navbar {
+    float: right; /* Remove float for responsiveness */
+    padding: 2px;
+  }
+
+  .navbar nav ul li {
+  /* Display navbar items as block for responsiveness */
+    margin: 10px 0; /* Adjust margin for smaller screens */
+    font-size: 10px;
+    padding: 2px;
+  }
+}
