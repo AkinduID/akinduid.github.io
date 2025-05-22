@@ -1,0 +1,267 @@
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:1.8em;
+  color:#666;
+}
+
+.pimg1, .pimg2, .pimg3, .pimg4{
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment:fixed;
+}
+
+.pimg1{
+  background-image:url('../images/image1.png');
+  min-height:100%;
+}
+
+.pimg2{
+  background-image:url('../images/image2.jpg');
+  min-height:555px;
+}
+
+.pimg3{
+  background-image:url('../images/image3.jpg');
+  min-height:555px;
+}
+
+.pimg4{
+  background-image:url('../images/image4.jpg');
+  min-height:100%;
+}
+
+.section{
+  text-align:center;
+  padding:20px 50px;
+  box-shadow: 0 90 100px rgba(0, 0, 0, 0.9);
+  box-shadow: 90 0 100px rgba(0, 0, 0, 0.9);
+}
+
+.section-light{
+  background-color:#f4f4f4;
+  color:#666;
+  box-shadow: 0 90 100px rgba(0, 0, 0, 0.9);
+  box-shadow: 90 0 100px rgba(0, 0, 0, 0.9);
+}
+
+.section-dark{
+  background-color:#282e34;
+  color:#ddd;
+  box-shadow: 0 90 100px rgba(0, 0, 0, 0.9);
+  box-shadow: 90 0 100px rgba(0, 0, 0, 0.9);
+}
+
+.ptext{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font: bold 20px/1 'Lato', sans-serif; /* Make the font bold */
+}
+
+.ptext .border{
+  background-color:transparent;
+  color:#000000;
+  padding:20px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+  
+
+.border{
+  font: 800 30px/1 'Lato', sans-serif; /* Make the font bold */
+}
+
+.border2{
+  font: 800 30px/1 'Roboto', sans-serif; /* Make the font bold */
+}
+
+/* Flexbox container for all categories */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Each category box */
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 30%; /* Adjust this for column width */
+  margin-bottom: 20px;
+}
+
+/* Styling for the logos inside each category */
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logos img {
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+/* Hover effect on logos */
+.logos img:hover {
+  transform: scale(1.1);
+}
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusts spacing between groups */
+}
+
+.category-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 30%; /* 30% width for each group to fit 3 per row */
+  margin: 10px;
+}
+
+.category-group img {
+  margin: 5px;
+}
+
+.category-group h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ptext .border.trans{
+  background-color:transparent;
+}
+
+@media(max-width:568px){
+  .pimg1, .pimg2, .pimg3, .pimg4{
+    background-attachment:fixed;
+  }
+  .ptext {
+    padding:10px;
+    font: bold 15px/0.9 'Lato', sans-serif; /* Make the font bold */
+  }
+  .border{
+    font: 800 20px/1 'Lato', sans-serif; /* Make the font bold */
+  }
+  
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 5px;
+}
+
+.social-icons img {
+  width: 52px;
+  height: 40px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7); /* Add shadow */
+}
+
+@media only screen and (max-width: 600px) {
+  .social-icons img {
+      width: 30px;
+      height: 30px;
+  }
+}
+
+/* Styles for logo */
+.logo {
+  display: inline-block; /* Display the logo inline with the navbar */
+  margin-right: 20px; /* Adjust margin between logo and navbar */
+  padding: 5px; /* Adjust padding around logo */
+}
+
+.logo img {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: #000 0px 0px 10px; /* Add shadow to logo */
+}
+
+/* Styles for navbar */
+.navbar {
+  text-shadow: #000 0px 0px 10px; /* Add shadow to text */
+  background-color: transparent; /* Transparent background color */
+  float: right; /* Align navbar to the right */
+}
+
+.navbar nav ul {
+  list-style-type: none; /* Remove bullet points from list */
+  padding: 7px; /* Add padding to the navbar */
+  margin: 0;
+}
+
+.navbar nav ul li {
+  display: inline-block; /* Display navbar items inline */
+  margin-right: 10px; /* Adjust spacing between navbar items */
+}
+
+.navbar nav ul li a {
+  display: inline-block; /* Display navbar items as blocks */
+  color: white; /* Text color of navbar items */
+  text-decoration: none; /* Remove underline from links */
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: background-color 0.3s;
+  border-radius: 25px; /* Rounded corners */
+}
+
+.navbar nav ul li a:hover {
+  background-color: #757575; /* Background color on hover */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 700px) {
+  .logo img {
+    width: 30px; /* Adjust logo width for smaller screens */
+  }
+  
+  .navbar {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .navbar nav ul li {
+    margin: 5px 0; /* Adjust margin for smaller screens */
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
