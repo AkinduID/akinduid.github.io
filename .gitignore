@@ -1,2 +1,6 @@
 *.zip
 .DS_Store
+src
+public
+*.json
+node_modules
