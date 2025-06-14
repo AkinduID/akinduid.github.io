@@ -110,7 +110,6 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
 		color: #e44c65;
 		text-decoration: none;
 	}
@@ -4385,4 +4384,36 @@ input, select, textarea {
         width: 16px;
         height: 16px;
     }
+}
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    border-radius: 50px;
+    /* background-color: #181920; */
+    box-shadow: 0 0px 16px rgba(0,0,0,0.25);
+    transition: box-shadow 0.3s;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    box-shadow: 0 0px 32px rgba(0,0,0,0.35);
+}
+
+.social-links img {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.3s cubic-bezier(0.4, 1.4, 0.6, 1.0);
+    background: none;
+    margin: 0;
+    display: block;
+
+}
+
+.social-links img:hover,
+.social-links img:focus {
+    transform: scale(1.55);
 }
