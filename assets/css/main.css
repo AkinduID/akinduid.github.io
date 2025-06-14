@@ -4159,7 +4159,7 @@ input, select, textarea {
 	align-self: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 40px;
+    border-radius: 45px;
     padding: 2rem;
     width: 80%;
     max-width: 1000px;
@@ -4386,8 +4386,7 @@ input, select, textarea {
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 
-#side-navbar ul li a:hover,
-#side-navbar ul li a:focus-within a {
+#side-navbar ul li a:hover {
 	transform-origin: center center;
     /* background: rgba(110, 198, 255, 0.22); */
 	border-bottom: none !important;

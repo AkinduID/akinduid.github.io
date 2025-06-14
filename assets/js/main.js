@@ -34,6 +34,10 @@
 			speed: 2000
 		});
 
+		$('.scrolly').on('click', function() {
+		this.blur();
+		});
+
 	// Dropdowns.
 		$('#nav > ul').dropotron({
 			alignment: 'right',
