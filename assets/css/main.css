@@ -4373,7 +4373,7 @@ input, select, textarea {
     /* background: rgba(255, 255, 255, 0.18); */
     backdrop-filter: blur(3px);
     /* -webkit-backdrop-filter: blur(4px); */
-	filter: url(#glass-distortion);
+	/* filter: url(#glass-distortion); */
     /* box-shadow:
         0 6px 24px 0 rgba(0, 0, 0, 0.13),
         0 1px 8px 0 rgba(0, 0, 0, 0.13),
@@ -4405,7 +4405,7 @@ input, select, textarea {
     transform: scale(1.23);
     backdrop-filter: blur(3px);
     /* -webkit-backdrop-filter: blur(4px); */
-	filter: url(#glass-distortion);
+	/* filter: url(#glass-distortion); */
 }
 /* All buttons above the hovered one shift up */
 #side-navbar ul li:has(~ li:hover) a,
