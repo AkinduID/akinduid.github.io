@@ -4346,7 +4346,8 @@ input, select, textarea {
 /* Add this at the end of your main.css file */
 #side-navbar {
     position: fixed;
-    top: 25vh;
+    top: 50%; /* Align to the vertical center */
+    transform: translateY(-50%);
 	left: 2vw;
     z-index: 1000;
 	text-decoration: none;
