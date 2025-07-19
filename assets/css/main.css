@@ -1803,7 +1803,7 @@ input, select, textarea {
 .skills-container {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
   margin-top: 1rem;
 }
@@ -1816,12 +1816,12 @@ input, select, textarea {
 .skills-group h3 {
   text-align: center;
   margin-bottom: 0.4rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 .skills-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  gap: 0.3rem;
   justify-content: center;
 }
 .skill-item {
@@ -1838,7 +1838,7 @@ input, select, textarea {
   transition: transform 0.2s;
 }
 .skill-item img:hover {
-  transform: scale(1.12) rotate(-6deg);
+  transform: scale(1.4) rotate(-6deg);
 }
 .skill-label {
   margin-top: 0.1rem;
