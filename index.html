@@ -6,38 +6,189 @@
 -->
 <html>
 	<head>
-		<title>AkinduID</title>
+		<title>Akindu Induwara Delgahagoda | Computer Engineering Student</title>
 		<link rel="icon" type="image/x-icon" href="images/favicon2.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Portfolio of Akindu Induwara Delgahagoda - Computer Science & Engineering student specializing in Embedded Systems, IoT, Robotics, and ML/AI">
+		<meta name="keywords" content="Akindu, Computer Engineering, Embedded Systems, IoT, Robotics, ML, AI, Portfolio">
+		<meta name="author" content="Akindu Induwara Delgahagoda">
+		
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="Akindu Induwara Delgahagoda - Portfolio">
+		<meta property="og:description" content="Computer Engineering student specializing in Embedded Systems, IoT, and ML/AI">
+		<meta property="og:image" content="images/favicon.png">
+		<meta property="og:url" content="https://akinduid.github.io">
+		<meta property="og:type" content="website">
+		
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Akindu Induwara Delgahagoda - Portfolio">
+		<meta name="twitter:description" content="Computer Engineering student specializing in Embedded Systems, IoT, and ML/AI">
+		<meta name="twitter:image" content="images/favicon.png">
+		
+	<!-- Preload Critical Resources -->
+	<link rel="preload" as="image" href="images/favicon.png">
+	<link rel="preload" as="image" href="images/bg.jpg">
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modern-enhancements.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Loading State & Skeleton Screens -->
+		<style>
+		.skeleton {
+			background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+			background-size: 200% 100%;
+			animation: skeleton-loading 1.5s infinite;
+		}
+
+		@keyframes skeleton-loading {
+			0% { background-position: 200% 0; }
+			100% { background-position: -200% 0; }
+		}
+		
+		/* Scroll Progress Indicator */
+		.scroll-progress {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 0%;
+			height: 3px;
+			background: linear-gradient(90deg, #4fc3f7, #00bcd4);
+			z-index: 10001;
+			transition: width 0.1s ease;
+		}
+		
+		/* Skip Link */
+		.skip-link {
+			position: absolute;
+			top: -40px;
+			left: 0;
+			background: #000;
+			color: #fff;
+			padding: 8px;
+			text-decoration: none;
+			z-index: 100000;
+		}
+
+		.skip-link:focus {
+			top: 0;
+		}
+
+		/* Focus Visible Styles */
+		*:focus-visible {
+			outline: 2px solid #4fc3f7;
+			outline-offset: 2px;
+		}
+		
+		/* Improved UX Layout Styles */
+		.profile-header {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			margin-bottom: 2rem;
+			flex-wrap: wrap;
+		}
+		
+		.profile-content {
+			flex: 1;
+			min-width: 300px;
+		}
+		
+		.profile-image {
+			flex-shrink: 0;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+			max-width: 300px;
+		}
+		
+		.profile-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		.section-header {
+			border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+			padding-bottom: 1rem;
+			margin-bottom: 2rem;
+			position: relative;
+		}
+		
+		.section-header::after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 80px;
+			height: 2px;
+			background: linear-gradient(90deg, #4fc3f7, #00bcd4);
+		}
+		
+		.skills-category {
+			margin-bottom: 2.5rem;
+		}
+		
+		.skills-category:last-child {
+			margin-bottom: 0;
+		}
+		
+		.skills-category h3 {
+			font-size: 1.1rem;
+			margin-bottom: 1rem;
+			color: #4fc3f7;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-weight: 600;
+		}
+		
+		@media screen and (max-width: 736px) {
+			.profile-header {
+				flex-direction: column;
+				text-align: center;
+			}
+			
+			.profile-image {
+				max-width: 100%;
+			}
+		}
+		</style>
 	</head>
 	<body class="is-preload">
+		<!-- Skip Navigation -->
+		<a href="#main" class="skip-link">Skip to main content</a>
+		
+		<!-- Scroll Progress Indicator -->
+		<div class="scroll-progress"></div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">
-							<img src="images/favicon.png" alt="Akindu Logo" />
+						<div class="logo float-animation">
+							<img src="images/favicon.png" alt="Akindu Logo" style="filter: drop-shadow(0 4px 16px rgba(79, 195, 247, 0.4));" />
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Akindu Induwara Delgahagoda</h1>
-								<p>Undergraduate Student | Computer Science & Engineering<br />
-								University of Moratuwa</p>
+								<h1 class="gradient-text" style="font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em;">Akindu Delgahagoda</h1>
+								<p style="font-size: 1.15rem; color: #4fc3f7; margin-bottom: 0.6rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; font-size: 0.9rem;">Embedded Systems Engineer | IoT & Robotics | ML/AI Developer</p>
+								<p style="font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.6;">Undergraduate Student | Computer Science & Engineering<br />
+								<span style="color: rgba(255,255,255,0.6);">University of Moratuwa</span></p>
 							</div>
 						</div>
 						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Projects</a></li>
-								<li><a href="#skills">Tech Stack</a></li>
-								<li><a href="#connect">Connect</a></li>
-								<!-- <li><a href="#contact">Contact</a></li> -->
-								<!--<li><a href="#elements">Elements</a></li>-->
+							<ul style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+								<li><a href="#about" class="animated-underline">About</a></li>
+								<li><a href="#experience" class="animated-underline">Experience</a></li>
+								<li><a href="#projects" class="animated-underline">Projects</a></li>
+								<li><a href="#skills" class="animated-underline">Skills</a></li>
+								<li><a href="#achievements" class="animated-underline">Achievements</a></li>
+								<li><a href="#connect" class="animated-underline">Connect</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -45,263 +196,715 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Profile</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="Akindu" /></span>
-								<p>I am Akindu, an Undergraduate Student at the Department of Computer Science and Engineering at the University of Moratuwa, specializing in the Integrated Computer Engineering stream. My academic focus includes Embedded Systems, IoT, Robotics, Automation, Computer Vision, and Image Processing. Beyond these subjects, I am equally passionate about Photo Editing, Photography, and Graphic Design. I am eager to apply my diverse skill set to contribute to creative and impactful projects.</p>
-							</article>
-
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Projects</h2>
-								<!-- Projects Carousel (Slider/Parallax style) -->
-								<div class="slideshow-container">
-									<div class="slider-track">
-										<div class="mySlides">
-											<img src="images/quot3d.png" class="parallax-img" style="width:100%" alt="QUOT3D">
-											<div class="text">
-												<h3>QUOT3D</h3>
-												<div class="project-subtitle">Automating 3D Printing Quotation</div>
-												<p><a href="https://github.com/AkinduID/project1" target="_blank" rel="noopener">View on GitHub</a></p>
-												<div class="project-tags">
-													<span>#Backend Development</span>
-													<span>#DevOps</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/infraportal.png" class="parallax-img" style="width:100%" alt="Infra Portal">
-											<div class="text">
-												<h3>Infra Portal</h3>
-												<div class="project-subtitle">Internal tool for automated GitHub repo creation and infrastructure workflows</div>
-												<div class="project-tags">
-													<span>#Backend Development</span>
-													<span>#Frontend Development</span>
-													<span>#DevOps</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/fazetrak.jpg" class="parallax-img" style="width:100%" alt="FazeTrak">
-											<div class="text">
-												<h3>FazeTrak</h3>
-												<div class="project-subtitle">Face recognition webcam with gesture-based tracking and pan-tilt control</div>
-												<p><a href="https://github.com/AkinduID/FazeTrak" target="_blank" rel="noopener">View on GitHub</a></p>
-												<div class="project-tags">
-													<span>#Embedded Systems</span>
-													<span>#ML/AI</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/pic05.jpg" class="parallax-img" style="width:100%" alt="MinerShield">
-											<div class="text">
-												<h3>MinerShield</h3>
-												<div class="project-subtitle">IoT mesh network for smart mining helmets and environmental monitoring</div>
-												<div class="project-tags">
-													<span>#Embedded Systems</span>
-													<span>#Frontend Development</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/pic02.jpg" class="parallax-img" style="width:100%" alt="MechaPulse">
-											<div class="text">
-												<h3>MechaPulse</h3>
-												<div class="project-subtitle">Industrial IoT system for machine fault detection using sound analysis and TinyML</div>
-												<div class="project-tags">
-													<span>#Embedded Systems</span>
-													<span>#ML/AI</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/pic05.jpg" class="parallax-img" style="width:100%" alt="Smart MediBox">
-											<div class="text">
-												<h3>Smart MediBox</h3>
-												<div class="project-subtitle">Smart medicine container with IoT dashboard for patient reminders</div>
-												<div class="project-tags">
-													<span>#Embedded Systems</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/aspiretrust.png" class="parallax-img" style="width:100%" alt="AspireTrust">
-											<div class="text">
-												<h3>AspireTrust</h3>
-												<div class="project-subtitle">Bank Transaction and Loan Processing System</div>
-												<p><a href="https://github.com/Group-02-CS3043/AspireTrust" target="_blank" rel="noopener">View on GitHub</a></p>
-												<div class="project-tags">
-													<span>#Backend Development</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/pic05.jpg" class="parallax-img" style="width:100%" alt="Nanoprocessor">
-											<div class="text">
-												<h3>Nanoprocessor</h3>
-												<div class="project-subtitle">4-bit processor in VHDL, simulated and deployed on FPGA hardware</div>
-												<p><a href="https://github.com/AkinduID/Nano-Processor-Final" target="_blank" rel="noopener">View on GitHub</a></p>
-												<div class="project-tags">
-													<span>#Embedded Systems</span>
-												</div>
-											</div>
-										</div>
-										<div class="mySlides">
-											<img src="images/pic02.jpg" class="parallax-img" style="width:100%" alt="NeoDeepa">
-											<div class="text">
-												<h3>NeoDeepa</h3>
-												<div class="project-subtitle">An electronic alternative to traditional oil lamp</div>
-												<div class="project-tags">
-													<span>#Embedded Systems</span>
-												</div>
-											</div>
-										</div>
+					<!-- About -->
+						<article id="about">
+							<div class="section-header">
+								<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">About Me</h2>
+							</div>
+							
+							<div class="profile-header">
+								<div class="profile-image modern-card">
+									<img src="images/pic01.jpg" alt="Akindu Delgahagoda" loading="lazy" style="border-radius: 12px;" />
+								</div>
+								
+								<div class="profile-content">
+									<h3 class="gradient-text" style="margin-bottom: 0.3rem; font-size: 1.3rem; font-weight: 700;">Akindu Delgahagoda</h3>
+									<p style="color: rgba(255,255,255,0.85); margin-bottom: 0.8rem; font-size: 1.05rem; line-height: 1.5;">
+										<strong style="color: #4fc3f7;">Computer Science & Engineering Student</strong><br>
+										<span style="color: rgba(255,255,255,0.7);">University of Moratuwa</span><br>
+										<span style="font-size: 0.9rem; color: rgba(255,255,255,0.6); font-style: italic;">Expected Graduation: 2026</span>
+									</p>
+									<a href="#" class="button primary icon solid fa-download modern-card" style="margin-top: 0.5rem; font-size: 0.9rem; padding: 0.7rem 1.4rem; border-radius: 8px; background: linear-gradient(135deg, #4fc3f7, #00bcd4); border: none; box-shadow: 0 4px 12px rgba(79, 195, 247, 0.3);">Download Resume</a>
+								</div>
+							</div>
+							
+											<div style="line-height: 1.3; color: rgba(255,255,255,0.85); margin-top: 1rem;">
+					<h3 style="color: #4fc3f7; font-size: 0.95rem; margin-bottom: 0.5rem;">Personal Statement</h3>
+					<p style="margin-bottom: 0.7rem; font-size: 0.88rem;">
+						Engineering undergraduate specialized in <strong style="color: #ffffff;">robotics and distributed systems</strong>. 
+						Proficient in bridging embedded hardware and cloud services to create cohesive intelligent solutions.
+					</p>
+					
+					<!-- Two Column Layout -->
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem;">
+						<!-- Left Column: Education -->
+						<div>
+							<h3 style="color: #4fc3f7; font-size: 0.95rem; margin-bottom: 0.5rem;">Education</h3>
+							
+							<div class="modern-card glassmorphism" style="margin-bottom: 0.6rem; padding: 0.6rem; border-radius: 10px; border-left: 3px solid #4fc3f7;">
+								<h4 style="color: #ffffff; margin-bottom: 0.15rem; font-size: 0.88rem;">BSc Eng (Hons), CSE</h4>
+								<p style="color: rgba(255,255,255,0.7); margin-bottom: 0.1rem; font-size: 0.78rem;">University of Moratuwa | 2022-2026</p>
+								<p style="color: #4fc3f7; font-size: 0.75rem; margin-bottom: 0.1rem;">Integrated Computer Engineering</p>
+								<p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">Dean's List: Semester 6</p>
+							</div>
+							
+							<div class="modern-card glassmorphism" style="margin-bottom: 0.6rem; padding: 0.6rem; border-radius: 10px; border-left: 3px solid #4fc3f7;">
+								<h4 style="color: #ffffff; margin-bottom: 0.15rem; font-size: 0.88rem;">Diploma in English</h4>
+								<p style="color: rgba(255,255,255,0.7); margin-bottom: 0.1rem; font-size: 0.78rem;">SUSL | 2021-2022</p>
+								<p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">Credit Pass</p>
+							</div>
+							
+							<div class="modern-card glassmorphism" style="margin-bottom: 0.6rem; padding: 0.6rem; border-radius: 10px; border-left: 3px solid #4fc3f7;">
+								<h4 style="color: #ffffff; margin-bottom: 0.15rem; font-size: 0.88rem;">GCE Advanced Level</h4>
+								<p style="color: rgba(255,255,255,0.7); margin-bottom: 0.1rem; font-size: 0.78rem;">Sivali Central College | 2020</p>
+								<p style="color: rgba(255,255,255,0.6); font-size: 0.75rem;">Physical Science | 3A Passes</p>
+							</div>
+						</div>
+						
+						<!-- Right Column: Beyond Engineering & Contact -->
+						<div>
+							<h3 style="color: #4fc3f7; font-size: 0.95rem; margin-bottom: 0.5rem;">Beyond Engineering</h3>
+							<p style="margin-bottom: 0.8rem; font-size: 0.88rem;">
+								Passionate about <strong style="color: #ffffff;">Photo Editing, Photography, and Graphic Design</strong>. 
+								Served in leadership roles at IEEE RAS and actively contribute to university events.
+							</p>
+							
+							<div class="modern-card" style="padding: 0.9rem; background: linear-gradient(135deg, rgba(79, 195, 247, 0.08), rgba(0, 188, 212, 0.06)); border-radius: 12px; border: 1px solid rgba(79, 195, 247, 0.25); box-shadow: 0 4px 16px rgba(79, 195, 247, 0.1);">
+								<h4 style="color: #4fc3f7; font-size: 0.88rem; margin-bottom: 0.4rem;">Contact Information</h4>
+								<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.25rem;">
+									📧 akindu.21@cse.mrt.ac.lk
+								</p>
+								<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem;">
+									📱 +94 71 631 2630
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</article>
+				
+				<!-- Experience -->
+					<article id="experience">
+						<div class="section-header">
+							<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Professional Experience</h2>
+						</div>
+						
+						<p style="color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; text-align: center; font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+							Building real-world solutions through internships and professional work
+						</p>
+						
+						<div class="modern-card glassmorphism" style="margin-bottom: 1.2rem; padding: 1.2rem; background: rgba(255,255,255,0.05); border-radius: 14px; border-left: 4px solid #4fc3f7; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);">
+							<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+								<div>
+									<h3 class="gradient-text" style="margin-bottom: 0.3rem; font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em;">Intern Software Engineer</h3>
+									<p style="color: #4fc3f7; margin-bottom: 0.2rem; font-size: 0.9rem; font-weight: 500;">WSO2</p>
+									<p style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">Digital Transformation Team</p>
+								</div>
+								<span style="color: rgba(255,255,255,0.5); font-size: 0.85rem; white-space: nowrap;">Jan 2025 - Jun 2025</span>
+							</div>
+							
+							<ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+								<li style="padding: 0.35rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.85);">
+									<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+									Developed <strong style="color: #ffffff;">"Infra Portal"</strong>, a full-stack infrastructure automation platform using <strong>Ballerina, React and MySQL</strong> to replace legacy manual workflows, streamlining GitHub repository provisioning across the company.
+								</li>
+								<li style="padding: 0.35rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.85);">
+									<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+									Upgraded and optimized existing internal middleware services to facilitate seamless integration with the <strong>GitHub API using GraphQL</strong>, ensuring robust communication between the new portal and external providers.
+								</li>
+								<li style="padding: 0.35rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.85);">
+									<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+									Architected the solution to be <strong>extensible beyond GitHub</strong>, designing a scalable foundation to support future infrastructure automation requirements.
+								</li>
+								<li style="padding: 0.35rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.85);">
+									<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+									Implemented secure authentication using <strong>Asgardeo</strong> and deployed the production-ready containerized application on <strong>Choreo</strong> for internal organizational use.
+								</li>
+							</ul>
+							
+							<div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+								<span class="tag">Ballerina</span>
+								<span class="tag">React</span>
+								<span class="tag">MySQL</span>
+								<span class="tag">GraphQL</span>
+								<span class="tag">Docker</span>
+								<span class="tag">Asgardeo</span>
+								<span class="tag">Choreo</span>
+							</div>
+						</div>
+					</article>
+				
+				<!-- Projects -->
+					<article id="projects">
+						<div class="section-header">
+							<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Projects</h2>
+						</div>							<p style="color: rgba(255,255,255,0.75); margin-bottom: 2rem; text-align: center; font-size: 1.08rem; line-height: 1.6; max-width: 650px; margin-left: auto; margin-right: auto;">
+								Explore my portfolio of innovative projects spanning embedded systems, ML/AI, and full-stack development
+							</p>
+							
+						<!-- Project Filters -->
+						<div class="project-filters" style="margin-bottom: 2.5rem;">
+							<button class="filter-btn active" data-filter="all"><span>All Projects</span></button>
+							<button class="filter-btn" data-filter="software"><span>Software</span></button>
+							<button class="filter-btn" data-filter="fpga"><span>FPGA</span></button>
+							<button class="filter-btn" data-filter="iot"><span>IoT/Embedded</span></button>
+							<button class="filter-btn" data-filter="ai"><span>AI/ML</span></button>
+							<button class="filter-btn" data-filter="robotics"><span>Robotics</span></button>
+					</div>						<!-- Projects Grid -->
+						<div class="projects-grid">
+							<!-- JetVIO -->
+							<div class="project-card modern-card" data-category="robotics ai">
+								<div class="project-image">
+									<img src="images/pic02.jpg" alt="JetVIO" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>JetVIO</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jul 2025 – Ongoing | Final Year Project | Team</p>
+									<p class="project-description">Visual-inertial navigation system for autonomous UAV operation in GPS-denied environments. Assembled UAV platform with simulation-based testing for stable state estimation.</p>
+									<div class="project-tags">
+										<span class="tag">Python</span>
+										<span class="tag">C++</span>
+										<span class="tag">ROS</span>
+										<span class="tag">Computer Vision</span>
 									</div>
-									<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-									<a class="next" onclick="plusSlides(1)">&#10095;</a>
 								</div>
-								<br>
-								<!-- The dots/circles -->
-								<div style="text-align:center">
-									<span class="dot" onclick="currentSlide(0)"></span>
-									<span class="dot" onclick="currentSlide(1)"></span>
-									<span class="dot" onclick="currentSlide(2)"></span>
-									<span class="dot" onclick="currentSlide(3)"></span>
-									<span class="dot" onclick="currentSlide(4)"></span>
-									<span class="dot" onclick="currentSlide(5)"></span>
-									<span class="dot" onclick="currentSlide(6)"></span>
-									<span class="dot" onclick="currentSlide(7)"></span>
-									<span class="dot" onclick="currentSlide(8)"></span>
+							</div>
+							
+							<!-- FPGA Audio Spectrum Analyzer -->
+							<div class="project-card modern-card" data-category="fpga">
+								<div class="project-image">
+									<img src="images/pic05.jpg" alt="FPGA Audio Spectrum Analyzer" loading="lazy">
 								</div>
-							</article>
-
-						<!-- Skills -->
-<article id="skills">
-  <h2 class="major">Skills</h2>
-  <div class="skills-container">
-    <!-- Programming Languages -->
-    <div class="skills-group">
-      <h3>Programming Languages</h3>
-      <div class="skills-icons">
-        <div class="skill-item"><a href="https://www.python.org/" target="_blank" rel="noopener" aria-label="Python"><img src="https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000" alt="Python"></a><span class="skill-label">Python</span></div>
-        <div class="skill-item"><a href="https://isocpp.org/" target="_blank" rel="noopener" aria-label="C++"><img src="https://img.icons8.com/?size=100&id=TpULddJc4gTh&format=png&color=000000" alt="C++"></a><span class="skill-label">C++</span></div>
-        <div class="skill-item"><a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener" aria-label="C"><img src="https://img.icons8.com/?size=100&id=shQTXiDQiQVR&format=png&color=000000" alt="C"></a><span class="skill-label">C</span></div>
-        <div class="skill-item"><a href="https://www.java.com/" target="_blank" rel="noopener" aria-label="Java"><img src="https://img.icons8.com/?size=100&id=Pd2x9GWu9ovX&format=png&color=000000" alt="Java"></a><span class="skill-label">Java</span></div>
-        <div class="skill-item"><a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener" aria-label="C#"><img src="https://img.icons8.com/?size=100&id=mhwmyz1eu7T5&format=png&color=000000" alt="C#"></a><span class="skill-label">C#</span></div>
-        <div class="skill-item"><a href="https://en.wikipedia.org/wiki/VHDL" target="_blank" rel="noopener" aria-label="VHDL"><img src="https://skillicons.dev/icons?i=vhdl" alt="VHDL"></a><span class="skill-label">VHDL</span></div>
-        <div class="skill-item"><a href="https://www.markdownguide.org/" target="_blank" rel="noopener" aria-label="Markdown"><img src="https://img.icons8.com/?size=100&id=sxnZ4MkfGiVC&format=png&color=000000" alt="Markdown"></a><span class="skill-label">Markdown</span></div>
-        <div class="skill-item"><a href="https://www.w3schools.com/js/" target="_blank" rel="noopener" aria-label="JavaScript"><img src="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000" alt="JavaScript"></a><span class="skill-label">JavaScript</span></div>
+								<div class="project-content">
+									<h3>FPGA Audio Spectrum Analyzer</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jul 2025 – Dec 2025 | Module Project | Team</p>
+									<p class="project-description">Real-time hardware-accelerated audio visualizer performing FFT analysis and VGA rendering on FPGA. Deployed on Nexys A7 with low-latency signal processing.</p>
+									<div class="project-tags">
+										<span class="tag">VHDL</span>
+										<span class="tag">Xilinx Vivado</span>
+										<span class="tag">FPGA</span>
+									</div>
+								</div>
+							</div>
+							
+						<!-- QUOT3D -->
+						<div class="project-card modern-card" data-category="software">
+							<div class="project-image">
+								<img src="images/quot3d.png" alt="QUOT3D" loading="lazy">
+							</div>
+							<div class="project-content">
+								<h3>QUOT3D</h3>
+								<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jan 2025 – Jun 2025 | Module Project | Team</p>
+								<p class="project-description">Web-based platform for generating instant 3D printing quotations. Developed backend service to analyze 3D models and extract pricing metrics with automated vendor-configurable quotation generation.</p>
+								<div class="project-tags">
+									<span class="tag">Python</span>
+									<span class="tag">FastAPI</span>
+									<span class="tag">Docker</span>
+								</div>
+							</div>
+						</div>					<div class="project-card modern-card" data-category="software">
+						<div class="project-image">
+							<img src="images/infraportal.png" alt="Infra Portal" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>Infra Portal</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jan 2025 – Jun 2025 | WSO2 Internship | Individual</p>
+									<p class="project-description">Full-stack infrastructure automation platform streamlining GitHub repository provisioning company-wide. Deployed production-ready containerized application with secure authentication.</p>
+									<div class="project-tags">
+										<span class="tag">Ballerina</span>
+										<span class="tag">React</span>
+										<span class="tag">MySQL</span>
+										<span class="tag">Docker</span>
+									</div>
+								</div>
+							</div>
+							
+					<div class="project-card modern-card" data-category="iot ai">
+						<div class="project-image">
+							<img src="images/fazetrak.jpg" alt="FazeTrak" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>FazeTrak</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jul 2024 – Nov 2024 | Semester Project | Individual</p>
+									<p class="project-description">Smart webcam with face recognition and gesture-based tracking. Achieved real-time face tracking with pan-tilt servo control and video streaming via OBS Virtual Camera Driver.</p>
+									<div class="project-tags">
+										<span class="tag">Python</span>
+										<span class="tag">C++</span>
+										<span class="tag">OpenCV</span>
+										<span class="tag">ESP32</span>
+									</div>
+									<a href="https://github.com/AkinduID/FazeTrak" target="_blank" rel="noopener" class="project-link">
+										View on GitHub →
+									</a>
+								</div>
+							</div>
+							
+					<div class="project-card modern-card" data-category="iot">
+						<div class="project-image">
+							<img src="images/pic05.jpg" alt="MinerShield" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>MinerShield</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jul 2024 – Oct 2024 | Competition Project | Team</p>
+									<p class="project-description">IoT-based wireless monitoring system for miner safety in underground environments. Demonstrated reliable environmental and miner-status monitoring through prototype sensor network.</p>
+									<div class="project-tags">
+										<span class="tag">C++</span>
+										<span class="tag">JavaScript</span>
+										<span class="tag">ESP32</span>
+										<span class="tag">Node-RED</span>
+									</div>
+								</div>
+							</div>
+							
+					<div class="project-card modern-card" data-category="iot ai">
+						<div class="project-image">
+							<img src="images/pic02.jpg" alt="MechaPulse" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>MechaPulse</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jan 2024 – May 2024 | Competition Project | Team</p>
+									<p class="project-description">Industrial IoT system for machinery fault detection using acoustic signal analysis via ML. Led ML model deployment on Raspberry Pi and validated fault detection of drill machine prototype.</p>
+									<div class="project-tags">
+										<span class="tag">C++</span>
+										<span class="tag">Python</span>
+										<span class="tag">Raspberry Pi</span>
+										<span class="tag">FastAPI</span>
+									</div>
+								</div>
+							</div>
+							
+					<div class="project-card modern-card" data-category="iot">
+						<div class="project-image">
+							<img src="images/pic05.jpg" alt="Smart MediBox" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>Smart MediBox</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Jan 2024 – Mar 2024 | Module Project | Individual</p>
+									<p class="project-description">Smart medicine container for scheduled intake reminders. Designed embedded firmware, IoT connectivity, and Node-RED control dashboard supporting remote monitoring and timely alerts.</p>
+									<div class="project-tags">
+										<span class="tag">Arduino</span>
+										<span class="tag">ESP32</span>
+										<span class="tag">IoT</span>
+										<span class="tag">Node-RED</span>
+									</div>
+								</div>
+							</div>
+							
+					<div class="project-card modern-card" data-category="software">
+						<div class="project-image">
+							<img src="images/aspiretrust.png" alt="AspireTrust" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>AspireTrust</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">Sep 2023 – Nov 2023 | Module Project | Team</p>
+									<p class="project-description">Database-driven banking system supporting transactions and loan processing. Contributed to database schema design and query implementation with robust database management practices.</p>
+									<div class="project-tags">
+										<span class="tag">MySQL</span>
+										<span class="tag">HTML</span>
+										<span class="tag">CSS</span>
+									</div>
+									<a href="https://github.com/Group-02-CS3043/AspireTrust" target="_blank" rel="noopener" class="project-link">
+										View on GitHub →
+									</a>
+								</div>
+							</div>
+							
+					<div class="project-card modern-card" data-category="fpga">
+						<div class="project-image">
+							<img src="images/pic05.jpg" alt="Nanoprocessor" loading="lazy">
+								</div>
+								<div class="project-content">
+									<h3>Nanoprocessor</h3>
+									<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem;">May 2023 – Jun 2023 | Module Project | Team</p>
+									<p class="project-description">Custom-designed 4-bit nanoprocessor implemented on FPGA. Architected top-level processor design and managed simulation workflows, successfully deployed on Basys3 FPGA board.</p>
+									<div class="project-tags">
+										<span class="tag">VHDL</span>
+										<span class="tag">Xilinx Vivado</span>
+										<span class="tag">FPGA</span>
+									</div>
+									<a href="https://github.com/AkinduID/Nano-Processor-Final" target="_blank" rel="noopener" class="project-link">
+										View on GitHub →
+									</a>
+								</div>
+							</div>
+							
+						</div>
+				</article>					<!-- Skills -->
+					<article id="skills">
+						<div class="section-header">
+							<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Tech Stack</h2>
+						</div>
+						
+						<p style="color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; text-align: center; font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+							Technologies and tools I work with to bring ideas to life
+						</p>
+						
+						<div class="skills-container">
+							<!-- Programming Languages -->
+							<div class="skills-category">
+								<h3 class="animated-underline" style="color: #4fc3f7; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-left: 0.8rem;">Programming Languages</h3>
+								<div class="skills-icons">
+        <div class="skill-item"><a href="https://www.python.org/" target="_blank" rel="noopener" aria-label="Python"><img src="images/programming/python.png" alt="Python" loading="lazy"></a><span class="skill-label">Python</span></div>
+        <div class="skill-item"><a href="https://isocpp.org/" target="_blank" rel="noopener" aria-label="C++"><img src="images/programming/cpp.png" alt="C++" loading="lazy"></a><span class="skill-label">C++</span></div>
+        <div class="skill-item"><a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener" aria-label="C"><img src="images/programming/c.png" alt="C" loading="lazy"></a><span class="skill-label">C</span></div>
+        <div class="skill-item"><a href="https://www.java.com/" target="_blank" rel="noopener" aria-label="Java"><img src="images/programming/java.png" alt="Java" loading="lazy"></a><span class="skill-label">Java</span></div>
+        <div class="skill-item"><a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener" aria-label="C#"><img src="images/programming/csharp.png" alt="C#" loading="lazy"></a><span class="skill-label">C#</span></div>
+        <div class="skill-item"><a href="https://en.wikipedia.org/wiki/VHDL" target="_blank" rel="noopener" aria-label="VHDL"><img src="images/programming/vhdl.svg" alt="VHDL" loading="lazy"></a><span class="skill-label">VHDL</span></div>
+        <div class="skill-item"><a href="https://www.markdownguide.org/" target="_blank" rel="noopener" aria-label="Markdown"><img src="images/programming/markdown.png" alt="Markdown" loading="lazy"></a><span class="skill-label">Markdown</span></div>
+        <div class="skill-item"><a href="https://www.w3schools.com/js/" target="_blank" rel="noopener" aria-label="JavaScript"><img src="images/programming/javascript.png" alt="JavaScript" loading="lazy"></a><span class="skill-label">JavaScript</span></div>
       </div>
     </div>
-    <!-- ML/AI -->
-    <div class="skills-group">
-      <h3>ML/AI</h3>
-      <div class="skills-icons">
-        <div class="skill-item"><a href="https://opencv.org/" target="_blank" rel="noopener" aria-label="OpenCV"><img src="https://img.icons8.com/?size=100&id=apebs8fnmi4m&format=png&color=000000" alt="OpenCV"></a><span class="skill-label">OpenCV</span></div>
-        <div class="skill-item"><a href="https://mediapipe.dev/" target="_blank" rel="noopener" aria-label="MediaPipe"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxhy0suV8YbA8sybk_czVeMzFH_EvgXmdCg&s" alt="MediaPipe"></a><span class="skill-label">MediaPipe</span></div>
-        <div class="skill-item"><a href="https://numpy.org/" target="_blank" rel="noopener" aria-label="NumPy"><img src="https://skillicons.dev/icons?i=numpy" alt="NumPy"></a><span class="skill-label">NumPy</span></div>
-        <div class="skill-item"><a href="https://pandas.pydata.org/" target="_blank" rel="noopener" aria-label="Pandas"><img src="https://skillicons.dev/icons?i=pandas" alt="Pandas"></a><span class="skill-label">Pandas</span></div>
-        <div class="skill-item"><a href="https://matplotlib.org/" target="_blank" rel="noopener" aria-label="Matplotlib"><img src="https://skillicons.dev/icons?i=matplotlib" alt="Matplotlib"></a><span class="skill-label">Matplotlib</span></div>
-      </div>
-    </div>
-    <!-- Embedded Systems and Robotics -->
-    <div class="skills-group">
-      <h3>Embedded Systems and Robotics</h3>
-      <div class="skills-icons">
-        <div class="skill-item"><a href="https://www.arduino.cc/" target="_blank" rel="noopener" aria-label="Arduino"><img src="https://siminnovations.com/wiki/images/7/7a/Arduino_logo_round.png" alt="Arduino"></a><span class="skill-label">Arduino</span></div>
-        <div class="skill-item"><a href="https://www.raspberrypi.org/" target="_blank" rel="noopener" aria-label="Raspberry Pi"><img src="https://skillicons.dev/icons?i=raspberrypi" alt="Raspberry Pi"></a><span class="skill-label">Raspberry Pi</span></div>
-        <div class="skill-item"><a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" rel="noopener" aria-label="ESP32"><img src="https://skillicons.dev/icons?i=esp32" alt="ESP32"></a><span class="skill-label">ESP32</span></div>
-        <div class="skill-item"><a href="https://platformio.org/" target="_blank" rel="noopener" aria-label="PlatformIO"><img src="https://skillicons.dev/icons?i=platformio" alt="PlatformIO"></a><span class="skill-label">PlatformIO</span></div>
-        <div class="skill-item"><a href="https://www.ros.org/" target="_blank" rel="noopener" aria-label="ROS"><img src="https://skillicons.dev/icons?i=ros" alt="ROS"></a><span class="skill-label">ROS</span></div>
-        <div class="skill-item"><a href="http://gazebosim.org/" target="_blank" rel="noopener" aria-label="Gazebo"><img src="https://skillicons.dev/icons?i=gazebo" alt="Gazebo"></a><span class="skill-label">Gazebo</span></div>
-        <div class="skill-item"><a href="https://www.vivado.com/" target="_blank" rel="noopener" aria-label="Vivado"><img src="https://skillicons.dev/icons?i=vivado" alt="Vivado"></a><span class="skill-label">Vivado</span></div>
-      </div>
-    </div>
-    <!-- DevOps -->
-    <div class="skills-group">
-      <h3>DevOps</h3>
-      <div class="skills-icons">
-        <div class="skill-item"><a href="https://git-scm.com/" target="_blank" rel="noopener" aria-label="Git"><img src="https://skillicons.dev/icons?i=git" alt="Git"></a><span class="skill-label">Git</span></div>
-        <div class="skill-item"><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></a><span class="skill-label">GitHub</span></div>
-        <div class="skill-item"><a href="https://www.linuxfoundation.org/" target="_blank" rel="noopener" aria-label="Linux"><img src="https://skillicons.dev/icons?i=linux" alt="Linux"></a><span class="skill-label">Linux</span></div>
-        <div class="skill-item"><a href="https://www.docker.com/" target="_blank" rel="noopener" aria-label="Docker"><img src="https://skillicons.dev/icons?i=docker" alt="Docker"></a><span class="skill-label">Docker</span></div>
-      </div>
-    </div>
+    
     <!-- Frontend Development -->
-    <div class="skills-group">
-      <h3>Frontend Development</h3>
+    <div class="skills-category">
+      <h3 class="animated-underline" style="color: #4fc3f7; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-left: 0.8rem;">Frontend Development</h3>
       <div class="skills-icons">
-        <div class="skill-item"><a href="https://www.w3.org/standards/history/html52/" target="_blank" rel="noopener" aria-label="HTML5"><img src="https://img.icons8.com/?size=100&id=v8RpPQUwv0N8&format=png&color=000000" alt="HTML5"></a><span class="skill-label">HTML5</span></div>
-        <div class="skill-item"><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noopener" aria-label="CSS3"><img src="https://img.icons8.com/?size=100&id=7gdY5qNXaKC0&format=png&color=000000" alt="CSS3"></a><span class="skill-label">CSS3</span></div>
-        <div class="skill-item"><a href="https://streamlit.io/" target="_blank" rel="noopener" aria-label="Streamlit"><img src="https://skillicons.dev/icons?i=streamlit" alt="Streamlit"></a><span class="skill-label">Streamlit</span></div>
-        <div class="skill-item"><a href="https://www.qt.io/" target="_blank" rel="noopener" aria-label="PyQt"><img src="https://skillicons.dev/icons?i=qt" alt="PyQt"></a><span class="skill-label">PyQt</span></div>
-        <div class="skill-item"><a href="https://react.dev/" target="_blank" rel="noopener" aria-label="React"><img src="https://skillicons.dev/icons?i=react" alt="React"></a><span class="skill-label">React</span></div>
-        <div class="skill-item"><a href="https://redux.js.org/" target="_blank" rel="noopener" aria-label="Redux"><img src="https://skillicons.dev/icons?i=redux" alt="Redux"></a><span class="skill-label">Redux</span></div>
-        <div class="skill-item"><a href="https://nodered.org/" target="_blank" rel="noopener" aria-label="Node-RED"><img src="https://skillicons.dev/icons?i=nodered" alt="Node-RED"></a><span class="skill-label">Node-RED</span></div>
+        <div class="skill-item"><a href="https://www.w3.org/standards/history/html52/" target="_blank" rel="noopener" aria-label="HTML5"><img src="images/frontend/html5.png" alt="HTML5"></a><span class="skill-label">HTML5</span></div>
+        <div class="skill-item"><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noopener" aria-label="CSS3"><img src="images/frontend/css3.png" alt="CSS3"></a><span class="skill-label">CSS3</span></div>
+        <div class="skill-item"><a href="https://streamlit.io/" target="_blank" rel="noopener" aria-label="Streamlit"><img src="images/frontend/streamlit.svg" alt="Streamlit"></a><span class="skill-label">Streamlit</span></div>
+        <div class="skill-item"><a href="https://www.qt.io/" target="_blank" rel="noopener" aria-label="PyQt"><img src="images/frontend/pyqt.svg" alt="PyQt"></a><span class="skill-label">PyQt</span></div>
+        <div class="skill-item"><a href="https://react.dev/" target="_blank" rel="noopener" aria-label="React"><img src="images/frontend/react.svg" alt="React"></a><span class="skill-label">React</span></div>
+        <div class="skill-item"><a href="https://redux.js.org/" target="_blank" rel="noopener" aria-label="Redux"><img src="images/frontend/redux.svg" alt="Redux"></a><span class="skill-label">Redux</span></div>
+        <div class="skill-item"><a href="https://nodered.org/" target="_blank" rel="noopener" aria-label="Node-RED"><img src="images/frontend/nodered.svg" alt="Node-RED"></a><span class="skill-label">Node-RED</span></div>
       </div>
     </div>
+    
+    <!-- ML/AI -->
+    <div class="skills-category">
+      <h3 class="animated-underline" style="color: #4fc3f7; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-left: 0.8rem;">ML/AI & Data Science</h3>
+      <div class="skills-icons">
+        <div class="skill-item"><a href="https://opencv.org/" target="_blank" rel="noopener" aria-label="OpenCV"><img src="images/ml/opencv.png" alt="OpenCV"></a><span class="skill-label">OpenCV</span></div>
+        <div class="skill-item"><a href="https://www.tensorflow.org/" target="_blank" rel="noopener" aria-label="TensorFlow"><img src="images/ml/tensorflow.svg" alt="TensorFlow"></a><span class="skill-label">TensorFlow</span></div>
+        <div class="skill-item"><a href="https://pytorch.org/" target="_blank" rel="noopener" aria-label="PyTorch"><img src="images/ml/pytorch.svg" alt="PyTorch"></a><span class="skill-label">PyTorch</span></div>
+        <div class="skill-item"><a href="https://mediapipe.dev/" target="_blank" rel="noopener" aria-label="MediaPipe"><img src="images/ml/mediapipe.png" alt="MediaPipe"></a><span class="skill-label">MediaPipe</span></div>
+        <div class="skill-item"><a href="https://numpy.org/" target="_blank" rel="noopener" aria-label="NumPy"><img src="images/ml/numpy.svg" alt="NumPy"></a><span class="skill-label">NumPy</span></div>
+        <div class="skill-item"><a href="https://pandas.pydata.org/" target="_blank" rel="noopener" aria-label="Pandas"><img src="images/ml/pandas.svg" alt="Pandas"></a><span class="skill-label">Pandas</span></div>
+        <div class="skill-item"><a href="https://matplotlib.org/" target="_blank" rel="noopener" aria-label="Matplotlib"><img src="images/ml/matplotlib.svg" alt="Matplotlib"></a><span class="skill-label">Matplotlib</span></div>
+      </div>
+    </div>
+    
+    <!-- Embedded Systems and Robotics -->
+    <div class="skills-category">
+      <h3 class="animated-underline" style="color: #4fc3f7; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-left: 0.8rem;">Embedded Systems & Robotics</h3>
+      <div class="skills-icons">
+        <div class="skill-item"><a href="https://www.arduino.cc/" target="_blank" rel="noopener" aria-label="Arduino"><img src="images/embedded/arduino.png" alt="Arduino"></a><span class="skill-label">Arduino</span></div>
+        <div class="skill-item"><a href="https://www.raspberrypi.org/" target="_blank" rel="noopener" aria-label="Raspberry Pi"><img src="images/embedded/raspberrypi.svg" alt="Raspberry Pi"></a><span class="skill-label">Raspberry Pi</span></div>
+        <div class="skill-item"><a href="https://www.espressif.com/en/products/socs/esp32" target="_blank" rel="noopener" aria-label="ESP32"><img src="images/embedded/esp32.svg" alt="ESP32"></a><span class="skill-label">ESP32</span></div>
+        <div class="skill-item"><a href="https://platformio.org/" target="_blank" rel="noopener" aria-label="PlatformIO"><img src="images/embedded/platformio.svg" alt="PlatformIO"></a><span class="skill-label">PlatformIO</span></div>
+        <div class="skill-item"><a href="https://www.ros.org/" target="_blank" rel="noopener" aria-label="ROS"><img src="images/embedded/ros.svg" alt="ROS"></a><span class="skill-label">ROS</span></div>
+        <div class="skill-item"><a href="http://gazebosim.org/" target="_blank" rel="noopener" aria-label="Gazebo"><img src="images/embedded/gazebo.svg" alt="Gazebo"></a><span class="skill-label">Gazebo</span></div>
+        <div class="skill-item"><a href="https://www.vivado.com/" target="_blank" rel="noopener" aria-label="Vivado"><img src="images/embedded/vivado.svg" alt="Vivado"></a><span class="skill-label">Vivado</span></div>
+      </div>
+    </div>
+    
+    <!-- DevOps -->
+    <div class="skills-category">
+      <h3 class="animated-underline" style="color: #4fc3f7; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-left: 0.8rem;">DevOps & Version Control</h3>
+      <div class="skills-icons">
+        <div class="skill-item"><a href="https://git-scm.com/" target="_blank" rel="noopener" aria-label="Git"><img src="images/devops/git.svg" alt="Git"></a><span class="skill-label">Git</span></div>
+        <div class="skill-item"><a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/devops/github.svg" alt="GitHub"></a><span class="skill-label">GitHub</span></div>
+        <div class="skill-item"><a href="https://www.linuxfoundation.org/" target="_blank" rel="noopener" aria-label="Linux"><img src="images/devops/linux.svg" alt="Linux"></a><span class="skill-label">Linux</span></div>
+        <div class="skill-item"><a href="https://www.docker.com/" target="_blank" rel="noopener" aria-label="Docker"><img src="images/devops/docker.svg" alt="Docker"></a><span class="skill-label">Docker</span></div>
+      </div>
+    </div>
+    
     <!-- Backend Development -->
-    <div class="skills-group">
-      <h3>Backend Development</h3>
+    <div class="skills-category">
+      <h3 class="animated-underline" style="color: #4fc3f7; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-left: 0.8rem;">Backend Development</h3>
       <div class="skills-icons">
-        <div class="skill-item"><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener" aria-label="FastAPI"><img src="https://skillicons.dev/icons?i=fastapi" alt="FastAPI"></a><span class="skill-label">FastAPI</span></div>
-        <div class="skill-item"><a href="https://ballerina.io/" target="_blank" rel="noopener" aria-label="Ballerina"><img src="https://skillicons.dev/icons?i=ballerina" alt="Ballerina"></a><span class="skill-label">Ballerina</span></div>
-        <div class="skill-item"><a href="https://www.mysql.com/" target="_blank" rel="noopener" aria-label="MySQL"><img src="https://skillicons.dev/icons?i=mysql" alt="MySQL"></a><span class="skill-label">MySQL</span></div>
+        <div class="skill-item"><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener" aria-label="FastAPI"><img src="images/backend/fastapi.svg" alt="FastAPI"></a><span class="skill-label">FastAPI</span></div>
+        <div class="skill-item"><a href="https://ballerina.io/" target="_blank" rel="noopener" aria-label="Ballerina"><img src="images/backend/ballerina.svg" alt="Ballerina"></a><span class="skill-label">Ballerina</span></div>
+        <div class="skill-item"><a href="https://www.mysql.com/" target="_blank" rel="noopener" aria-label="MySQL"><img src="images/backend/mysql.svg" alt="MySQL"></a><span class="skill-label">MySQL</span></div>
       </div>
     </div>
+    
     <!-- IDEs & Tools -->
-    <div class="skills-group">
-      <h3>IDEs & Tools</h3>
+    <div class="skills-category">
+      <h3 class="animated-underline" style="color: #4fc3f7; font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; position: relative; padding-left: 0.8rem;">IDEs & Development Tools</h3>
       <div class="skills-icons">
-        <div class="skill-item"><a href="https://code.visualstudio.com/" target="_blank" rel="noopener" aria-label="VS Code"><img src="https://img.icons8.com/?size=100&id=0OQR1FYCuA9f&format=png&color=000000" alt="VS Code"></a><span class="skill-label">VS Code</span></div>
-        <div class="skill-item"><a href="https://visualstudio.microsoft.com/" target="_blank" rel="noopener" aria-label="Visual Studio"><img src="https://img.icons8.com/?size=100&id=ezj3zaVtImPg&format=png&color=000000" alt="Visual Studio"></a><span class="skill-label">Visual Studio</span></div>
-        <div class="skill-item"><a href="https://www.jetbrains.com/datagrip/" target="_blank" rel="noopener" aria-label="DataGrip"><img src="https://skillicons.dev/icons?i=datagrip" alt="DataGrip"></a><span class="skill-label">DataGrip</span></div>
-        <div class="skill-item"><a href="https://jupyter.org/" target="_blank" rel="noopener" aria-label="Jupyter"><img src="https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000" alt="Jupyter"></a><span class="skill-label">Jupyter</span></div>
-        <div class="skill-item"><a href="https://colab.research.google.com/" target="_blank" rel="noopener" aria-label="Google Colab"><img src="https://skillicons.dev/icons?i=colab" alt="Google Colab"></a><span class="skill-label">Colab</span></div>
+        <div class="skill-item"><a href="https://code.visualstudio.com/" target="_blank" rel="noopener" aria-label="VS Code"><img src="images/ides/vscode.png" alt="VS Code"></a><span class="skill-label">VS Code</span></div>
+        <div class="skill-item"><a href="https://visualstudio.microsoft.com/" target="_blank" rel="noopener" aria-label="Visual Studio"><img src="images/ides/visualstudio.png" alt="Visual Studio"></a><span class="skill-label">Visual Studio</span></div>
+        <div class="skill-item"><a href="https://www.jetbrains.com/datagrip/" target="_blank" rel="noopener" aria-label="DataGrip"><img src="images/ides/datagrip.svg" alt="DataGrip"></a><span class="skill-label">DataGrip</span></div>
+        <div class="skill-item"><a href="https://jupyter.org/" target="_blank" rel="noopener" aria-label="Jupyter"><img src="images/ides/jupyter.png" alt="Jupyter"></a><span class="skill-label">Jupyter</span></div>
+        <div class="skill-item"><a href="https://colab.research.google.com/" target="_blank" rel="noopener" aria-label="Google Colab"><img src="images/ides/colab.svg" alt="Google Colab"></a><span class="skill-label">Colab</span></div>
       </div>
     </div>
   </div>
 </article>
 
-						<!-- Design -->
-							<article id="connect">
-								<h2 class="major">Connect</h2>
-								<div class="social-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; font-size: 2.2rem;">
-									<a href="mailto:akinduid@gmail.com" target="_blank" rel="noopener" title="Email">
-										<img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Email">
-									</a>
-									<a href="https://facebook.com/akinduid" target="_blank" rel="noopener" title="Facebook">
-										<img src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000" alt="Facebook">
-									</a>
-									<a href="https://instagram.com/akinduid" target="_blank" rel="noopener" title="Instagram">
-										<img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram">
-									</a>
-									<a href="https://twitter.com/akinduid" target="_blank" rel="noopener" title="Twitter">
-										<img src="https://img.icons8.com/?size=100&id=yoQabS8l0qpr&format=png&color=000000" alt="Twitter">
-									</a>
-									<a href="https://discord.com/users/akinduid" target="_blank" rel="noopener" title="Discord">
-										<img src="https://img.icons8.com/?size=100&id=2mIgusGquJFz&format=png&color=000000" alt="Discord">
-									</a>
-									<a href="https://github.com/AkinduID" target="_blank" rel="noopener" title="GitHub">
-										<img src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000" alt="GitHub">
-									</a>
-									<a href="https://linkedin.com/in/akinduid" target="_blank" rel="noopener" title="LinkedIn">
-										<img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn">
-									</a>
-									<a href="https://behance.net/akinduid" target="_blank" rel="noopener" title="Behance">
-										<img src="https://img.icons8.com/?size=100&id=MME8DugmLdh0&format=png&color=000000" alt="Behance">
-									</a>
-									<a href="https://flickr.com/people/akinduid" target="_blank" rel="noopener" title="Flickr">
-										<img src="https://img.icons8.com/?size=100&id=fmfdNl8b3nOE&format=png&color=000000" alt="Flickr">
-									</a>
+				<!-- Achievements -->
+					<article id="achievements">
+						<div class="section-header">
+							<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Achievements</h2>
+						</div>
+						
+						<p style="color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; text-align: center; font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+							Recognition, certifications, and leadership roles that shape my journey
+						</p>
+						
+						<!-- Awards & Honors -->
+						<div style="margin-bottom: 1.5rem;">
+							<h3 style="color: #4fc3f7; font-size: 1.05rem; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(79, 195, 247, 0.3); font-weight: 600; letter-spacing: 0.02em;">Awards & Honors</h3>
+							<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;">
+								<div class="modern-card glassmorphism" style="padding: 0.55rem; background: rgba(255,255,255,0.04); border-radius: 12px; border-left: 3px solid #4fc3f7;">
+									<h4 style="color: #ffffff; margin-bottom: 0.2rem; font-size: 0.9rem;">Dean's List</h4>
+									<p style="color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-bottom: 0.1rem;">University of Moratuwa | Semester 6</p>
 								</div>
-							</article>
+								<div class="modern-card glassmorphism" style="padding: 0.55rem; background: rgba(255,255,255,0.04); border-radius: 12px; border-left: 3px solid #4fc3f7;">
+									<h4 style="color: #ffffff; margin-bottom: 0.2rem; font-size: 0.9rem;">Evolve IoT Mini Research Competition</h4>
+									<p style="color: #4fc3f7; font-size: 0.8rem; margin-bottom: 0.1rem;">1st Place</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.55rem; background: rgba(255,255,255,0.04); border-radius: 12px; border-left: 3px solid #4fc3f7;">
+									<h4 style="color: #ffffff; margin-bottom: 0.2rem; font-size: 0.9rem;">SLIoT Challenge 2023</h4>
+									<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Semifinalists</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.55rem; background: rgba(255,255,255,0.04); border-radius: 12px; border-left: 3px solid #4fc3f7;">
+									<h4 style="color: #ffffff; margin-bottom: 0.2rem; font-size: 0.9rem;">President's Scout Award</h4>
+									<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Issued in 2019</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.55rem; background: rgba(255,255,255,0.04); border-radius: 12px; border-left: 3px solid #4fc3f7;">
+									<h4 style="color: #ffffff; margin-bottom: 0.2rem; font-size: 0.9rem;">National Junior Science Olympiad 2016</h4>
+									<p style="color: #4fc3f7; font-size: 0.9rem;">Gold Medal</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.55rem; background: rgba(255,255,255,0.04); border-radius: 12px; border-left: 3px solid #4fc3f7;">
+									<h4 style="color: #ffffff; margin-bottom: 0.2rem; font-size: 0.9rem;">International Mathematics and Science Olympiad 2013</h4>
+									<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Silver Medal</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Certifications -->
+						<div style="margin-bottom: 1.5rem;">
+							<h3 style="color: #4fc3f7; font-size: 1.05rem; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(79, 195, 247, 0.3); font-weight: 600; letter-spacing: 0.02em;">Certifications</h3>
+							
+							<!-- Embedded AI -->
+							<h4 style="color: #ffffff; font-size: 0.9rem; margin-bottom: 0.6rem; margin-top: 1rem;">Embedded AI & Machine Learning</h4>
+							<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem;">
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Embedded AI: ML at the Edge</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Arm | Apr 2025</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Computer Vision with Embedded ML</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Edge Impulse | Mar 2025</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Intro to Embedded ML</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Edge Impulse | Mar 2025</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">CV & AI Vision Language Models</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">OpenCV University | Dec 2024</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Fundamentals of Deep Learning</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">NVIDIA DLI | Dec 2024</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Computer Vision</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Kaggle | Dec 2024</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Intro to Machine Learning</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Kaggle | Jan 2024</p>
+								</div>
+							</div>
+							
+							<!-- Embedded Systems -->
+							<h4 style="color: #ffffff; font-size: 0.9rem; margin-bottom: 0.6rem; margin-top: 1rem;">Embedded Systems</h4>
+							<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem;">
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Arm Cortex-M Architecture & Software Dev</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">Arm | Apr 2025</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Embedded Software & Hardware Architecture</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">CU Boulder | Mar 2025</p>
+								</div>
+							</div>
+							
+							<!-- DevOps -->
+							<h4 style="color: #ffffff; font-size: 0.9rem; margin-bottom: 0.6rem; margin-top: 1rem;">DevOps & Engineering</h4>
+							<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.4rem;">
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">GitHub Foundations</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">GitHub | Mar 2025</p>
+								</div>
+								<div class="modern-card glassmorphism" style="padding: 0.5rem; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);">
+									<p style="color: rgba(255,255,255,0.85); font-size: 0.8rem; margin-bottom: 0.15rem;">Docker Training for Absolute Beginners</p>
+									<p style="color: rgba(255,255,255,0.5); font-size: 0.7rem;">KodeKloud | Feb 2025</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Leadership & Extracurricular -->
+						<div style="margin-bottom: 1rem;">
+							<h3 style="color: #4fc3f7; font-size: 1.15rem; margin-bottom: 0.7rem; padding-bottom: 0.4rem; border-bottom: 2px solid rgba(79, 195, 247, 0.3);">Leadership & Extracurricular</h3>
+							
+							<div style="margin-bottom: 1rem;">
+								<h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 0.4rem;">IEEE Robotics and Automation Society, UoM</h4>
+								<ul style="list-style: none; padding-left: 0;">
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										<strong>Secretary</strong> | Oct 2024 – Oct 2025
+									</li>
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										<strong>Vice Chairman</strong> | Oct 2023 – Oct 2024
+									</li>
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										<strong>Design Committee Member</strong> | Oct 2022 – Oct 2023
+									</li>
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										<strong>BotTalks 1.0 Co-Chair</strong> | Mar – Apr 2023
+									</li>
+								</ul>
+							</div>
+							
+							<div style="margin-bottom: 1rem;">
+								<h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 0.4rem;">IEEE Student Branch, UoM</h4>
+								<ul style="list-style: none; padding-left: 0;">
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										Membership Development Committee | Nov 2023 – Nov 2024
+									</li>
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										IEEE Open Week Volunteer | Feb – Mar 2024
+									</li>
+								</ul>
+							</div>
+							
+							<div style="margin-bottom: 1rem;">
+								<h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 0.4rem;">Department of CSE, UoM</h4>
+								<ul style="list-style: none; padding-left: 0;">
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										CSE40 Marketing Committee | Jan – May 2025
+									</li>
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										Hit The Grounds Marketing Committee | Dec 2024 – Jan 2025
+									</li>
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										CSE Career Fair 2024 Company Coordination | Dec 2023 – Jan 2024
+									</li>
+								</ul>
+							</div>
+							
+							<div style="margin-bottom: 1rem;">
+								<h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 0.4rem;">Mora Hiking Club, UoM</h4>
+								<ul style="list-style: none; padding-left: 0;">
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										Stridian 2025 Media Team | Jul – Sep 2025
+									</li>
+									<li style="padding: 0.25rem 0; padding-left: 1.5rem; position: relative; color: rgba(255,255,255,0.8); font-size: 0.85rem;">
+										<span style="position: absolute; left: 0; color: #4fc3f7;">▹</span>
+										Stridian 2024 Health Team | Jul – Sep 2024
+									</li>
+								</ul>
+							</div>
+						</div>
+					</article>
 
-						<!-- Contact -->
+				<!-- Connect -->
+						<article id="connect">
+							<div class="section-header">
+								<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Let's Connect</h2>
+							</div>
+							
+							<p style="color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; text-align: center; font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+								Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or collaboration opportunities.
+							</p>
+							
+							<div class="connect-grid">
+								<a href="mailto:akinduid@gmail.com" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/email.png" alt="Email" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>Email</h4>
+										<p>akinduid@gmail.com</p>
+									</div>
+								</a>
+								
+								<a href="https://linkedin.com/in/akinduid" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/linkedin.png" alt="LinkedIn" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>LinkedIn</h4>
+										<p>@akinduid</p>
+									</div>
+								</a>
+								
+								<a href="https://github.com/AkinduID" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/github.png" alt="GitHub" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>GitHub</h4>
+										<p>@AkinduID</p>
+									</div>
+								</a>
+								
+								<a href="https://instagram.com/akinduid" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/instagram.png" alt="Instagram" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>Instagram</h4>
+										<p>@akinduid</p>
+									</div>
+								</a>
+								
+								<a href="https://twitter.com/akinduid" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/twitter.png" alt="Twitter" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>Twitter</h4>
+										<p>@akinduid</p>
+									</div>
+								</a>
+								
+								<a href="https://behance.net/akinduid" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/behance.png" alt="Behance" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>Behance</h4>
+										<p>@akinduid</p>
+									</div>
+								</a>
+								
+								<a href="https://facebook.com/akinduid" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/facebook.png" alt="Facebook" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>Facebook</h4>
+										<p>@akinduid</p>
+									</div>
+								</a>
+								
+								<a href="https://discord.com/users/akinduid" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/discord.png" alt="Discord" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>Discord</h4>
+										<p>@akinduid</p>
+									</div>
+								</a>
+								
+								<a href="https://flickr.com/people/akinduid" class="connect-card modern-card" target="_blank" rel="noopener">
+									<div class="connect-icon">
+										<img src="images/social/flickr.png" alt="Flickr" loading="lazy">
+									</div>
+									<div class="connect-info">
+										<h4>Flickr</h4>
+										<p>@akinduid</p>
+									</div>
+								</a>
+							</div>
+						</article>						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">Contact</h2>
+								<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Contact</h2>
 								<form method="post" action="#">
 									<div class="fields">
 										<div class="field half">
@@ -331,7 +934,7 @@
 
 						<!-- Elements -->
 							<article id="elements">
-								<h2 class="major">Elements</h2>
+								<h2 class="major gradient-text" style="font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;">Elements</h2>
 
 								<section>
 									<h3 class="major">Text</h3>
@@ -468,13 +1071,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; 2025 Akindu Delgahagoda. All rights reserved. | Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a></p>
+						<p style="font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 0.5rem;">Last updated: December 2025</p>
 					</footer>
 
 			</div>
 
 		<!-- BG -->
 			<div id="bg"></div>
+		
+		<!-- Back to Top Button -->
+		<div class="back-to-top" id="backToTop" aria-label="Back to top">
+			<span>↑</span>
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -483,45 +1092,101 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-<!-- W3Schools-style Carousel Script -->
+<!-- Project Filtering Script -->
 <script>
-let slideIndex = 0;
-const slides = document.querySelectorAll('.mySlides');
-const track = document.querySelector('.slider-track');
-const dots = document.getElementsByClassName("dot");
+// Project filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
 
-function updateSlider() {
-  // Move the track
-  track.style.transform = `translateX(-${slideIndex * 100}%)`;
-  // Enhanced Parallax: move image at a different rate and scale
-  slides.forEach((slide, i) => {
-    const img = slide.querySelector('.parallax-img');
-    const offset = (slideIndex - i);
-    // Parallax: image moves at 60% of the slide movement and scales down further away
-    img.style.transform = `translateX(${offset * 60}px) scale(${1 - Math.abs(offset) * 0.08})`;
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove active class from all buttons
+    filterButtons.forEach(b => b.classList.remove('active'));
+    // Add active class to clicked button
+    btn.classList.add('active');
+    
+    const filter = btn.getAttribute('data-filter');
+    
+    // Show/hide project cards based on filter with fade animation
+    projectCards.forEach(card => {
+      if (filter === 'all') {
+        card.style.display = 'block';
+        setTimeout(() => card.style.opacity = '1', 10);
+      } else {
+        const categories = card.getAttribute('data-category') || '';
+        if (categories.includes(filter)) {
+          card.style.display = 'block';
+          setTimeout(() => card.style.opacity = '1', 10);
+        } else {
+          card.style.opacity = '0';
+          setTimeout(() => card.style.display = 'none', 300);
+        }
+      }
+    });
   });
-  // Dots
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+});
+
+// Scroll progress indicator
+const scrollProgress = document.querySelector('.scroll-progress');
+window.addEventListener('scroll', () => {
+  const article = document.querySelector('#main article.active');
+  if (article && scrollProgress) {
+    const scrolled = article.scrollTop;
+    const height = article.scrollHeight - article.clientHeight;
+    const progress = height > 0 ? (scrolled / height) * 100 : 0;
+    scrollProgress.style.width = progress + '%';
   }
-  if (dots[slideIndex]) dots[slideIndex].className += " active";
+});
+
+// Form validation
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    
+    if (!name || !email || !message) {
+      alert('Please fill in all fields');
+      return;
+    }
+    
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+    
+    // Form submission logic here
+    alert('Form submitted successfully!');
+    console.log('Form submitted:', { name, email, message });
+  });
 }
 
-function plusSlides(n) {
-  slideIndex += n;
-  if (slideIndex >= slides.length) slideIndex = 0;
-  if (slideIndex < 0) slideIndex = slides.length - 1;
-  updateSlider();
-}
+// Performance monitoring
+window.addEventListener('load', () => {
+  const perfData = performance.getEntriesByType('navigation')[0];
+  console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
+});
 
-function currentSlide(n) {
-  slideIndex = n;
-  updateSlider();
-}
-
-// Initialize
-updateSlider();
+// Track article views (for analytics)
+document.querySelectorAll('#main article').forEach(article => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log('Viewed:', article.id);
+        // Add your analytics code here
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  observer.observe(article);
+});
 </script>
+
+<!-- Scroll Animations -->
+<script src="assets/js/scroll-animations.js"></script>
 
 	</body>
 </html>
