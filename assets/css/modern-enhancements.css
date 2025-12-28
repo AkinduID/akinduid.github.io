@@ -1120,3 +1120,644 @@ pre code {
     padding: 0;
     color: rgba(255, 255, 255, 0.9);
 }
+
+/* ===================================
+   MINIMAL & COMPACT OVERRIDES
+   =================================== */
+
+/* Reduce all section headers for minimal aesthetic */
+.section-header h2.major {
+    font-size: 1.7rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Compact intro paragraphs */
+article > p:not(.project-description) {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Tighter card spacing - Keep reasonable padding */
+.modern-card {
+    padding: 1rem !important;
+}
+
+/* Reduce glassmorphism blur for cleaner look */
+.glassmorphism {
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Compact project cards */
+.project-content {
+    padding: 1.2rem !important;
+}
+
+.project-content h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
+}
+
+.project-description {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.8rem !important;
+}
+
+/* Reduce project image height for compact design */
+.project-image {
+    height: 180px !important;
+}
+
+/* Compact tags */
+.tag {
+    padding: 0.35rem 0.7rem !important;
+    font-size: 0.72rem !important;
+    border-radius: 5px !important;
+}
+
+/* Smaller skill items */
+.skill-item {
+    padding: 0.8rem !important;
+    gap: 0.4rem !important;
+}
+
+.skill-item img {
+    width: 42px !important;
+    height: 42px !important;
+}
+
+.skill-label {
+    font-size: 0.75rem !important;
+}
+
+/* Compact skill category headers */
+.skills-category h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.8rem !important;
+    padding-left: 0.6rem !important;
+}
+
+/* Reduce skill grid gaps */
+.skills-icons {
+    gap: 0.8rem !important;
+    margin-top: 0.8rem !important;
+}
+
+/* Compact filter buttons */
+.filter-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.82rem !important;
+}
+
+.project-filters {
+    gap: 0.6rem !important;
+    margin-bottom: 1.8rem !important;
+}
+
+/* Tighter achievement cards */
+.achievements-grid .modern-card {
+    padding: 0.45rem !important;
+}
+
+/* Compact certification cards */
+article#achievements h4 {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Reduce connect card size */
+.connect-card {
+    padding: 1rem !important;
+}
+
+.connect-icon {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.connect-icon img {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.connect-info h4 {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+.connect-info p {
+    font-size: 0.78rem !important;
+}
+
+/* Reduce grid gaps globally */
+.projects-grid {
+    gap: 1.3rem !important;
+    margin-top: 1.8rem !important;
+}
+
+/* Minimal scroll progress bar */
+#scroll-progress {
+    height: 2px !important;
+}
+
+/* Compact back-to-top button */
+.back-to-top {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.3rem !important;
+    bottom: 25px !important;
+    right: 25px !important;
+}
+
+/* Reduce box shadows for cleaner look */
+.modern-card:hover {
+    box-shadow: 0 8px 28px rgba(79, 195, 247, 0.12) !important;
+}
+
+/* Minimal border styles */
+.modern-card, .glassmorphism {
+    border-width: 1px !important;
+}
+
+/* Compact responsive adjustments */
+@media screen and (max-width: 980px) {
+    .section-header h2.major {
+        font-size: 1.6rem !important;
+    }
+    
+    article > p {
+        font-size: 0.9rem !important;
+    }
+    
+    .project-image {
+        height: 160px !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .section-header h2.major {
+        font-size: 1.5rem !important;
+    }
+    
+    .project-content {
+        padding: 1rem !important;
+    }
+    
+    .skill-item {
+        padding: 0.7rem !important;
+    }
+    
+    .modern-card {
+        padding: 0.8rem !important;
+    }
+    
+    .back-to-top {
+        width: 42px !important;
+        height: 42px !important;
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+}
+
+/* Ultra-minimal white space */
+body {
+    letter-spacing: -0.01em;
+}
+
+/* Tighter line heights */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3 !important;
+}
+
+p {
+    line-height: 1.5 !important;
+}
+
+/* Compact list items */
+ul li, ol li {
+    line-height: 1.4 !important;
+}
+
+/* Clean focus states (less bold) */
+*:focus-visible {
+    outline-width: 1px !important;
+    outline-offset: 1px !important;
+}
+
+/* Minimal button padding */
+.button {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.85rem !important;
+}
+
+/* Reduce animation distances for subtlety */
+.modern-card:hover {
+    transform: translateY(-3px) !important;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px) scale(1.01) !important;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Cleaner gradients (less vibrant) */
+.gradient-text {
+    background: linear-gradient(135deg, #4fc3f7 0%, #00bcd4 50%, #0097a7 100%);
+    opacity: 0.95;
+}
+
+/* Minimal transition durations */
+.modern-card, .skill-item, .tag, .filter-btn {
+    transition-duration: 0.25s !important;
+}
+
+/* ===================================
+   ULTRA-CLEAN SPACING
+   =================================== */
+
+/* Remove excessive margins - but keep reasonable spacing */
+article {
+    padding: 2.5rem 0 !important;
+}
+
+/* Compact section spacing - increased for better readability */
+.section-header {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Tighter about section - increased spacing */
+.profile-header {
+    gap: 1.5rem !important;
+    margin-bottom: 1.8rem !important;
+}
+
+.profile-image-container {
+    width: 140px !important;
+    height: 140px !important;
+    border-width: 2px !important;
+}
+
+/* Minimal experience bullets */
+article#experience ul li {
+    padding: 0.3rem 0 !important;
+    padding-left: 1.3rem !important;
+    font-size: 0.88rem !important;
+}
+
+/* Compact two-column grids in About section */
+article#about [style*="grid"] {
+    gap: 1rem !important;
+}
+
+/* Reduce space between categories */
+.skills-category {
+    margin-bottom: 1.8rem !important;
+}
+
+/* Keep last category with some spacing */
+.skills-category:last-child {
+    margin-bottom: 1rem !important;
+}
+
+/* Minimal achievement section spacing */
+article#achievements > div {
+    margin-bottom: 1.8rem !important;
+}
+
+article#achievements h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.7rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* Compact certification grids - Keep minimal gap */
+article#achievements [style*="grid"] {
+    gap: 0.5rem !important;
+}
+
+/* Clean connect grid */
+.connect-grid {
+    gap: 1.2rem !important;
+    margin-top: 1.8rem !important;
+}
+
+/* Minimal form elements */
+.field {
+    margin-bottom: 1rem !important;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 0.7rem !important;
+    font-size: 0.88rem !important;
+}
+
+label {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.4rem !important;
+}
+
+/* Remove redundant spacing - FIX: Keep horizontal margins */
+.major {
+    margin-bottom: 0.8rem !important;
+}
+
+/* Tighter list styles */
+ul.icons {
+    margin-top: 0.8rem !important;
+}
+
+ul.icons li {
+    padding: 0 0.4rem !important;
+}
+
+/* Minimal contact icons */
+ul.icons a {
+    font-size: 1rem !important;
+}
+
+/* Reduce wrapper padding on mobile */
+@media screen and (max-width: 736px) {
+    article {
+        padding: 2rem 0 !important;
+    }
+    
+    .profile-header {
+        gap: 1rem !important;
+        flex-direction: column !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .profile-image-container {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .section-header {
+        margin-bottom: 1.2rem !important;
+    }
+}
+
+/* Minimal empty space between sections */
+#main > article + article {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2.5rem !important;
+}
+
+/* Ultra-compact mode for very focused content */
+.ultra-compact .modern-card {
+    padding: 0.7rem !important;
+}
+
+.ultra-compact h3 {
+    font-size: 1rem !important;
+}
+
+.ultra-compact p {
+    font-size: 0.85rem !important;
+}
+
+/* Clean, minimal shadows */
+.modern-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.glassmorphism {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Subtle, clean hover effects */
+.modern-card:hover {
+    box-shadow: 0 6px 20px rgba(79, 195, 247, 0.1) !important;
+}
+
+/* Minimal border-radius for cleaner look */
+.modern-card {
+    border-radius: 10px !important;
+}
+
+.glassmorphism {
+    border-radius: 10px !important;
+}
+
+.tag {
+    border-radius: 4px !important;
+}
+
+/* Clean typography - remove excessive boldness */
+strong {
+    font-weight: 600 !important;
+}
+
+/* Subtle gradient effects - FIX: Remove opacity to keep text visible */
+.gradient-text {
+    background: linear-gradient(135deg, #4fc3f7 0%, #00bcd4 50%, #0097a7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Minimal logo effects */
+.logo {
+    font-size: 1rem !important;
+}
+
+/* Clean navigation */
+nav ul li a {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.88rem !important;
+}
+
+/* Remove excessive blur */
+.glassmorphism {
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+}
+
+/* Cleaner borders */
+.modern-card, .glassmorphism, .skill-item, .project-card {
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Minimal glow effects */
+.modern-card:hover {
+    border-color: rgba(79, 195, 247, 0.2) !important;
+}
+
+/* ===================================
+   FIX: ADD MARGIN TO ARTICLE CONTENT
+   =================================== */
+
+/* Add proper spacing inside articles between header and content */
+#main article > *:first-child {
+    margin-top: 2rem !important;
+}
+
+/* Ensure section-header has proper top spacing */
+#main article .section-header:first-child {
+    margin-top: 0 !important;
+    padding-top: 2rem !important;
+}
+
+/* Add bottom margin to article content */
+#main article > *:last-child {
+    margin-bottom: 2rem !important;
+}
+
+/* Specific spacing for article sections */
+#main article {
+    padding: 2.5rem 2rem !important;
+}
+
+@media screen and (max-width: 980px) {
+    #main article {
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #main article {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    #main article .section-header:first-child {
+        padding-top: 1.5rem !important;
+    }
+}
+
+/* ===================================
+   MODERN UX/UI: REPOSITIONED HEADER & CLOSE BUTTON
+   Following Material Design & iOS principles
+   =================================== */
+
+/* Modern header with close button (non-sticky) */
+#main article .section-header:first-child {
+    position: relative !important;
+    z-index: 10 !important;
+    background: transparent !important;
+    padding: 0.4rem 2rem 1rem 2rem !important;
+    margin: 0 -2rem 2rem -2rem !important;
+    border-bottom: 1px solid rgba(79, 195, 247, 0.1) !important;
+}
+
+/* Position close button in header - top right with better spacing */
+#main article .close {
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    width: 3rem !important;
+    height: 3rem !important;
+    z-index: 101 !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#main article .close:hover {
+    background: rgba(79, 195, 247, 0.15) !important;
+    border-color: rgba(79, 195, 247, 0.3) !important;
+    transform: rotate(90deg) scale(1.1) !important;
+}
+
+#main article .close:active {
+    transform: rotate(90deg) scale(0.95) !important;
+}
+
+#main article .close:before {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    background-size: 16px 16px !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}
+
+#main article .close:hover:before {
+    background-color: transparent !important;
+}
+
+/* Better title positioning in sticky header */
+#main article .section-header:first-child h2.major {
+    margin: 0 3rem 0 0 !important;
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 980px) {
+    #main article .section-header:first-child {
+        padding: 1.2rem 1.5rem 0.8rem 1.5rem !important;
+        margin: 0 -1.5rem 1.5rem -1.5rem !important;
+    }
+    
+    #main article .close {
+        width: 2.8rem !important;
+        height: 2.8rem !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #main article .section-header:first-child {
+        padding: 1rem 1rem 0.8rem 1rem !important;
+        margin: 0 -1rem 1.2rem -1rem !important;
+    }
+    
+    #main article .section-header:first-child h2.major {
+        font-size: 1.4rem !important;
+        margin: 0 2.5rem 0 0 !important;
+    }
+    
+    #main article .close {
+        top: 0.8rem !important;
+        right: 0.8rem !important;
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+    
+    #main article .close:before {
+        width: 1.2rem !important;
+        height: 1.2rem !important;
+        background-size: 14px 14px !important;
+    }
+}
+
+/* Alternative: Top-aligned layout (commented out - use if preferred) */
+/*
+#main article .section-header:first-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-right: 4rem !important;
+}
+
+#main article .close {
+    position: absolute !important;
+    top: 1.5rem !important;
+    right: 1.5rem !important;
+}
+*/
+
+
+
+/* Smooth scroll behavior for sticky header */
+html {
+    scroll-padding-top: 5rem !important;
+}
+
+/* Prevent content jump when sticky activates */
+#main article .section-header:first-child + * {
+    margin-top: 0 !important;
+}
