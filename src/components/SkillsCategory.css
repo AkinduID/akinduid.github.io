@@ -1,0 +1,33 @@
+.skills-category {
+    margin-bottom: 2.5rem;
+}
+
+.skills-category:last-child {
+    margin-bottom: 0;
+}
+
+.animated-underline {
+    color: #4fc3f7;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    position: relative;
+    padding-left: 0.8rem;
+    margin-top: 0;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+
+@media (max-width: 600px) {
+    .skills-icons {
+        gap: 1rem;
+        justify-content: center;
+    }
+}

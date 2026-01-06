@@ -1,0 +1,118 @@
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.project-card:hover::after {
+    opacity: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 16px 48px rgba(79, 195, 247, 0.12);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.05), rgba(0, 188, 212, 0.05));
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(27, 31, 34, 0.8) 100%);
+}
+
+.project-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    transition: color 0.3s;
+    margin-top: 0;
+}
+
+.project-card:hover .project-content h3 {
+    color: #4fc3f7;
+}
+
+.project-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #4fc3f7;
+}
+
+.project-link i {
+    font-size: 1.1rem;
+}

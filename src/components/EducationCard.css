@@ -1,0 +1,40 @@
+.education-card {
+    margin-bottom: 0.6rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+    /* border-left: 3px solid #4fc3f7; */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.9rem;
+    /* background: linear-gradient(135deg, rgba(79, 195, 247, 0.08), rgba(0, 188, 212, 0.06)); */
+    border-radius: 12px;
+    /* border: 1px solid rgba(79, 195, 247, 0.25); */
+    /* box-shadow: 0 4px 16px rgba(79, 195, 247, 0.1); */
+}
+
+.education-card h4 {
+    color: #ffffff;
+    margin-bottom: 0.15rem;
+    font-size: 0.88rem;
+    margin-top: 0;
+}
+
+.edu-institution {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.1rem;
+    font-size: 0.78rem;
+    margin-top: 0;
+}
+
+.edu-details {
+    color: #4fc3f7;
+    font-size: 0.75rem;
+    margin-bottom: 0.1rem;
+    margin-top: 0;
+}
+
+.edu-sub-details {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}

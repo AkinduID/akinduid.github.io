@@ -1,0 +1,29 @@
+.achievement-card {
+    padding: 0.55rem;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    /* border-left: 3px solid #4fc3f7; */
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.achievement-card h4 {
+    color: #ffffff;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+
+.ach-subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+    margin-top: 0;
+}
+
+.ach-detail {
+    color: #4fc3f7;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}

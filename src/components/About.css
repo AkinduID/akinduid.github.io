@@ -1,0 +1,55 @@
+.about-container {
+    width: 100%;
+}
+
+.personal-statement {
+    line-height: 1.3;
+    color: rgba(255,255,255,0.85);
+    margin-top: 1rem;
+}
+
+.personal-statement h3 {
+    color: #4fc3f7;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.highlight-white {
+    color: #ffffff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.contact-card {
+    padding: 0.9rem;
+    background: linear-gradient(135deg, rgba(79, 195, 247, 0.08), rgba(0, 188, 212, 0.06));
+    border-radius: 12px;
+    border: 1px solid rgba(79, 195, 247, 0.25);
+    box-shadow: 0 4px 16px rgba(79, 195, 247, 0.1);
+}
+
+.contact-card h4 {
+    color: #4fc3f7;
+    font-size: 0.88rem;
+    margin-bottom: 0.4rem;
+    margin-top: 0;
+}
+
+.contact-card p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

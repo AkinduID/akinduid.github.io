@@ -1,0 +1,68 @@
+.projects-container {
+    width: 100%;
+}
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.6rem 1.2rem;
+    border-radius: 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.03em;
+    position: relative;
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #4fc3f7, #00bcd4);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.filter-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.filter-btn:hover {
+    border-color: rgba(79, 195, 247, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 195, 247, 0.2);
+    color: #ffffff;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #4fc3f7, #00bcd4);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 8px 24px rgba(79, 195, 247, 0.3);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

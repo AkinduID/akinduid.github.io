@@ -1,0 +1,18 @@
+.skills-container {
+    width: 100%;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.skills-category {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+}

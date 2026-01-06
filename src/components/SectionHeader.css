@@ -1,0 +1,24 @@
+.section-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3f7, #00bcd4);
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
