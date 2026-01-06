@@ -7,6 +7,7 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Achievements from './components/Achievements'
+import Volunteering from './components/Volunteering'
 import Connect from './components/Connect'
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
     { id: 'achievements', label: 'Achievements' },
+    { id: 'volunteering', label: 'Volunteering' },
     { id: 'connect', label: 'Connect' }
   ];
 
@@ -65,6 +67,7 @@ function App() {
             {activeTab === 'experience' && <Experience />}
             {activeTab === 'projects' && <Projects />}
             {activeTab === 'skills' && <Skills />}
+            {activeTab === 'volunteering' && <Volunteering />}
             {activeTab === 'achievements' && <Achievements />}
             {activeTab === 'connect' && <Connect />}
           </Window>
