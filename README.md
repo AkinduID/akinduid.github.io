@@ -1,6 +1,6 @@
-# React + Vite
+# AkinduID Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the source code for [akinduid.github.io](https://akinduid.github.io), built with React and Vite. This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
