@@ -156,6 +156,104 @@
 				max-width: 100%;
 			}
 		}
+
+		/* Sidebar Navigation */
+		#side-nav {
+			position: fixed;
+			left: -1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 10000;
+			padding: 1.5rem 1rem 1rem 2rem;
+			border-radius: 16px;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			width: 160px;
+		}
+
+		#side-nav ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#side-nav li {
+			width: 100%;
+			padding: 0;
+		}
+
+		#side-nav li a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		/* Responsive visibility */
+		@media screen and (min-width: 981px) {
+			#header nav {
+				display: none !important;
+			}
+		}
+
+		@media screen and (max-width: 980px) {
+			#side-nav {
+				display: none !important;
+			}
+			
+			/* Mobile Nav Styling to match Sidebar */
+			#header nav {
+				margin-top: 1rem;
+			}
+			
+			#header nav.use-middle:after {
+				display: none !important;
+			}
+			
+			#header nav ul {
+				border: none !important;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.5rem !important;
+			}
+			
+			#header nav ul li {
+				border: none !important;
+				padding: 0 !important;
+			}
+			
+			#header nav ul li a {
+				min-width: auto !important;
+				height: auto !important;
+				line-height: normal !important;
+				padding: 0.6rem 1.2rem !important;
+				border-radius: 24px !important;
+				border: 1px solid rgba(255, 255, 255, 0.1) !important;
+				text-transform: none !important;
+				letter-spacing: 0.03em !important;
+				font-size: 0.85rem !important;
+				background: transparent;
+			}
+			
+			#header nav ul li a:hover {
+				border-color: rgba(79, 195, 247, 0.4) !important;
+				transform: translateY(-2px);
+				box-shadow: 0 6px 20px rgba(79, 195, 247, 0.2);
+			}
+			
+			#header nav ul li a.active {
+				background: linear-gradient(135deg, #4fc3f7, #00bcd4) !important;
+				color: #ffffff !important;
+				border-color: transparent !important;
+				box-shadow: 0 8px 24px rgba(79, 195, 247, 0.3);
+			}
+		}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -164,6 +262,38 @@
 		
 		<!-- Scroll Progress Indicator -->
 		<div class="scroll-progress"></div>
+
+		<!-- Sidebar Navigation -->
+		<nav id="side-nav" class="glassmorphism">
+			<ul>
+				<li><a href="#about" class="filter-btn">About</a></li>
+				<li><a href="#experience" class="filter-btn">Experience</a></li>
+				<li><a href="#projects" class="filter-btn">Projects</a></li>
+				<li><a href="#skills" class="filter-btn">Skills</a></li>
+				<li><a href="#achievements" class="filter-btn">Achievements</a></li>
+				<li><a href="#connect" class="filter-btn">Connect</a></li>
+			</ul>
+		</nav>
+
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const navLinks = document.querySelectorAll('#side-nav a, #header nav a');
+			
+			function updateActiveLink() {
+				const hash = window.location.hash;
+				navLinks.forEach(link => {
+					if (link.getAttribute('href') === hash) {
+						link.classList.add('active');
+					} else {
+						link.classList.remove('active');
+					}
+				});
+			}
+
+			window.addEventListener('hashchange', updateActiveLink);
+			updateActiveLink(); // Initial check
+		});
+		</script>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -183,12 +313,12 @@
 						</div>
 						<nav>
 							<ul style="display: flex; gap: 0.35rem; flex-wrap: wrap; justify-content: center; margin-top: 0.6rem;">
-								<li><a href="#about" class="animated-underline" style="font-size: 0.9rem;">About</a></li>
-								<li><a href="#experience" class="animated-underline" style="font-size: 0.9rem;">Experience</a></li>
-								<li><a href="#projects" class="animated-underline" style="font-size: 0.9rem;">Projects</a></li>
-								<li><a href="#skills" class="animated-underline" style="font-size: 0.9rem;">Skills</a></li>
-								<li><a href="#achievements" class="animated-underline" style="font-size: 0.9rem;">Achievements</a></li>
-								<li><a href="#connect" class="animated-underline" style="font-size: 0.9rem;">Connect</a></li>
+								<li><a href="#about" class="filter-btn">About</a></li>
+								<li><a href="#experience" class="filter-btn">Experience</a></li>
+								<li><a href="#projects" class="filter-btn">Projects</a></li>
+								<li><a href="#skills" class="filter-btn">Skills</a></li>
+								<li><a href="#achievements" class="filter-btn">Achievements</a></li>
+								<li><a href="#connect" class="filter-btn">Connect</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -1093,7 +1223,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 <!-- Project Filtering Script -->
 <script>
 // Project filtering
-const filterButtons = document.querySelectorAll('.filter-btn');
+const filterButtons = document.querySelectorAll('.project-filters .filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(btn => {
