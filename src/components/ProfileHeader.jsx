@@ -16,7 +16,7 @@ const ProfileHeader = () => {
           <span className="text-dim">University of Moratuwa</span><br />
           <span className="text-italic">Expected Graduation: 2026 June</span>
         </p>
-        <a href="https://akinduid.github.io/my-cv/" className="button primary icon solid fa-download modern-card download-btn">Download Resume</a>
+        <a href="https://akinduid.github.io/my-cv/" className="button primary icon solid fa-download modern-card download-btn">Download Full CV</a>
       </div>
     </div>
   );
