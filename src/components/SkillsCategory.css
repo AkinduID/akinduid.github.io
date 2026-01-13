@@ -1,5 +1,5 @@
 .skills-category {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .skills-category:last-child {
@@ -21,7 +21,7 @@
 .skills-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 0.8rem;
     justify-content: flex-start;
 }
 

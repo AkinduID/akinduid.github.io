@@ -14,9 +14,9 @@ const ProfileHeader = () => {
         <p className="profile-subtitle">
           <strong className="highlight-blue">Computer Science & Engineering Student</strong><br />
           <span className="text-dim">University of Moratuwa</span><br />
-          <span className="text-italic">Expected Graduation: 2026</span>
+          <span className="text-italic">Expected Graduation: 2026 June</span>
         </p>
-        <a href="#" className="button primary icon solid fa-download modern-card download-btn">Download Resume</a>
+        <a href="https://akinduid.github.io/my-cv/" className="button primary icon solid fa-download modern-card download-btn">Download Resume</a>
       </div>
     </div>
   );

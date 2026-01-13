@@ -10,7 +10,7 @@ const Intro = () => {
           <p className="intro-subtitle">Embedded Systems | IoT & Robotics | ML/AI</p>
           <p className="intro-details">
             CS & Engineering | University of Moratuwa<br />
-            <span className="intro-grad">Expected Grad: 2026</span>
+            <span className="intro-grad">Expected Grad: 2026 June</span>
           </p>
         </div>
       </div>
