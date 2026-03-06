@@ -22,3 +22,9 @@
     margin-bottom: 1rem;
     margin-top: 0;
 }
+
+@media screen and (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+}
