@@ -23,6 +23,18 @@
     margin-top: 0;
 }
 
+@media screen and (max-width: 768px) {
+    .section-header {
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .section-header h2 {
         font-size: 1.4rem;

@@ -72,14 +72,36 @@
     .profile-header {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
     }
     
     .profile-image {
-        max-width: 100%;
+        max-width: 180px;
+        width: 180px;
     }
 
     .profile-content {
         min-width: 0;
         width: 100%;
+    }
+
+    .profile-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .profile-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-image {
+        max-width: 140px;
+        width: 140px;
+    }
+
+    .profile-content h3 {
+        font-size: 1rem;
     }
 }
