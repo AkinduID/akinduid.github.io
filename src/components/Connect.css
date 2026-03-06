@@ -144,4 +144,17 @@ input[type="submit"].primary:hover,
     .button {
         width: 100%;
     }
+
+    .connect-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .contact-form-section {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .contact-form-section h2 {
+        font-size: 1.4rem;
+    }
 }

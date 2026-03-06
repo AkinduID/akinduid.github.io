@@ -83,3 +83,18 @@
     font-weight: 500;
     border: 1px solid rgba(79, 195, 247, 0.3);
 }
+
+@media screen and (max-width: 768px) {
+    .experience-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .exp-header h3 {
+        font-size: 1rem;
+    }
+
+    .exp-list li {
+        font-size: 0.88rem;
+    }
+}
