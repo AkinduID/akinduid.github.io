@@ -121,6 +121,15 @@
 
 		}
 
+		@media screen and (max-width: 768px) {
+
+			#wrapper {
+				justify-content: flex-start;
+				padding-top: 0;
+			}
+
+		}
+
 		@media screen and (max-width: 736px) {
 
 			#wrapper {

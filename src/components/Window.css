@@ -98,8 +98,10 @@
     background-color: rgba(255, 255, 255, 0.175);
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 768px) {
     .window {
+        width: 95vw;
+        max-width: 95vw;
         padding: 2.5rem 1.5rem 1rem 1.5rem;
         max-height: 90vh;
     }
