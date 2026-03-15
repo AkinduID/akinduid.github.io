@@ -1,12 +1,9 @@
 import React from 'react';
-import SectionHeader from './SectionHeader';
 import './Volunteering.css';
 
 const Volunteering = () => {
   return (
     <div className="volunteering-container">
-      <SectionHeader title="Volunteering" />
-      
       <p className="section-subtitle">
         Leadership roles and community engagement
       </p>

@@ -16,13 +16,13 @@ function App() {
   const [direction, setDirection] = useState('fade')
 
   const navItems = [
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'achievements', label: 'Achievements' },
-    { id: 'volunteering', label: 'Volunteering' },
-    { id: 'connect', label: 'Connect' }
+    { id: 'about', label: 'About', title: 'About Me' },
+    { id: 'experience', label: 'Experience', title: 'Professional Experience' },
+    { id: 'projects', label: 'Projects', title: 'Projects' },
+    { id: 'skills', label: 'Skills', title: 'Tech Stack' },
+    { id: 'achievements', label: 'Achievements', title: 'Achievements' },
+    { id: 'volunteering', label: 'Volunteering', title: 'Volunteering' },
+    { id: 'connect', label: 'Connect', title: "Let's Connect" }
   ];
 
   const handleNavClick = (tabId) => {
@@ -62,7 +62,12 @@ function App() {
         />
         <Intro />
         {activeTab && (
-          <Window key={activeTab} onClose={() => setActiveTab(null)} direction={direction}>
+          <Window 
+            key={activeTab} 
+            onClose={() => setActiveTab(null)} 
+            direction={direction}
+            title={navItems.find(item => item.id === activeTab)?.title}
+          >
             {activeTab === 'about' && <About />}
             {activeTab === 'experience' && <Experience />}
             {activeTab === 'projects' && <Projects />}

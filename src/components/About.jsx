@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionHeader from './SectionHeader';
 import ProfileHeader from './ProfileHeader';
 import EducationCard from './EducationCard';
 import './About.css';
@@ -7,7 +6,6 @@ import './About.css';
 const About = () => {
   return (
     <div className="about-container">
-      <SectionHeader title="About Me" />
       <ProfileHeader />
       
       <div className="personal-statement">

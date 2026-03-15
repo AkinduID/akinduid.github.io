@@ -1,13 +1,10 @@
 import React from 'react';
-import SectionHeader from './SectionHeader';
 import AchievementCard from './AchievementCard';
 import './Achievements.css';
 
 const Achievements = () => {
   return (
     <div className="achievements-container">
-      <SectionHeader title="Achievements" />
-      
       <p className="section-subtitle">
         Recognition, certifications, and leadership roles that shape my journey
       </p>

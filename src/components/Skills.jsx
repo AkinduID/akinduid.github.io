@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionHeader from './SectionHeader';
 import SkillsCategory from './SkillsCategory';
 import SkillItem from './SkillItem';
 import './Skills.css';
@@ -62,8 +61,6 @@ import colab from '../assets/images/ides/colab.svg';
 const Skills = () => {
   return (
     <div className="skills-container">
-      <SectionHeader title="Tech Stack" />
-      
       <p className="section-subtitle">
         Technologies and tools I work with to bring ideas to life
       </p>

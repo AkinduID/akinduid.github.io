@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 
@@ -116,8 +115,6 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <SectionHeader title="Projects" />
-      
       <p className="section-subtitle">
         Explore my portfolio of innovative projects spanning embedded systems, ML/AI, and full-stack development
       </p>

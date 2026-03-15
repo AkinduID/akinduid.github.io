@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionHeader from './SectionHeader';
 import ConnectCard from './ConnectCard';
 import './Connect.css';
 
@@ -17,8 +16,6 @@ import flickr from '../assets/images/social/flickr.png';
 const Connect = () => {
   return (
     <div className="connect-container">
-      <SectionHeader title="Let's Connect" />
-      
       <p className="section-subtitle">
         Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or collaboration opportunities.
       </p>

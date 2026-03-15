@@ -1,13 +1,10 @@
 import React from 'react';
-import SectionHeader from './SectionHeader';
 import ExperienceCard from './ExperienceCard';
 import './Experience.css';
 
 const Experience = () => {
   return (
     <div className="experience-container">
-      <SectionHeader title="Professional Experience" />
-      
       <p className="section-subtitle">
         Building real-world solutions through internships and professional work
       </p>
