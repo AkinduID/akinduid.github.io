@@ -9,7 +9,7 @@ const Volunteering = () => {
       </p> */}
 
       <div className="volunteering-section">
-        <h3 className="vol-section-title">Leadership & Extracurricular</h3>
+        <h3 className="vol-section-title">University of Moratuwa</h3>
         
         <div className="leadership-group">
           <h4 className="leadership-title">IEEE Robotics and Automation Society, UoM</h4>
@@ -43,6 +43,31 @@ const Volunteering = () => {
           <ul className="leadership-list">
             <li><span className="bullet">▹</span>Stridian 2025 Media Team | Jul – Sep 2025</li>
             <li><span className="bullet">▹</span>Stridian 2024 Health Team | Jul – Sep 2024</li>
+          </ul>
+        </div>
+      </div>
+      <div className="volunteering-section">
+        <h3 className="vol-section-title">Sivali Central College</h3>
+        
+        <div className="leadership-group">
+          <h4 className="leadership-title">Sivali Astronomy Union</h4>
+          <ul className="leadership-list">
+            <li><span className="bullet">▹</span><strong>President</strong> | Oct 2018 – Oct 2019</li>
+          </ul>
+        </div>
+
+        <div className="leadership-group">
+          <h4 className="leadership-title">Sivali Scout Group</h4>
+          <ul className="leadership-list">
+            <li><span className="bullet">▹</span>Senior Scout | Jul 2017 – Jul 2020</li>
+            <li><span className="bullet">▹</span>Junior Scout | Jan 2014 – Jul 2017</li>
+          </ul>
+        </div>
+
+        <div className="leadership-group">
+          <h4 className="leadership-title">Sivali Prefects Guild</h4>
+          <ul className="leadership-list">
+            <li><span className="bullet">▹</span>Junior Prefect | Jan 2017 – Jan 2018</li>
           </ul>
         </div>
       </div>
