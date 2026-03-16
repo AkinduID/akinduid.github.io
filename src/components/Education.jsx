@@ -5,34 +5,33 @@ import './Education.css';
 const Education = () => {
   return (
     <div className="education-container">
-      
-      <div className="education-content">
-        
-        <div className="education-grid">
-          <div className="education-column">
-            <h3>Education</h3>
-            <EducationCard 
-              title="BSc Eng (Hons), CSE"
-              institution="University of Moratuwa"
-              year="2022-2026"
-              details="Integrated Computer Engineering"
-              subDetails="Dean's List: Semester 6"
-            />
-            <EducationCard 
-              title="Diploma in English"
-              institution="SUSL"
-              year="2021-2022"
-              subDetails="Credit Pass"
-            />
-            <EducationCard 
-              title="GCE Advanced Level"
-              institution="Sivali Central College"
-              year="2020"
-              subDetails="Physical Science | 3A Passes"
-            />
-          </div>
-        </div>
-      </div>
+      <EducationCard 
+        institution="University of Moratuwa"
+        degree="BSc Hons in Engineering"
+        year="2022-2026"
+        details={[
+          'Specialization - Computer Science and Engineering',
+          'Stream - Integrated Computer Engineering',
+          'CGPA - 3.5'
+        ]}
+      />
+      <EducationCard 
+        institution="Sabaragamuwa University of Sri Lanka"
+        degree="Diploma in English"
+        year="2021-2022"
+        details={[
+          'Credit Pass'
+        ]}
+      />
+      <EducationCard 
+        institution="Sivali Central College"
+        degree="GCE Advanced Level & Ordinary Level"
+        year="2007-2020"
+        details={[
+          '<strong style="color: #4fc3f7;">GCE Advanced Level (2020)</strong> - Physical Science Stream | 3A Passes | Island Rank - 423 | District Rank - 13',
+          '<strong style="color: #4fc3f7;">GCE Ordinary Level (2017)</strong> - 9A Passes'
+        ]}
+      />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .education-card {
-    margin-bottom: 1.2rem;
+    margin-bottom: 0;
     padding: 1.2rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 14px;
@@ -28,7 +28,7 @@
     flex-direction: column;
 }
 
-.edu-institution {
+.edu-degree {
     color: #4fc3f7;
     margin-bottom: 0.2rem;
     font-size: 0.9rem;
@@ -42,21 +42,26 @@
     white-space: nowrap;
 }
 
-.edu-content {
-   margin-top: 0.5rem;
-}
-
-.edu-details {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
-    margin-top: 0;
-}
-
-.edu-sub-details {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.85rem;
-    font-style: italic;
-    margin-top: 0;
+.edu-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
     margin-bottom: 0;
+}
+
+.edu-list li {
+    padding: 0.2rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.edu-bullet {
+    position: absolute;
+    left: 0;
+    color: #4fc3f7;
+    font-size: 0.8rem;
+    top: 0.3rem; 
 }
