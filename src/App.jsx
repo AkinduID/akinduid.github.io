@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Window from './components/Window'
 import Intro from './components/Intro'
-import About from './components/About'
+import Education from './components/Education'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
@@ -16,7 +16,7 @@ function App() {
   const [direction, setDirection] = useState('fade')
 
   const navItems = [
-    { id: 'about', label: 'About', title: 'About Me' },
+    { id: 'education', label: 'Education', title: 'Education' },
     { id: 'experience', label: 'Experience', title: 'Professional Experience' },
     { id: 'projects', label: 'Projects', title: 'Projects' },
     { id: 'skills', label: 'Skills', title: 'Tech Stack' },
@@ -68,7 +68,7 @@ function App() {
             direction={direction}
             title={navItems.find(item => item.id === activeTab)?.title}
           >
-            {activeTab === 'about' && <About />}
+            {activeTab === 'education' && <Education />}
             {activeTab === 'experience' && <Experience />}
             {activeTab === 'projects' && <Projects />}
             {activeTab === 'skills' && <Skills />}
