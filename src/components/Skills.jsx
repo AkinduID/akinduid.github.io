@@ -61,9 +61,9 @@ import colab from '../assets/images/ides/colab.svg';
 const Skills = () => {
   return (
     <div className="skills-container">
-      <p className="section-subtitle">
+      {/* <p className="section-subtitle">
         Technologies and tools I work with to bring ideas to life
-      </p>
+      </p> */}
       
       <div className="skills-content">
         <SkillsCategory title="Programming Languages">

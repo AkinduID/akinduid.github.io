@@ -4,9 +4,9 @@ import './Volunteering.css';
 const Volunteering = () => {
   return (
     <div className="volunteering-container">
-      <p className="section-subtitle">
+      {/* <p className="section-subtitle">
         Leadership roles and community engagement
-      </p>
+      </p> */}
 
       <div className="volunteering-section">
         <h3 className="vol-section-title">Leadership & Extracurricular</h3>

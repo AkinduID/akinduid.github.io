@@ -5,9 +5,9 @@ import './Achievements.css';
 const Achievements = () => {
   return (
     <div className="achievements-container">
-      <p className="section-subtitle">
+      {/* <p className="section-subtitle">
         Recognition, certifications, and leadership roles that shape my journey
-      </p>
+      </p> */}
       
       <div className="achievements-section">
         <h3 className="ach-section-title">Awards & Honors</h3>

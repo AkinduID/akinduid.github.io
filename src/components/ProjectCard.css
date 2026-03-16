@@ -7,6 +7,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height:100%; /* Make card take full height */
+    /* max-height: 60vh; Limit height to prevent overflow of window */
 }
 
 .project-card::after {
@@ -37,7 +39,8 @@
 .project-image {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 35%; /* Reduced height */
+    flex-shrink: 0; /* Prevent image from shrinking */
     background: linear-gradient(135deg, rgba(79, 195, 247, 0.05), rgba(0, 188, 212, 0.05));
 }
 
@@ -59,53 +62,107 @@
     background: linear-gradient(180deg, transparent 0%, rgba(27, 31, 34, 0.8) 100%);
 }
 
-.project-content {
-    padding: 1.5rem;
+.project-content{
+    padding: 15px;
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* Allow content to scroll if it's too long */
+    flex-direction: column;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between; /* Space out title and icon */
+    align-items: flex-start; /* Align to top */
+    margin-bottom: 0.25rem; /* Space below header */
 }
 
 .project-content h3 {
     color: #ffffff;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem; /* Compact: reduced font size */
     font-weight: 600;
     transition: color 0.3s;
-    margin-top: 0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Increased size for tap target */
+    height: 24px;
+    margin-left: 0.5rem;
+    padding: 0;
+    border-radius: 50%;
+    /* background: rgba(255, 255, 255, 0.1); removed background */
+    background: transparent;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.github-link:hover {
+    /* background: rgba(255, 255, 255, 0.2); removed background */
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.github-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block; /* Remove any inline spacing */
 }
 
 .project-card:hover .project-content h3 {
     color: #4fc3f7;
 }
 
+.project-meta {
+    display: flex;
+    font-size: 0.75rem; /* Standardize font size */
+    justify-content: space-between;
+    align-items: center;
+    margin: -0.1rem; /* Slight margin */
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .project-description {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.88rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem; /* Compact: smaller font */
+    line-height: 1.35; /* Compact: tighter line height */
+    margin: 0.1rem; /* Compact: reduced margin */
     flex-grow: 1;
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 0.35rem; /* Compact: tighter gap */
+    margin-bottom: 0.1rem; /* Compact: reduced margin */
+}
+
+.project-tag {
+    /* Assuming there's a tag class or elements within .project-tags */
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
 }
 
 .project-links {
     display: flex;
     gap: 1rem;
     margin-top: auto;
+    padding-top: 0.5rem; /* Add subtle separation */
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Add subtle separator */
 }
 
 .project-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem; /* Compact: reduced gap */
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Compact: smaller font */
     transition: color 0.3s;
 }
 
@@ -116,3 +173,14 @@
 .project-link i {
     font-size: 1.1rem;
 }
+.project-meta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.project-meta-info {
+    flex: 1;
+    padding-right: 0.5rem;
+} 

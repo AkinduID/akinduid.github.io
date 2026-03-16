@@ -16,9 +16,9 @@ import flickr from '../assets/images/social/flickr.png';
 const Connect = () => {
   return (
     <div className="connect-container">
-      <p className="section-subtitle">
+      {/* <p className="section-subtitle">
         Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or collaboration opportunities.
-      </p>
+      </p> */}
       
       <div className="connect-grid">
         <ConnectCard icon={email} title="Email" handle="akinduid@gmail.com" link="mailto:akinduid@gmail.com" />
@@ -32,7 +32,7 @@ const Connect = () => {
         <ConnectCard icon={flickr} title="Flickr" handle="@akinduid" link="https://flickr.com/people/akinduid" />
       </div>
 
-      <div className="contact-form-section">
+      {/* <div className="contact-form-section">
         <h2 className="major gradient-text">Contact</h2>
         <form method="post" action="#">
           <div className="fields">
@@ -54,7 +54,7 @@ const Connect = () => {
             <li><input type="reset" value="Reset" /></li>
           </ul>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };
