@@ -52,3 +52,13 @@
         font-size: 1.4rem;
     }
 }
+
+.section-header-gradient-text {
+  background: linear-gradient(135deg, #4fc3f7 0%, #00bcd4 50%, #0097a7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #4fc3f7;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 0px 16px rgba(0, 0, 0, 0.9));
+}

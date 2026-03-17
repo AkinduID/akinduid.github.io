@@ -3,15 +3,15 @@ import ConnectCard from './ConnectCard';
 import './Connect.css';
 
 // Social Icons
-import email from '../assets/images/social/email.png';
-import linkedin from '../assets/images/social/linkedin.png';
-import github from '../assets/images/social/github.png';
-import instagram from '../assets/images/social/instagram.png';
-import twitter from '../assets/images/social/twitter.png';
-import behance from '../assets/images/social/behance.png';
-import facebook from '../assets/images/social/facebook.png';
-import discord from '../assets/images/social/discord.png';
-import flickr from '../assets/images/social/flickr.png';
+import email from '../../assets/images/social/email.png';
+import linkedin from '../../assets/images/social/linkedin.png';
+import github from '../../assets/images/social/github.png';
+import instagram from '../../assets/images/social/instagram.png';
+import twitter from '../../assets/images/social/twitter.png';
+import behance from '../../assets/images/social/behance.png';
+import facebook from '../../assets/images/social/facebook.png';
+import discord from '../../assets/images/social/discord.png';
+import flickr from '../../assets/images/social/flickr.png';
 
 const Connect = () => {
   return (

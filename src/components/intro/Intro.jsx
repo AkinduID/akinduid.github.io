@@ -1,5 +1,5 @@
 import React from 'react';
-import pic01 from '../assets/pic01.jpg';
+import pic01 from '../../assets/pic01.jpg';
 import './Intro.css';
 
 const Intro = () => {

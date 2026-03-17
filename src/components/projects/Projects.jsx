@@ -3,12 +3,12 @@ import ProjectCard from './ProjectCard';
 import './Projects.css';
 
 // Import images
-import pic02 from '../assets/pic02.jpg';
-import pic05 from '../assets/pic05.jpg';
-import quot3d from '../assets/quot3d.png';
-import infraportal from '../assets/infraportal.png';
-import fazetrak from '../assets/fazetrak.jpg';
-import aspiretrust from '../assets/aspiretrust.png';
+import pic02 from '../../assets/pic02.jpg';
+import pic05 from '../../assets/pic05.jpg';
+import quot3d from '../../assets/quot3d.png';
+import infraportal from '../../assets/infraportal.png';
+import fazetrak from '../../assets/fazetrak.jpg';
+import aspiretrust from '../../assets/aspiretrust.png';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');

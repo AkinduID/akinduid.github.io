@@ -10,7 +10,7 @@ const VolunteeringCard = ({ organization, details, logo }) => {
         </div>
         
         <div className="vol-title-group">
-          <h3 className="gradient-text">{organization}</h3>
+          <h3 className="section-header-gradient-text">{organization}</h3>
         </div>
         
         <div className="vol-details">

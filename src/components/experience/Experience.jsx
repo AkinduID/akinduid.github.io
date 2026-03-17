@@ -1,8 +1,8 @@
 import React from 'react';
 import ExperienceCard from './ExperienceCard';
 import './Experience.css';
-import uomLogo from '../assets/images/uomcse-448x212.png';
-import wso2Logo from '../assets/images/WSO2_Software_Logo.png';
+import uomLogo from '../../assets/images/uomcse-448x212.png';
+import wso2Logo from '../../assets/images/WSO2_Software_Logo.png';
 
 const Experience = () => {
   return (

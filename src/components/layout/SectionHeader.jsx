@@ -4,7 +4,7 @@ import './SectionHeader.css';
 const SectionHeader = ({ title }) => {
   return (
     <div className="section-header">
-      <h2 className="major gradient-text">{title}</h2>
+      <h2 className="major section-header-gradient-text">{title}</h2>
     </div>
   );
 };
