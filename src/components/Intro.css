@@ -65,6 +65,11 @@ body.is-article-visible .intro-container {
     /* border: 4px solid rgba(255, 255, 255, 0.1); */
     padding: 0;
     background: transparent;
+    transition: transform 0.5s ease;
+}
+
+.profile-image.modern-card:hover {
+    transform: scale(1.05);
 }
 
 .profile-image.modern-card img {
@@ -72,12 +77,12 @@ body.is-article-visible .intro-container {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    /* transition: transform 0.5s ease; */
 }
 
-.profile-image.modern-card:hover img {
+/* .profile-image.modern-card:hover img {
     transform: scale(1.05);
-}
+} */
 
 .intro-right {
     max-width: 600px;
@@ -105,6 +110,13 @@ body.is-article-visible .intro-container {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: #4fc3f7;
+  /* filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); */
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 0px 16px rgba(0, 0, 0, 0.9));
+}
+
+.gradient-text:hover {
+  transform: scale(1.05);
 }
 
 .intro-description {
@@ -113,10 +125,18 @@ body.is-article-visible .intro-container {
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0.1rem;
     margin-top:-1rem;
+    filter: drop-shadow(0 0px 16px rgba(0, 0, 0, 0.9));
+    /* transition: transform 0.5s ease; */
 }
 
 .intro-description p {
     margin-bottom: 0.8rem;
+    filter: drop-shadow(0 0px 16px rgba(0, 0, 0, 0.9));
+    transition: transform 0.5s ease;
+}
+
+.intro-description p:hover {
+  transform: scale(1.05);
 }
 .intro-description p:last-child {
     margin-bottom: 0;
@@ -146,14 +166,16 @@ body.is-article-visible .intro-container {
   backdrop-filter: blur(5px);
   margin-top: -0.1rem;
   margin-bottom: 0.1rem;
+  filter: drop-shadow(0 0px 16px rgba(0, 0, 0, 0.5));
+  transition: transform 0.4s ease;
 }
 
 .intro-cv-button:hover {
   background: rgba(79, 195, 247, 0.2);
   border-color: #4fc3f7;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
-  color: #ffffff !important;
+  /* transform: translateY(-2px); */
+  /* filter: drop-shadow(0 0px 16px rgba(0, 0, 0, 0.7)); */
+  transform: scale(1.07);
 }
 
 /* Mobile responsive styles */
