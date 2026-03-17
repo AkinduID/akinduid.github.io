@@ -1,6 +1,8 @@
 import React from 'react';
 import ExperienceCard from './ExperienceCard';
 import './Experience.css';
+import uomLogo from '../assets/images/uomcse-448x212.png';
+import wso2Logo from '../assets/images/WSO2_Software_Logo.png';
 
 const Experience = () => {
   return (
@@ -10,8 +12,9 @@ const Experience = () => {
       </p> */}
       
       <ExperienceCard 
+        logo={uomLogo}
         role="Teaching Assistant"
-        company="University of Moratuwa"
+        company="Department of Computer Science and Engineering, University of Moratuwa"
         team="Robotics and Automation"
         date="Feb 2026 - Jun 2026"
         tasks={[
@@ -22,6 +25,7 @@ const Experience = () => {
         tags={['ROS', 'Gazebo', 'Nav2', 'GitHub', 'GitHub Actions', 'GitHub Classroom', 'Ubuntu']}
       />
       <ExperienceCard 
+        logo={wso2Logo}
         role="Intern Software Engineer"
         company="WSO2"
         team="Digital Transformation Team"

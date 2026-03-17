@@ -1,11 +1,15 @@
 import React from 'react';
 import EducationCard from './EducationCard';
 import './Education.css';
+import uomLogo from '../assets/images/University_of_Moratuwa_logo.png';
+import suslLogo from '../assets/images/Logo-SUSL.png';
+import sccLogo from '../assets/images/SCC Logo.png';
 
 const Education = () => {
   return (
     <div className="education-container">
       <EducationCard 
+        logo={uomLogo}
         institution="University of Moratuwa"
         degree="BSc Hons in Engineering"
         year="2022-2026"
@@ -16,6 +20,7 @@ const Education = () => {
         ]}
       />
       <EducationCard 
+        logo={suslLogo}
         institution="Sabaragamuwa University of Sri Lanka"
         degree="Diploma in English"
         year="2021-2022"
@@ -24,6 +29,7 @@ const Education = () => {
         ]}
       />
       <EducationCard 
+        logo={sccLogo}
         institution="Sivali Central College"
         degree="GCE Advanced Level & Ordinary Level"
         year="2007-2020"
