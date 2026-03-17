@@ -49,10 +49,15 @@
 }
 
 .filter-btn.active {
-    background: linear-gradient(135deg, #4fc3f7, #00bcd4);
+    /* background: linear-gradient(135deg, #4fc3f7, #00bcd4);
     color: #ffffff;
     border-color: transparent;
+    box-shadow: 0 8px 24px rgba(79, 195, 247, 0.3); */
+    background: rgba(79, 195, 247, 0.3);
+    color: #ffffff !important;
+    border-color: transparent;
     box-shadow: 0 8px 24px rgba(79, 195, 247, 0.3);
+    border: 1px solid rgba(79, 195, 247, 0.5);
 }
 
 .projects-grid {

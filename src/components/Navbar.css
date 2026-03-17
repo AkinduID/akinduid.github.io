@@ -78,10 +78,11 @@
 }
 
 .navbar ul li button.active {
-  background: linear-gradient(135deg, #4fc2f7, #00bbd4);
-  color: #ffffff;
+  background: rgba(79, 195, 247, 0.2);
+  color: #ffffff !important;
   border-color: transparent;
   box-shadow: 0 8px 24px rgba(79, 195, 247, 0.3);
+  border: 1px solid rgba(79, 195, 247, 0.5);
 }
 
 /* Desktop Styles (Vertical Sidebar) */
