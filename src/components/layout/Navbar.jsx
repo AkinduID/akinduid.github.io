@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import favicon from '../../assets/favicon.png';
+import favicon from '../../assets/images/favicon.png';
 
 const Navbar = ({ onNavClick, activeTab, items, onLogoClick }) => {
   return (

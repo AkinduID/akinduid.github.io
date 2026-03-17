@@ -3,12 +3,16 @@ import ProjectCard from './ProjectCard';
 import './Projects.css';
 
 // Import images
-import pic02 from '../../assets/pic02.jpg';
-import pic05 from '../../assets/pic05.jpg';
-import quot3d from '../../assets/quot3d.png';
-import infraportal from '../../assets/infraportal.png';
-import fazetrak from '../../assets/fazetrak.jpg';
-import aspiretrust from '../../assets/aspiretrust.png';
+import medibox from '../../assets/images/projects/medibox.png';
+import minershield from '../../assets/images/projects/minershield.jpg';
+import nanoprocessor from '../../assets/images/projects/nanoprocessor.jpg';
+import audio_spectrum from '../../assets/images/projects/audio_spectrum_visualizer.png';
+import jetvio from '../../assets/images/projects/jetvio.jpg';
+import mechapulse from '../../assets/images/projects/mechapulse.png';
+import quot3d from '../../assets/images/projects/quot3d.png';
+import infraportal from '../../assets/images/projects/infraportal.png';
+import fazetrak from '../../assets/images/projects/fazetrak.jpg';
+import aspiretrust from '../../assets/images/projects/aspiretrust.png';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -16,7 +20,7 @@ const Projects = () => {
   const projects = [
     {
       title: "JetVIO",
-      image: pic02,
+      image: jetvio,
       date: "Jul 2025 – Ongoing",
       projectType: "University of Moratuwa",
       teamType: "Group Project",
@@ -27,7 +31,7 @@ const Projects = () => {
     },
     {
       title: "FPGA Audio Spectrum Analyzer",
-      image: pic05,
+      image: audio_spectrum,
       date: "Jul 2025 – Dec 2025",
       projectType: "University of Moratuwa",
       teamType: "Group Project",
@@ -70,7 +74,7 @@ const Projects = () => {
     },
     {
       title: "MinerShield",
-      image: pic05,
+      image: minershield,
       date: "Jul 2024 – Oct 2024",
       projectType: "Evolve IoT Mini Research Competition",
       teamType: "Group Project",
@@ -81,7 +85,7 @@ const Projects = () => {
     },
     {
       title: "MechaPulse",
-      image: pic02,
+      image: mechapulse,
       date: "Jan 2024 – May 2024",
       projectType: "SLIoT 2024",
       teamType: "Group Project",
@@ -92,7 +96,7 @@ const Projects = () => {
     },
     {
       title: "Smart MediBox",
-      image: pic05,
+      image: medibox,
       date: "Jan 2024 – Mar 2024",
       projectType: "University of Moratuwa",
       teamType: "Individual Project",
@@ -114,7 +118,7 @@ const Projects = () => {
     },
     {
       title: "Nanoprocessor",
-      image: pic05,
+      image: nanoprocessor,
       date: "May 2023 – Jun 2023",
       projectType: "University of Moratuwa",
       teamType: "Group Project",

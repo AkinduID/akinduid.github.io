@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProjectCard.css';
-import github from '../../assets/images/devops/github.svg';
+import github from '../../assets/images/skills/devops/github.svg';
 
 const ProjectCard = ({ image, title, date, projectType, teamType, description, tags, link, category }) => {
   return (

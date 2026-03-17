@@ -1,9 +1,9 @@
 import React from 'react';
 import EducationCard from './EducationCard';
 import './Education.css';
-import uomLogo from '../../assets/images/University_of_Moratuwa_logo.png';
-import suslLogo from '../../assets/images/Logo-SUSL.png';
-import sccLogo from '../../assets/images/SCC Logo.png';
+import uomLogo from '../../assets/images/institutes/University_of_Moratuwa_logo.png';
+import suslLogo from '../../assets/images/institutes/Logo-SUSL.png';
+import sccLogo from '../../assets/images/institutes/SCC Logo.png';
 
 const Education = () => {
   return (

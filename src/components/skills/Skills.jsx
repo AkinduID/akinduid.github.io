@@ -4,59 +4,59 @@ import SkillItem from './SkillItem';
 import './Skills.css';
 
 // Programming Languages
-import python from '../../assets/images/programming/python.png';
-import cpp from '../../assets/images/programming/cpp.png';
-import c from '../../assets/images/programming/c.png';
-import java from '../../assets/images/programming/java.png';
-import csharp from '../../assets/images/programming/csharp.png';
-import vhdl from '../../assets/images/programming/vhdl.svg';
-import markdown from '../../assets/images/programming/markdown.png';
-import javascript from '../../assets/images/programming/javascript.png';
+import python from '../../assets/images/skills/programming/python.png';
+import cpp from '../../assets/images/skills/programming/cpp.png';
+import c from '../../assets/images/skills/programming/c.png';
+import java from '../../assets/images/skills/programming/java.png';
+import csharp from '../../assets/images/skills/programming/csharp.png';
+import vhdl from '../../assets/images/skills/programming/vhdl.svg';
+import markdown from '../../assets/images/skills/programming/markdown.png';
+import javascript from '../../assets/images/skills/programming/javascript.png';
 
 // Frontend
-import html5 from '../../assets/images/frontend/html5.png';
-import css3 from '../../assets/images/frontend/css3.png';
-import streamlit from '../../assets/images/frontend/streamlit.svg';
-import pyqt from '../../assets/images/frontend/pyqt.svg';
-import react from '../../assets/images/frontend/react.svg';
-import redux from '../../assets/images/frontend/redux.svg';
-import nodered from '../../assets/images/frontend/nodered.svg';
+import html5 from '../../assets/images/skills/frontend/html5.png';
+import css3 from '../../assets/images/skills/frontend/css3.png';
+import streamlit from '../../assets/images/skills/frontend/streamlit.svg';
+import pyqt from '../../assets/images/skills/frontend/pyqt.svg';
+import react from '../../assets/images/skills/frontend/react.svg';
+import redux from '../../assets/images/skills/frontend/redux.svg';
+import nodered from '../../assets/images/skills/frontend/nodered.svg';
 
 // ML/AI
-import opencv from '../../assets/images/ml/opencv.png';
-import tensorflow from '../../assets/images/ml/tensorflow.svg';
-import pytorch from '../../assets/images/ml/pytorch.svg';
-import mediapipe from '../../assets/images/ml/mediapipe.png';
-import numpy from '../../assets/images/ml/numpy.svg';
-import pandas from '../../assets/images/ml/pandas.svg';
-import matplotlib from '../../assets/images/ml/matplotlib.svg';
+import opencv from '../../assets/images/skills/ml/opencv.png';
+import tensorflow from '../../assets/images/skills/ml/tensorflow.svg';
+import pytorch from '../../assets/images/skills/ml/pytorch.svg';
+import mediapipe from '../../assets/images/skills/ml/mediapipe.png';
+import numpy from '../../assets/images/skills/ml/numpy.svg';
+import pandas from '../../assets/images/skills/ml/pandas.svg';
+import matplotlib from '../../assets/images/skills/ml/matplotlib.svg';
 
 // Embedded
-import arduino from '../../assets/images/embedded/arduino.png';
-import raspberrypi from '../../assets/images/embedded/raspberrypi.svg';
-import esp32 from '../../assets/images/embedded/esp32.svg';
-import platformio from '../../assets/images/embedded/platformio.svg';
-import ros from '../../assets/images/embedded/ros.svg';
-import gazebo from '../../assets/images/embedded/gazebo.svg';
-import vivado from '../../assets/images/embedded/vivado.svg';
+import arduino from '../../assets/images/skills/embedded/arduino.png';
+import raspberrypi from '../../assets/images/skills/embedded/raspberrypi.svg';
+import esp32 from '../../assets/images/skills/embedded/esp32.svg';
+import platformio from '../../assets/images/skills/embedded/platformio.svg';
+import ros from '../../assets/images/skills/embedded/ros.svg';
+import gazebo from '../../assets/images/skills/embedded/gazebo.svg';
+import vivado from '../../assets/images/skills/embedded/vivado.svg';
 
 // DevOps
-import git from '../../assets/images/devops/git.svg';
-import github from '../../assets/images/devops/github.svg';
-import linux from '../../assets/images/devops/linux.svg';
-import docker from '../../assets/images/devops/docker.svg';
+import git from '../../assets/images/skills/devops/git.svg';
+import github from '../../assets/images/skills/devops/github.svg';
+import linux from '../../assets/images/skills/devops/linux.svg';
+import docker from '../../assets/images/skills/devops/docker.svg';
 
 // Backend
-import fastapi from '../../assets/images/backend/fastapi.svg';
-import ballerina from '../../assets/images/backend/ballerina.svg';
-import mysql from '../../assets/images/backend/mysql.svg';
+import fastapi from '../../assets/images/skills/backend/fastapi.svg';
+import ballerina from '../../assets/images/skills/backend/ballerina.svg';
+import mysql from '../../assets/images/skills/backend/mysql.svg';
 
 // IDEs
-import vscode from '../../assets/images/ides/vscode.png';
-import visualstudio from '../../assets/images/ides/visualstudio.png';
-import datagrip from '../../assets/images/ides/datagrip.svg';
-import jupyter from '../../assets/images/ides/jupyter.png';
-import colab from '../../assets/images/ides/colab.svg';
+import vscode from '../../assets/images/skills/ides/vscode.png';
+import visualstudio from '../../assets/images/skills/ides/visualstudio.png';
+import datagrip from '../../assets/images/skills/ides/datagrip.svg';
+import jupyter from '../../assets/images/skills/ides/jupyter.png';
+import colab from '../../assets/images/skills/ides/colab.svg';
 
 const Skills = () => {
   return (

@@ -1,13 +1,13 @@
 import React from 'react';
 import VolunteeringCard from './VolunteeringCard';
 import './Volunteering.css';
-import ieeeRasLogo from '../../assets/images/RAS New Logo Color.png';
-import ieeeSbLogo from '../../assets/images/IEEE STUDENT B LOGO.png';
-import cseLogo from '../../assets/images/uomcse-448x212.png';
-import uomLogo from '../../assets/images/University_of_Moratuwa_logo.png';
-import sccAuLogo from '../../assets/images/SCCAU Logo.png';
-import sccScoutLogo from '../../assets/images/new logo SCCSG.png';
-import sccLogo from '../../assets/images/SCC Logo.png';
+import ieeeRasLogo from '../../assets/images/organizations/RAS New Logo Color.png';
+import ieeeSbLogo from '../../assets/images/organizations/IEEE STUDENT B LOGO.png';
+import cseLogo from '../../assets/images/institutes/uomcse-448x212.png';
+import uomLogo from '../../assets/images/institutes/University_of_Moratuwa_logo.png';
+import sccAuLogo from '../../assets/images/organizations/SCCAU Logo.png';
+import sccScoutLogo from '../../assets/images/organizations/new logo SCCSG.png';
+import sccLogo from '../../assets/images/institutes/SCC Logo.png';
 
 const Volunteering = () => {
   return (
