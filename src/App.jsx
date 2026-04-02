@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Navbar from './components/layout/Navbar'
 import Window from './components/layout/Window'
 import Intro from './components/intro/Intro'
@@ -13,41 +13,36 @@ import './App.css'
 
 function App() {
   const [activeTab, setActiveTab] = useState(null)
-  const [direction, setDirection] = useState('fade')
+  const sectionRefs = useRef({})
 
   const navItems = [
-    { id: 'education', label: 'Education', title: 'Education' },
-    { id: 'experience', label: 'Experience', title: 'Professional Experience' },
-    { id: 'projects', label: 'Projects', title: 'Projects' },
-    { id: 'skills', label: 'Skills', title: 'Tech Stack' },
-    { id: 'achievements', label: 'Achievements', title: 'Achievements' },
-    { id: 'volunteering', label: 'Volunteering', title: 'Volunteering' },
-    { id: 'connect', label: 'Connect', title: "Let's Connect" }
+    { id: 'education', label: 'Edu', title: 'Education' },
+    { id: 'experience', label: 'Exp', title: 'Professional Experience' },
+    { id: 'projects', label: 'Pro', title: 'Projects' },
+    { id: 'skills', label: 'Skil', title: 'Tech Stack' },
+    { id: 'achievements', label: 'Achi', title: 'Achievements' },
+    { id: 'volunteering', label: 'Vol', title: 'Volunteering' },
+    { id: 'connect', label: 'Co', title: "Let's Connect" }
   ];
 
   const handleNavClick = (tabId) => {
-    if (activeTab) {
-      const currentIndex = navItems.findIndex(item => item.id === activeTab);
-      const newIndex = navItems.findIndex(item => item.id === tabId);
-      
-      if (newIndex > currentIndex) {
-        setDirection('up');
-      } else if (newIndex < currentIndex) {
-        setDirection('down');
-      } else {
-        setDirection('fade');
-      }
-    } else {
-      setDirection('fade');
-    }
-    setActiveTab(tabId);
-  };
+    setActiveTab(tabId)
+  }
 
   useEffect(() => {
     if (activeTab) {
       document.body.classList.add('is-article-visible')
     } else {
       document.body.classList.remove('is-article-visible')
+    }
+  }, [activeTab])
+
+  useEffect(() => {
+    if (!activeTab) return
+
+    const targetSection = sectionRefs.current[activeTab]
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [activeTab])
 
@@ -63,18 +58,31 @@ function App() {
         <Intro />
         {activeTab && (
           <Window 
-            key={activeTab} 
             onClose={() => setActiveTab(null)} 
-            direction={direction}
-            title={navItems.find(item => item.id === activeTab)?.title}
+            direction="fade"
+            // title="Profile Overview"
           >
-            {activeTab === 'education' && <Education />}
-            {activeTab === 'experience' && <Experience />}
-            {activeTab === 'projects' && <Projects />}
-            {activeTab === 'skills' && <Skills />}
-            {activeTab === 'volunteering' && <Volunteering />}
-            {activeTab === 'achievements' && <Achievements />}
-            {activeTab === 'connect' && <Connect />}
+            <section className="window-section" ref={(el) => { sectionRefs.current.education = el }}>
+              <Education />
+            </section>
+            <section className="window-section" ref={(el) => { sectionRefs.current.experience = el }}>
+              <Experience />
+            </section>
+            <section className="window-section" ref={(el) => { sectionRefs.current.projects = el }}>
+              <Projects />
+            </section>
+            <section className="window-section" ref={(el) => { sectionRefs.current.skills = el }}>
+              <Skills />
+            </section>
+            <section className="window-section" ref={(el) => { sectionRefs.current.achievements = el }}>
+              <Achievements />
+            </section>
+            <section className="window-section" ref={(el) => { sectionRefs.current.volunteering = el }}>
+              <Volunteering />
+            </section>
+            <section className="window-section" ref={(el) => { sectionRefs.current.connect = el }}>
+              <Connect />
+            </section>
           </Window>
         )}
       </div>
