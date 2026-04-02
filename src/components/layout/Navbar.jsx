@@ -36,8 +36,11 @@ const Navbar = ({ onNavClick, activeTab, items, onLogoClick }) => {
               <button 
                 className={activeTab === item.id ? 'active' : ''}
                 onClick={() => onNavClick(item.id)}
+                aria-label={item.title || item.label}
+                title={item.title || item.label}
               >
-                {item.label}
+                {item.icon && <span className={`nav-icon ${item.icon}`} aria-hidden="true"></span>}
+                <span className="nav-label">{item.label}</span>
               </button>
             </li>
           ))}

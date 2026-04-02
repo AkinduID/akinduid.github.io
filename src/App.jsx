@@ -20,14 +20,14 @@ function App() {
   const scrollSpyLockUntil = useRef(0)
 
   const navItems = [
-    { id: 'about', label: 'Ab', title: 'About' },
-    { id: 'education', label: 'Edu', title: 'Education' },
-    { id: 'experience', label: 'Exp', title: 'Professional Experience' },
-    { id: 'projects', label: 'Pro', title: 'Projects' },
-    { id: 'skills', label: 'Skil', title: 'Tech Stack' },
-    { id: 'achievements', label: 'Achi', title: 'Achievements' },
-    { id: 'volunteering', label: 'Vol', title: 'Volunteering' },
-    { id: 'connect', label: 'Co', title: "Let's Connect" }
+    { id: 'about', label: 'About', title: 'About', icon: 'fa-solid fa-user' },
+    { id: 'education', label: 'Education', title: 'Education', icon: 'fa-solid fa-graduation-cap' },
+    { id: 'experience', label: 'Experience', title: 'Professional Experience', icon: 'fa-solid fa-briefcase' },
+    { id: 'projects', label: 'Projects', title: 'Projects', icon: 'fa-solid fa-folder-open' },
+    { id: 'skills', label: 'Skills', title: 'Tech Stack', icon: 'fa-solid fa-code' },
+    { id: 'achievements', label: 'Achivements', title: 'Achievements', icon: 'fa-solid fa-trophy' },
+    { id: 'volunteering', label: 'Volunteering', title: 'Volunteering', icon: 'fa-solid fa-handshake' },
+    { id: 'connect', label: 'Connect', title: "Let's Connect", icon: 'fa-regular fa-paper-plane' }
   ];
 
   const handleNavClick = (tabId) => {
