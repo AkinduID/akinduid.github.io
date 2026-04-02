@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import Navbar from './components/layout/Navbar'
 import Window from './components/layout/Window'
 import Intro from './components/intro/Intro'
+import About from './components/about/about'
 import Education from './components/education/Education'
 import Experience from './components/experience/Experience'
 import Projects from './components/projects/Projects'
@@ -19,6 +20,7 @@ function App() {
   const scrollSpyLockUntil = useRef(0)
 
   const navItems = [
+    { id: 'about', label: 'Ab', title: 'About' },
     { id: 'education', label: 'Edu', title: 'Education' },
     { id: 'experience', label: 'Exp', title: 'Professional Experience' },
     { id: 'projects', label: 'Pro', title: 'Projects' },
@@ -33,8 +35,14 @@ function App() {
     setActiveTab(tabId)
   }
 
+  const handleIntroArrowClick = () => {
+    hasAutoOpenedFromScroll.current = true
+    scrollSpyLockUntil.current = Date.now() + 450
+    setActiveTab(navItems[0].id)
+  }
+
   const handleWindowContentWheel = (event) => {
-    if (activeTab !== 'education') return
+    if (activeTab !== navItems[0].id) return
 
     const isScrollingUp = event.deltaY < -20
     const isAtTop = event.currentTarget.scrollTop <= 0
@@ -121,34 +129,60 @@ function App() {
           items={navItems} 
           onLogoClick={() => setActiveTab(null)}
         />
-        <Intro />
+        <Intro onArrowClick={handleIntroArrowClick} />
         {activeTab && (
           <Window 
-            onClose={() => setActiveTab(null)} 
             direction="fade"
             onContentWheel={handleWindowContentWheel}
             onContentScroll={handleWindowContentScroll}
             // title="Profile Overview"
           >
+            <section className="window-section" ref={(el) => { sectionRefs.current.about = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">About</h2>
+              </div>
+              <About />
+            </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.education = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">Education</h2>
+              </div>
               <Education />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.experience = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">Professional Experience</h2>
+              </div>
               <Experience />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.projects = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">Projects</h2>
+              </div>
               <Projects />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.skills = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">Tech Stack</h2>
+              </div>
               <Skills />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.achievements = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">Achievements</h2>
+              </div>
               <Achievements />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.volunteering = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">Volunteering</h2>
+              </div>
               <Volunteering />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.connect = el }}>
+              <div className="window-section-header">
+                <h2 className="window-section-title">Let's Connect</h2>
+              </div>
               <Connect />
             </section>
           </Window>

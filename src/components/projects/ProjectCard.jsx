@@ -1,10 +1,11 @@
 import React from 'react';
 import './ProjectCard.css';
 import github from '../../assets/images/skills/devops/github.svg';
+import CommonCard from '../layout/CommonCard';
 
 const ProjectCard = ({ image, title, date, projectType, teamType, description, tags, link, category }) => {
   return (
-    <div className="project-card modern-card" data-category={category}>
+    <CommonCard className="project-card modern-card" data-category={category}>
       <div className="project-image">
         <img src={image} alt={title} loading="lazy" />
       </div>
@@ -32,7 +33,7 @@ const ProjectCard = ({ image, title, date, projectType, teamType, description, t
           ))}
         </div>
       </div>
-    </div>
+    </CommonCard>
   );
 };
 

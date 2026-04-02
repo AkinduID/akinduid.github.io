@@ -4,39 +4,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 1rem;
-    background: rgba(40, 39, 39, 0.73);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
     text-align: center;
-}
-
-.connect-card::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(79, 195, 247, 0.1), transparent);
-    transform: translate(-50%, -50%);
-    transition: width 0.4s, height 0.4s;
-}
-
-.connect-card:hover::before {
-    width: 300px;
-    height: 300px;
-}
-
-.connect-card:hover {
-    /* background: rgba(255, 255, 255, 0.06); */
-    border-color: rgba(79, 195, 247, 0.3);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(79, 195, 247, 0.15);
 }
 
 .connect-icon {
@@ -51,11 +20,6 @@
     z-index: 1;
     transition: all 0.3s;
     margin-right: 0; /* Reset margin from previous style */
-}
-
-.connect-card:hover .connect-icon {
-    /* background: rgba(79, 195, 247, 0.15); */
-    transform: scale(1.1);
 }
 
 .connect-icon img {

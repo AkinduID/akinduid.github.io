@@ -1,14 +1,15 @@
 import React from 'react';
+import CommonCard from '../layout/CommonCard';
 import './SkillsCategory.css';
 
 const SkillsCategory = ({ title, children }) => {
   return (
-    <div className="skills-category">
+    <CommonCard className="skills-category">
       <h3 className="animated-underline">{title}</h3>
       <div className="skills-icons">
         {children}
       </div>
-    </div>
+    </CommonCard>
   );
 };
 

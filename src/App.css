@@ -57,10 +57,10 @@
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
 			transform: scale(1.125); */
-			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
-			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
-			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
-			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+			-moz-transition: -moz-transform 0.58s cubic-bezier(0.22, 1, 0.36, 1), -moz-filter 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+			-webkit-transition: -webkit-transform 0.58s cubic-bezier(0.22, 1, 0.36, 1), -webkit-filter 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+			-ms-transition: -ms-transform 0.58s cubic-bezier(0.22, 1, 0.36, 1), -ms-filter 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+			transition: transform 0.58s cubic-bezier(0.22, 1, 0.36, 1), filter 0.58s cubic-bezier(0.22, 1, 0.36, 1);
 			background-image: url("./assets/images/bg3.jpg");
 			background-position: top;
 			background-size: cover;
@@ -69,14 +69,14 @@
 		}
 
 		body.is-article-visible #bg:after {
-			-moz-transform: scale(1.0825);
-			-webkit-transform: scale(1.0825);
-			-ms-transform: scale(1.0825);
-			transform: scale(1.0825);
-			-moz-filter: blur(0.2rem);
-			-webkit-filter: blur(0.2rem);
-			-ms-filter: blur(0.2rem);
-			filter: blur(0.2rem);
+			-moz-transform: scale(1.07);
+			-webkit-transform: scale(1.07);
+			-ms-transform: scale(1.07);
+			transform: scale(1.07);
+			-moz-filter: blur(0.28rem);
+			-webkit-filter: blur(0.28rem);
+			-ms-filter: blur(0.28rem);
+			filter: blur(0.28rem);
 		}
 
 		body.is-preload #bg:before {
@@ -148,50 +148,3 @@
 			}
 
 		}
-
-/* Sections */
-
-	.app-sections {
-		width: min(1320px, 100%);
-		padding: 1rem 2rem 3rem;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		z-index: 3;
-	}
-
-	.app-section {
-		scroll-margin-top: 2rem;
-	}
-
-	.app-section-card {
-		padding: 0 1.25rem 1.5rem;
-		border-radius: 18px;
-		/* background: rgba(27, 31, 34, 0.18); */
-		/* border: 1px solid rgba(255, 255, 255, 0.08); */
-		/* -webkit-backdrop-filter: blur(8px);
-		backdrop-filter: blur(8px); */
-	}
-
-	@media screen and (min-width: 769px) {
-		.app-sections {
-			padding-left: 220px;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		.app-sections {
-			padding: 0.75rem 1rem 2rem;
-			gap: 1rem;
-		}
-
-		.app-section {
-			scroll-margin-top: 1rem;
-		}
-
-		.app-section-card {
-			padding: 0 0.5rem 1rem;
-			border-radius: 14px;
-		}
-	}

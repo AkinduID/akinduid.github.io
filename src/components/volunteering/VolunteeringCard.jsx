@@ -1,9 +1,10 @@
 import React from 'react';
 import './VolunteeringCard.css';
+import CommonCard from '../layout/CommonCard';
 
 const VolunteeringCard = ({ organization, details, logo }) => {
   return (
-    <div className="volunteering-card modern-card glassmorphism">
+    <CommonCard className="volunteering-card modern-card glassmorphism">
       <div className="vol-grid">
         <div className="vol-logo-section">
           <img src={logo} alt={`${organization} logo`} className="vol-logo" />
@@ -24,7 +25,7 @@ const VolunteeringCard = ({ organization, details, logo }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </CommonCard>
   );
 };
 

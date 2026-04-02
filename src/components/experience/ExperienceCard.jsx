@@ -1,9 +1,10 @@
 import React from 'react';
 import './ExperienceCard.css';
+import CommonCard from '../layout/CommonCard';
 
 const ExperienceCard = ({ role, company, team, date, tasks, tags, logo }) => {
   return (
-    <div className="experience-card modern-card glassmorphism">
+    <CommonCard className="experience-card modern-card glassmorphism">
       <div className="exp-grid">
         <div className="exp-logo-section">
           <img src={logo} alt={`${company} logo`} className="exp-logo" />
@@ -38,7 +39,7 @@ const ExperienceCard = ({ role, company, team, date, tasks, tags, logo }) => {
             </div>
         </div>
       </div>
-    </div>
+    </CommonCard>
   );
 };
 

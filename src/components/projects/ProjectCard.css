@@ -11,31 +11,6 @@
     /* max-height: 60vh; Limit height to prevent overflow of window */
 }
 
-.project-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 16px;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(79, 195, 247, 0.2), transparent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-}
-
-.project-card:hover::after {
-    opacity: 1;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 16px 48px rgba(79, 195, 247, 0.12);
-}
-
 .project-image {
     position: relative;
     overflow: hidden;
@@ -49,10 +24,6 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.08);
 }
 
 .project-image::after {
@@ -113,10 +84,6 @@
     height: 100%;
     object-fit: contain;
     display: block; /* Remove any inline spacing */
-}
-
-.project-card:hover .project-content h3 {
-    color: #4fc3f7;
 }
 
 .project-meta {

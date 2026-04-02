@@ -1,7 +1,5 @@
 .achievement-card {
     padding: 0.55rem;
-    background: rgba(255,255,255,0.04);
-    border-radius: 12px;
     /* border-left: 3px solid #4fc3f7; */
     height: 100%;
     box-sizing: border-box;

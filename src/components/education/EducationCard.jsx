@@ -1,9 +1,10 @@
 import React from 'react';
 import './EducationCard.css';
+import CommonCard from '../layout/CommonCard';
 
 const EducationCard = ({ institution, degree, year, details, logo }) => {
   return (
-    <div className="education-card modern-card glassmorphism">
+    <CommonCard className="education-card modern-card glassmorphism">
       <div className="edu-grid">
         <div className="edu-logo-section">
           <img src={logo} alt={`${institution} logo`} className="edu-logo" />
@@ -29,7 +30,7 @@ const EducationCard = ({ institution, degree, year, details, logo }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </CommonCard>
   );
 };
 
