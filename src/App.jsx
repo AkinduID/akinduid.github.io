@@ -14,6 +14,9 @@ import './App.css'
 function App() {
   const [activeTab, setActiveTab] = useState(null)
   const sectionRefs = useRef({})
+  const hasAutoOpenedFromScroll = useRef(false)
+  const isSyncingFromScroll = useRef(false)
+  const scrollSpyLockUntil = useRef(0)
 
   const navItems = [
     { id: 'education', label: 'Edu', title: 'Education' },
@@ -26,7 +29,43 @@ function App() {
   ];
 
   const handleNavClick = (tabId) => {
+    scrollSpyLockUntil.current = Date.now() + 450
     setActiveTab(tabId)
+  }
+
+  const handleWindowContentWheel = (event) => {
+    if (activeTab !== 'education') return
+
+    const isScrollingUp = event.deltaY < -20
+    const isAtTop = event.currentTarget.scrollTop <= 0
+
+    if (isScrollingUp && isAtTop) {
+      setActiveTab(null)
+    }
+  }
+
+  const handleWindowContentScroll = (event) => {
+    if (!activeTab || Date.now() < scrollSpyLockUntil.current) return
+
+    const container = event.currentTarget
+    let closestId = navItems[0].id
+    let smallestDistance = Number.POSITIVE_INFINITY
+
+    for (const item of navItems) {
+      const section = sectionRefs.current[item.id]
+      if (!section) continue
+
+      const distance = Math.abs(section.offsetTop - container.scrollTop)
+      if (distance < smallestDistance) {
+        smallestDistance = distance
+        closestId = item.id
+      }
+    }
+
+    if (closestId !== activeTab) {
+      isSyncingFromScroll.current = true
+      setActiveTab(closestId)
+    }
   }
 
   useEffect(() => {
@@ -40,11 +79,38 @@ function App() {
   useEffect(() => {
     if (!activeTab) return
 
+    if (isSyncingFromScroll.current) {
+      isSyncingFromScroll.current = false
+      return
+    }
+
     const targetSection = sectionRefs.current[activeTab]
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [activeTab])
+
+  useEffect(() => {
+    if (activeTab) {
+      hasAutoOpenedFromScroll.current = true
+      return
+    }
+
+    hasAutoOpenedFromScroll.current = false
+
+    const handleWheel = (event) => {
+      if (event.deltaY <= 20 || hasAutoOpenedFromScroll.current) return
+
+      hasAutoOpenedFromScroll.current = true
+      setActiveTab(navItems[0].id)
+    }
+
+    window.addEventListener('wheel', handleWheel, { passive: true })
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+    }
+  }, [activeTab, navItems])
 
   return (
     <>
@@ -60,6 +126,8 @@ function App() {
           <Window 
             onClose={() => setActiveTab(null)} 
             direction="fade"
+            onContentWheel={handleWindowContentWheel}
+            onContentScroll={handleWindowContentScroll}
             // title="Profile Overview"
           >
             <section className="window-section" ref={(el) => { sectionRefs.current.education = el }}>

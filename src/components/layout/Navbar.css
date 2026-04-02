@@ -3,22 +3,39 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
-  
+  transition: transform 0.42s cubic-bezier(0.2, 1.4, 0.4, 1);
 }
 
 .navbar-logo-btn {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06));
   padding: 0;
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
+  transition: transform 0.42s cubic-bezier(0.2, 1.4, 0.4, 1), box-shadow 0.34s ease, border-color 0.34s ease, background-color 0.34s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
+  backdrop-filter: blur(14px) saturate(125%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 7px 18px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.navbar-logo-btn::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -45%;
+  width: 65%;
+  height: 165%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.32), transparent);
+  transform: rotate(18deg);
+  opacity: 0.7;
+  transition: transform 0.5s ease;
 }
 
 .navbar-logo-btn img {
@@ -32,8 +49,11 @@
 
 .navbar-logo-btn:hover {
   border-color: rgba(79, 195, 247, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(79, 195, 247, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 10px 24px rgba(79, 195, 247, 0.26);
+}
+
+.navbar-logo-btn:hover::before {
+  transform: translateX(16px) rotate(18deg);
 }
 
 .navbar-container {
@@ -60,6 +80,7 @@
 .navbar ul li {
   display: flex;
   justify-content: center;
+  transition: transform 0.42s cubic-bezier(0.2, 1.4, 0.4, 1);
 }
 
 .navbar ul li button {
@@ -74,27 +95,47 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   color: white;
-  background: transparent;
-  transition: width 0.28s ease, height 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background-color 0.28s ease;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04));
+  transition: transform 0.42s cubic-bezier(0.2, 1.4, 0.4, 1), box-shadow 0.34s ease, border-color 0.34s ease, background-color 0.34s ease;
   letter-spacing: 0.03em;
   cursor: pointer;
   font-family: inherit;
   box-sizing: border-box;
   line-height: 1.1;
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
+  backdrop-filter: blur(14px) saturate(125%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 7px 18px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar ul li button::before {
+  content: '';
+  position: absolute;
+  top: -36%;
+  left: -50%;
+  width: 64%;
+  height: 170%;
+  /* background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent); */
+  transform: rotate(18deg);
+  transition: transform 0.5s ease;
+  opacity: 0.75;
 }
 
 .navbar ul li button:hover {
   border-color: rgba(79, 195, 247, 0.4);
-  width: var(--nav-btn-hover-size, 52px);
-  height: var(--nav-btn-hover-size, 52px);
-  box-shadow: 0 6px 20px rgba(79, 195, 247, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38), 0 10px 24px rgba(79, 195, 247, 0.26);
+}
+
+.navbar ul li button:hover::before {
+  transform: translateX(16px) rotate(18deg);
 }
 
 .navbar ul li button.active {
-  background: rgba(79, 195, 247, 0.2);
+  background: rgb(0, 174, 255);
   color: #ffffff !important;
   border-color: transparent;
-  box-shadow: 0 8px 24px rgba(79, 195, 247, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38), 0 9px 26px rgba(79, 195, 247, 0.32);
   border: 1px solid rgba(79, 195, 247, 0.5);
 }
 
@@ -123,6 +164,34 @@
 
   .navbar ul li button {
     font-size: 0.82rem;
+  }
+
+  .navbar ul li.is-hovered {
+    transform: translateY(0);
+  }
+
+  .navbar ul li.is-hovered button {
+    transform: scale(1.14);
+    border-color: rgba(79, 195, 247, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42), 0 12px 30px rgba(79, 195, 247, 0.32);
+  }
+
+  .navbar ul li.is-above-hovered {
+    transform: translateY(-11px);
+  }
+
+  .navbar ul li.is-below-hovered {
+    transform: translateY(11px);
+  }
+
+  .navbar-logo-container.is-hovered .navbar-logo-btn {
+    transform: scale(1.14);
+    border-color: rgba(79, 195, 247, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42), 0 12px 30px rgba(79, 195, 247, 0.32);
+  }
+
+  .navbar-logo-container.is-above-hovered {
+    transform: translateY(-11px);
   }
 }
 
