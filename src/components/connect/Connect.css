@@ -3,7 +3,7 @@
 }
 
 .connect-hub-card {
-    padding: 1rem;
+    padding: 0.75rem;
 }
 
 .connect-grid {
@@ -11,7 +11,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
-    gap: -50rem;
+    gap: 0.28rem;
     margin-bottom: 0;
     -ms-overflow-style: none;
 }
@@ -27,10 +27,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    flex: 0 0 170px;
-    min-height: 118px;
-    padding: 0.05rem;
+    gap: 0.32rem;
+    flex: 0 0 156px;
+    min-height: 102px;
+    padding: 0.45rem;
     border-radius: 12px;
     /* background: rgba(255, 255, 255, 0.02); */
     /* border: 1px solid rgba(255, 255, 255, 0.08); */
@@ -73,7 +73,7 @@
 
 .connect-info h4 {
     color: #ffffff;
-    margin: 0 0 0.15rem 0;
+    margin: 0 0 0.05rem 0;
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -222,18 +222,19 @@ input[type="submit"].primary:hover,
     }
 
     .connect-grid {
-        gap: 0.4rem;
+        gap: 0.3rem;
         justify-content: flex-start;
     }
 
     .connect-hub-card {
-        padding: 0.8rem;
+        padding: 0.65rem;
     }
 
     .connect-item {
-        flex-basis: 130px;
-        min-height: 108px;
-        padding: 0.75rem;
+        gap: 0.28rem;
+        flex-basis: 122px;
+        min-height: 96px;
+        padding: 0.4rem;
     }
 
     .contact-form-section {
