@@ -61,54 +61,36 @@
 }
 
 .projects-grid {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
-    padding-bottom: 2rem; /* Add space for scrollbar inside container */
-    scroll-snap-type: x mandatory;
-    height: 80%; /* Take full height of parent */
-    
-    /* Custom Scrollbar for horizontal scroll */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-}
-
-.projects-grid::-webkit-scrollbar {
-    height: 8px; /* Use height for horizontal scrollbar */
-}
-
-.projects-grid::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.projects-grid::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-}
-
-.projects-grid::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    padding-bottom: 0;
+    height: auto;
 }
 
 .project-card {
-    min-width: 320px; /* Ensure fixed width for cards */
-    max-width: 320px;
-    scroll-snap-align: start;
-    flex-shrink: 0;
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media screen and (max-width: 600px) {
     .projects-grid {
-        /* grid-template-columns: 1fr; removed */
+        grid-template-columns: 1fr;
         gap: 1rem;
         margin-top: 1rem;
     }
 
     .project-card {
-        min-width: 280px;
-        max-width: 280px;
+        min-width: 0;
+        max-width: none;
     }
 
 

@@ -1,5 +1,5 @@
 .project-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(26, 26, 26, 0.785);
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -39,7 +39,7 @@
 .project-image {
     position: relative;
     overflow: hidden;
-    height: 35%; /* Reduced height */
+    height: 45%; /* Reduced height */
     flex-shrink: 0; /* Prevent image from shrinking */
     background: linear-gradient(135deg, rgba(79, 195, 247, 0.05), rgba(0, 188, 212, 0.05));
 }

@@ -17,7 +17,7 @@ const Navbar = ({ onNavClick, activeTab, items, onLogoClick }) => {
           onMouseEnter={() => setHoveredIndex(-1)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <button className="navbar-logo-btn" onClick={onLogoClick} aria-label="Home">
+          <button className={`navbar-logo-btn ${activeTab === null ? 'active' : ''}`} onClick={onLogoClick} aria-label="Home">
             <img src={favicon} alt="Logo" />
           </button>
         </div>

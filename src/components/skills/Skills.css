@@ -3,16 +3,28 @@
 }
 
 .skills-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
-    align-items: center;
+    align-items: stretch;
     margin-top: 1rem;
 }
 
 .skills-category {
-    width: 100%;
-    max-width: 900px;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.2rem;
+    width: auto;
+    max-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+    .skills-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
 }
