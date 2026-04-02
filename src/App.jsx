@@ -140,48 +140,56 @@ function App() {
             <section className="window-section" ref={(el) => { sectionRefs.current.about = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">About</h2>
+                <p className="window-section-caption">A concise profile snapshot, interests, and what I am currently focused on.</p>
               </div>
               <About />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.education = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">Education</h2>
+                <p className="window-section-caption">Academic foundations, key milestones, and areas of specialization.</p>
               </div>
               <Education />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.experience = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">Professional Experience</h2>
+                <p className="window-section-caption">Roles, responsibilities, and measurable outcomes across recent work.</p>
               </div>
               <Experience />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.projects = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">Projects</h2>
+                <p className="window-section-caption">Selected builds highlighting problem-solving, architecture, and delivery.</p>
               </div>
               <Projects />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.skills = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">Tech Stack</h2>
+                <p className="window-section-caption">Core tools and technologies used across development and deployment.</p>
               </div>
               <Skills />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.achievements = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">Achievements</h2>
+                <p className="window-section-caption">Awards, recognitions, and notable milestones from recent work.</p>
               </div>
               <Achievements />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.volunteering = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">Volunteering</h2>
+                <p className="window-section-caption">Community contributions, mentorship, and service-oriented initiatives.</p>
               </div>
               <Volunteering />
             </section>
             <section className="window-section" ref={(el) => { sectionRefs.current.connect = el }}>
               <div className="window-section-header">
                 <h2 className="window-section-title">Let's Connect</h2>
+                <p className="window-section-caption">Quick channels to reach out, collaborate, or follow my latest updates.</p>
               </div>
               <Connect />
             </section>

@@ -17,7 +17,7 @@ const Intro = ({ onArrowClick }) => {
             onClick={onArrowClick}
             aria-label="Open sections"
           >
-            ↓
+            <span className="fa-solid fa-arrow-down" aria-hidden="true"></span>
           </button>
       </div>
     </div>

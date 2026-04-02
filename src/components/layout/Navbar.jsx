@@ -6,7 +6,7 @@ const Navbar = ({ onNavClick, activeTab, items, onLogoClick }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null)
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" aria-label="Primary">
       <div className="navbar-container">
         <div
           className={[
@@ -17,7 +17,12 @@ const Navbar = ({ onNavClick, activeTab, items, onLogoClick }) => {
           onMouseEnter={() => setHoveredIndex(-1)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <button className={`navbar-logo-btn ${activeTab === null ? 'active' : ''}`} onClick={onLogoClick} aria-label="Home">
+          <button
+            className={`navbar-logo-btn ${activeTab === null ? 'active' : ''}`}
+            onClick={onLogoClick}
+            aria-label="Home"
+            aria-current={activeTab === null ? 'page' : undefined}
+          >
             <img src={favicon} alt="Logo" />
           </button>
         </div>
@@ -37,10 +42,10 @@ const Navbar = ({ onNavClick, activeTab, items, onLogoClick }) => {
                 className={activeTab === item.id ? 'active' : ''}
                 onClick={() => onNavClick(item.id)}
                 aria-label={item.title || item.label}
+                aria-current={activeTab === item.id ? 'page' : undefined}
                 title={item.title || item.label}
               >
                 {item.icon && <span className={`nav-icon ${item.icon}`} aria-hidden="true"></span>}
-                <span className="nav-label">{item.label}</span>
               </button>
             </li>
           ))}

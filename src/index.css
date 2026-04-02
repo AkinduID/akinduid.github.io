@@ -105,6 +105,9 @@ button:focus-visible {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  border-radius: var(--card-radius, 14px);
+  border: 1px solid var(--card-border-color, rgba(255, 255, 255, 0.1));
+  box-shadow: var(--card-shadow, 0 10px 24px rgba(0, 0, 0, 0.26));
 }
 
 .modern-card::before {
@@ -124,10 +127,9 @@ button:focus-visible {
 }
 
 .modern-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(79, 195, 247, 0.15);
-  border: solid 1px;
-  border-color: rgba(79, 195, 247, 0.3);
+  transform: var(--card-lift, translateY(-3px));
+  box-shadow: var(--card-shadow-hover, 0 18px 34px rgba(0, 0, 0, 0.34));
+  border-color: var(--card-border-color-hover, rgba(79, 195, 247, 0.42));
 }
 
 /* Tag Styles */

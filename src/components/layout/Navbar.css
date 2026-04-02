@@ -7,8 +7,8 @@
 }
 
 .navbar-logo-btn {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.06);
@@ -59,9 +59,9 @@
 }
 
 .navbar-logo-btn.active {
-  border-color: rgba(79, 195, 247, 0.15);
-  background: rgba(0, 174, 255, 0.98);
-  box-shadow: 0 0 0 1px rgba(79, 195, 247, 0.25), 0 0 20px rgba(79, 195, 247, 0.5), 0 0 36px rgba(79, 195, 247, 0.32);
+  border-color: rgba(79, 195, 247, 0.24);
+  background: rgba(0, 174, 255, 0.88);
+  box-shadow: 0 0 0 1px rgba(79, 195, 247, 0.24), 0 10px 24px rgba(8, 23, 33, 0.4), 0 0 16px rgba(79, 195, 247, 0.22);
 }
 
 .navbar-container {
@@ -95,7 +95,7 @@
   width: var(--nav-btn-size, 44px);
   height: var(--nav-btn-size, 44px);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -125,7 +125,7 @@
   justify-content: center;
   font-size: 0.92rem;
   line-height: 1;
-  margin-bottom: 0.22rem;
+  margin-bottom: 0;
   color: rgba(215, 235, 242, 0.68);
   opacity: 0.72;
   transition: color 0.28s ease, opacity 0.28s ease, filter 0.28s ease, transform 0.28s ease;
@@ -133,19 +133,6 @@
 
 .nav-icon::before {
   margin: 0;
-}
-
-.nav-label {
-  display: block;
-  font-size: 0.5rem;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: rgba(255, 255, 255, 0.86);
-  opacity: 0.92;
-  transition: color 0.28s ease, opacity 0.28s ease;
 }
 
 .navbar ul li button::before {
@@ -172,38 +159,28 @@
   filter: drop-shadow(0 0 8px rgba(79, 195, 247, 0.45));
 }
 
-.navbar ul li button:hover .nav-label {
-  color: rgba(255, 255, 255, 0.97);
-  opacity: 1;
-}
-
 .navbar ul li button:hover::before {
   transform: translateX(16px) rotate(18deg);
 }
 
 .navbar ul li button.active {
-  background: rgba(0, 174, 255, 0.92);
+  background: rgba(0, 174, 255, 0.84);
   color: #ffffff !important;
-  border-color: rgba(79, 195, 247, 0.25);
-  box-shadow: 0 0 0 1px rgba(79, 195, 247, 0.45), 0 0 20px rgba(79, 195, 247, 0.5), 0 0 36px rgba(79, 195, 247, 0.32);
+  border-color: rgba(79, 195, 247, 0.26);
+  box-shadow: 0 0 0 1px rgba(79, 195, 247, 0.28), 0 10px 22px rgba(8, 23, 33, 0.42), 0 0 14px rgba(79, 195, 247, 0.2);
 }
 
 .navbar ul li button.active .nav-icon {
   color: #d8f9ff;
   opacity: 1;
-  filter: drop-shadow(0 0 10px rgba(79, 195, 247, 0.65));
-}
-
-.navbar ul li button.active .nav-label {
-  color: #ffffff;
-  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(79, 195, 247, 0.4));
 }
 
 /* Desktop Styles (Vertical Sidebar) */
 @media screen and (min-width: 769px) {
   .navbar {
-    --nav-btn-size: 60px;
-    --nav-btn-hover-size: 60px;
+    --nav-btn-size: 50px;
+    --nav-btn-hover-size: 50px;
   }
 
   .navbar {
@@ -228,11 +205,7 @@
 
   .nav-icon {
     font-size: 1rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .nav-label {
-    font-size: 0.5rem;
+    margin-bottom: 0;
   }
 
   .navbar ul li.is-hovered {
@@ -272,20 +245,28 @@
   }
 
   .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    padding: 0.75rem 0;
-    position: relative;
-    z-index: 10;
+    padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom));
+    z-index: 120;
+    background: linear-gradient(180deg, rgba(12, 18, 24, 0.1), rgba(12, 18, 24, 0.72));
+    -webkit-backdrop-filter: blur(10px) saturate(115%);
+    backdrop-filter: blur(10px) saturate(115%);
+    border-top: 1px solid rgba(120, 198, 228, 0.2);
   }
 
   .navbar-container {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 0;
     box-shadow: none;
+    overflow: hidden;
   }
 
   .navbar-logo-container {
@@ -295,25 +276,31 @@
 
   .navbar ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 0.5rem;
     flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.15rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .navbar ul::-webkit-scrollbar {
+    display: none;
   }
 
   .navbar ul li button {
-    font-size: 0.66rem;
+    font-size: 0.82rem;
     letter-spacing: 0.01em;
     padding: 0.35rem;
+    flex: 0 0 auto;
   }
 
   .nav-icon {
-    font-size: 0.82rem;
-    margin-bottom: 0.12rem;
-  }
-
-  .nav-label {
-    font-size: 0.46rem;
+    font-size: 1rem;
+    margin-bottom: 0;
   }
 
   .navbar-logo-btn {

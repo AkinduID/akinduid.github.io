@@ -6,6 +6,10 @@
   text-align: left;
 }
 
+body.is-article-visible {
+	overflow: hidden;
+}
+
 /* BG */
 
 	#bg {

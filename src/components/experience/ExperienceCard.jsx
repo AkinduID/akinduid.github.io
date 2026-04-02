@@ -11,7 +11,7 @@ const ExperienceCard = ({ role, company, team, date, tasks, tags, logo }) => {
         </div>
         
         <div className="exp-title-group">
-          <h3 className="gradient-text">{role}</h3>
+          <h3 className="gradient-text-card">{role}</h3>
           <p className="exp-company">{company}</p>
           <p className="exp-team">{team}</p>
         </div>

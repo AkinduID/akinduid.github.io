@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 
@@ -16,6 +16,17 @@ import aspiretrust from '../../assets/images/projects/aspiretrust.png';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
+  const [isFiltering, setIsFiltering] = useState(false);
+  const [animationSeed, setAnimationSeed] = useState(0);
+
+  const filterOptions = [
+    { id: 'all', label: 'All Projects' },
+    { id: 'software', label: 'Software' },
+    { id: 'fpga', label: 'FPGA' },
+    { id: 'iot', label: 'IoT/Embedded' },
+    { id: 'ai', label: 'AI/ML' },
+    { id: 'robotics', label: 'Robotics' }
+  ];
 
   const projects = [
     {
@@ -133,26 +144,59 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.category.includes(filter));
 
+  useEffect(() => {
+    if (!isFiltering) {
+      return undefined;
+    }
+
+    const timer = setTimeout(() => {
+      setIsFiltering(false);
+    }, 260);
+
+    return () => clearTimeout(timer);
+  }, [isFiltering]);
+
+  const handleFilterChange = (nextFilter) => {
+    if (nextFilter === filter) {
+      return;
+    }
+
+    setFilter(nextFilter);
+    setIsFiltering(true);
+    setAnimationSeed((prev) => prev + 1);
+  };
+
   return (
     <div className="projects-container">
       {/* <p className="section-subtitle">
         Explore my portfolio of innovative projects spanning embedded systems, ML/AI, and full-stack development
       </p> */}
       
-      <div className="project-filters">
-        <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}><span>All Projects</span></button>
-        <button className={`filter-btn ${filter === 'software' ? 'active' : ''}`} onClick={() => setFilter('software')}><span>Software</span></button>
-        <button className={`filter-btn ${filter === 'fpga' ? 'active' : ''}`} onClick={() => setFilter('fpga')}><span>FPGA</span></button>
-        <button className={`filter-btn ${filter === 'iot' ? 'active' : ''}`} onClick={() => setFilter('iot')}><span>IoT/Embedded</span></button>
-        <button className={`filter-btn ${filter === 'ai' ? 'active' : ''}`} onClick={() => setFilter('ai')}><span>AI/ML</span></button>
-        <button className={`filter-btn ${filter === 'robotics' ? 'active' : ''}`} onClick={() => setFilter('robotics')}><span>Robotics</span></button>
-      </div>
-      
-      <div className="projects-grid">
-        {filteredProjects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+      <div className="project-filters" role="group" aria-label="Project filters">
+        {filterOptions.map((option) => (
+          <button
+            key={option.id}
+            className={`filter-btn ${filter === option.id ? 'active' : ''}`}
+            onClick={() => handleFilterChange(option.id)}
+            aria-pressed={filter === option.id}
+            type="button"
+          >
+            <span>{option.label}</span>
+          </button>
         ))}
       </div>
+      
+      <div className={`projects-grid ${isFiltering ? 'is-filtering' : ''}`}>
+        {filteredProjects.map((project, index) => (
+          <div key={`${project.title}-${project.date}-${animationSeed}`} className="project-grid-item" style={{ '--project-delay-index': index }}>
+            <ProjectCard {...project} />
+          </div>
+        ))}
+      </div>
+
+      {filteredProjects.length === 0 && (
+        <p className="projects-empty">No projects found for this filter yet. Try another category.</p>
+      )}
     </div>
   );
 };
