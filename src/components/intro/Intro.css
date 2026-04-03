@@ -32,12 +32,15 @@ body.is-article-visible .intro-container {
   pointer-events: auto;
   width: 100%;
   max-width: 800px;
+  height: 100%;
+  min-height: 100vh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  position: relative;
   transition: transform 0.58s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.48s ease;
   will-change: transform, opacity;
 }
@@ -48,8 +51,8 @@ body.is-article-visible .intro-content {
 }
 
 .profile-image.modern-card {
-    width: 250px;
-    height: 250px;
+  width: var(--profile-size, 290px);
+  height: var(--profile-size, 290px);
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -57,6 +60,52 @@ body.is-article-visible .intro-content {
     background: transparent;
     transition: transform 0.5s ease;
 }
+
+  .profile-orbit {
+    --profile-size: 290px;
+    --orbit-gap: 60px;
+    --orbit-text-fill: rgba(214, 247, 255, 0.96);
+    --orbit-text-stroke: rgba(79, 195, 247, 0.36);
+    --orbit-text-glow: rgba(79, 195, 247, 0.52);
+    width: calc(var(--profile-size) + var(--orbit-gap));
+    height: calc(var(--profile-size) + var(--orbit-gap));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-circle-text {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+      transform-origin: 50% 50%;
+      animation: profileOrbitSpin 22s linear infinite;
+  }
+
+  .profile-circle-text text {
+      font-size: 25px;
+      letter-spacing: 2.5px;
+    font-weight: 600;
+      fill: var(--orbit-text-fill, rgba(214, 247, 255, 0.96));
+      stroke: var(--orbit-text-stroke, rgba(79, 195, 247, 0.36));
+      stroke-width: 0.35px;
+      paint-order: stroke fill;
+    text-transform: uppercase;
+      filter: drop-shadow(0 0 10px var(--orbit-text-glow, rgba(79, 195, 247, 0.52)));
+  }
+
+  @keyframes profileOrbitSpin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 .profile-image.modern-card:hover {
     transform: scale(1.05);
@@ -105,7 +154,11 @@ body.is-article-visible .intro-content {
 }
 
 .intro-down-arrow {
-  margin-top: 0.75rem;
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  margin-top: 0;
   font-size: 2.35rem;
   line-height: 1;
   color: #7be8ff;
@@ -121,7 +174,8 @@ body.is-article-visible .intro-content {
 }
 
 .intro-down-arrow:hover {
-  transform: translateY(3px) scale(1.08);
+  animation-play-state: paused;
+  transform: translate(-50%, 3px) scale(1.08);
 }
 
 .intro-down-arrow:focus-visible {
@@ -133,11 +187,11 @@ body.is-article-visible .intro-content {
 @keyframes introArrowFloat {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate(-50%, 0);
     opacity: 0.75;
   }
   50% {
-    transform: translateY(8px);
+    transform: translate(-50%, 8px);
     opacity: 1;
   }
 }
@@ -208,12 +262,23 @@ body.is-article-visible .intro-content {
 
   .intro-content {
       padding: 1rem;
+      min-height: 100vh;
   }
   
   .profile-image.modern-card {
-      width: 200px;
-      height: 200px;
-  }
+      width: var(--profile-size, 220px);
+      height: var(--profile-size, 220px);
+    }
+
+    .profile-orbit {
+      --profile-size: 220px;
+      --orbit-gap: 56px;
+    }
+
+    .profile-circle-text text {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
 
   .intro-title {
       font-size: 2.5rem;
@@ -242,8 +307,23 @@ body.is-article-visible .intro-content {
     pointer-events: auto;
     display: flex;
   }
+
+  .intro-content {
+    min-height: calc(100vh - 5.5rem);
+  }
+
+  .intro-down-arrow {
+    bottom: 1rem;
+  }
+
    body.is-article-visible .intro-container {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-circle-text {
+    animation: none;
   }
 }
 
