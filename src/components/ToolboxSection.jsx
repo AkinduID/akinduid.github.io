@@ -1,3 +1,5 @@
+import CommonCard from "./CommonCard"
+
 function createBadgeDataUri(label) {
   const initials = label
     .split(/\s+/)
@@ -97,24 +99,24 @@ const itemIcon = {
 
 export default function ToolboxSection({ title, items }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-black/20 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-sm">
-      <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8be9ff]/90">
+    <CommonCard>
+      <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#00ffff]/80">
         {title}
       </h2>
 
       <ul className="mt-4 grid grid-cols-3 gap-4">
         {items.map((item) => (
-          <li key={item} className="flex flex-col items-center gap-2 text-center text-sm text-white/82">
+          <li key={item} className="flex flex-col items-center gap-2 text-center">
             <img
               src={itemIcon[item] || createBadgeDataUri(item)}
               alt=""
               className="h-12 w-12 shrink-0 object-contain"
               loading="lazy"
             />
-            <span className="min-w-0 leading-tight">{item}</span>
+            <span className="min-w-0 text-sm font-semibold leading-tight text-gray-200/90">{item}</span>
           </li>
         ))}
       </ul>
-    </article>
+    </CommonCard>
   )
 }

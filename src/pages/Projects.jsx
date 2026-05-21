@@ -22,6 +22,7 @@ const projects = [
     description:
       "Visual-inertial navigation system for autonomous UAV operation in GPS-denied environments. Assembled UAV platform with simulation-based testing for stable state estimation.",
     tags: ["Python", "C++", "ROS", "Computer Vision"],
+    link: "https://github.com/team-vinsight",
     category: "robotics ai",
   },
   {
@@ -32,6 +33,7 @@ const projects = [
     description:
       "Real-time hardware-accelerated audio visualizer performing FFT analysis and VGA rendering on FPGA. Deployed on Nexys A7 with low-latency signal processing.",
     tags: ["VHDL", "Xilinx Vivado", "FPGA"],
+    link: "https://github.com/AkinduID/FPGA-Spectrum-Visualizer",
     category: "fpga",
   },
   {
@@ -42,6 +44,7 @@ const projects = [
     description:
       "Web-based platform for generating instant 3D printing quotations. Developed backend service to analyze 3D models and extract pricing metrics with automated vendor-configurable quotation generation.",
     tags: ["Python", "FastAPI", "Docker"],
+    link: "https://github.com/Team-Akatsuki-CS3940",
     category: "software",
   },
   {
@@ -73,6 +76,7 @@ const projects = [
     description:
       "IoT-based wireless monitoring system for miner safety in underground environments. Demonstrated reliable environmental and miner-status monitoring through prototype sensor network.",
     tags: ["C++", "JavaScript", "ESP32", "Node-RED"],
+    link: "https://github.com/Team-Razorcrest",
     category: "iot",
   },
   {
@@ -83,6 +87,7 @@ const projects = [
     description:
       "Industrial IoT system for machinery fault detection using acoustic signal analysis via ML. Led ML model deployment on Raspberry Pi and validated fault detection of drill machine prototype.",
     tags: ["C++", "Python", "Raspberry Pi", "FastAPI"],
+    link: "https://github.com/AkinduID/MechaPulse",
     category: "iot ai",
   },
   {
@@ -93,6 +98,7 @@ const projects = [
     description:
       "Smart medicine container for scheduled intake reminders. Designed embedded firmware, IoT connectivity, and Node-RED control dashboard supporting remote monitoring and timely alerts.",
     tags: ["Arduino", "ESP32", "IoT", "Node-RED"],
+    link: "https://github.com/AkinduID/Smart-MediBox",
     category: "iot",
   },
   {
@@ -143,16 +149,16 @@ export default function Projects() {
     <PageShell>
       <div className="space-y-6">
 
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           {filters.map((item) => (
             <button
               key={item.key}
               type="button"
               onClick={() => setFilter(item.key)}
-              className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
+              className={`rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-xl transition-all duration-200 ${
                 filter === item.key
                   ? "border-[#8be9ff]/60 bg-[#8be9ff]/15 text-[#dffcff] shadow-[0_0_0_1px_rgba(139,233,255,0.12)]"
-                  : "border-white/10 bg-white/5 text-white/72 hover:border-white/20 hover:bg-white/10 hover:text-white"
+                  : "border-white/10 bg-white/5 text-white/72"
               }`}
             >
               {item.label}
@@ -160,9 +166,13 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div key={filter} className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <ProjectCard
+              key={`${filter}-${project.title}`}
+              animationDelay={`${Math.min(filteredProjects.indexOf(project) * 70, 280)}ms`}
+              {...project}
+            />
           ))}
         </div>
       </div>

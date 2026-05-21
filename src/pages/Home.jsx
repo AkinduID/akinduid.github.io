@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Lightbulb } from "lucide-react"
 import PageShell from "../components/PageShell"
+import CommonCard from "../components/CommonCard"
 import email from "../assets/social/email.png"
 import linkedin from "../assets/social/linkedin.png"
 import github from "../assets/social/github.png"
@@ -40,7 +41,7 @@ export default function Home() {
   return (
     <PageShell>
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.75fr)_minmax(0,0.9fr)] lg:items-stretch">
-        <div className="flex h-full flex-col rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:p-8">
+        <CommonCard>
           <p className="text-2xl font-medium tracking-tight text-white/85 sm:text-3xl">
             Hello I&apos;m
           </p>
@@ -81,7 +82,7 @@ export default function Home() {
               Download CV
             </a>
           </div>
-        </div>
+        </CommonCard>
 
         <div className="aspect-square h-full max-h-[22rem] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-black/25 shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:max-h-[24rem] lg:max-h-none lg:max-w-[24rem]">
           <img
@@ -92,7 +93,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-6 rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:p-8">
+      <CommonCard className="mt-6">
         <div className="mb-5 flex items-center gap-3">
           <p className="text-sm font-medium uppercase tracking-[0.24em] text-white/55">
             Connect
@@ -100,31 +101,25 @@ export default function Home() {
           <div className="h-px flex-1 bg-white/10" />
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-          {connectItems.map(({ icon, title, handle, link }) => (
+        <div className="flex flex-nowrap gap-16 items-center justify-center overflow-x-auto pb-1">
+          {connectItems.map(({ icon, title, link }) => (
             <a
               key={title}
               href={link}
               target="_blank"
               rel="noreferrer noopener"
-              className="group flex items-center gap-4 rounded-[1.35rem] border border-white/10 bg-black/20 px-4 py-3 text-left transition-all duration-150 hover:-translate-y-0.5 hover:border-[#8be9ff]/40 hover:bg-[#8be9ff]/10"
+              aria-label={title}
+              className="group flex h-16 w-16 shrink-0 items-center justify-center p-2 transition-all duration-150 hover:-translate-y-0.5"
             >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-2.5">
-                <img src={icon} alt="" className="h-full w-full object-contain" />
-              </span>
-
-              <span className="min-w-0">
-                <span className="block text-sm font-semibold text-white/90 transition-colors group-hover:text-[#dffcff]">
-                  {title}
-                </span>
-                <span className="block truncate text-xs text-white/55 transition-colors group-hover:text-white/75">
-                  {handle}
-                </span>
-              </span>
+              <img
+                src={icon}
+                alt=""
+                className="h-full w-full object-contain transition-transform duration-150 group-hover:scale-105"
+              />
             </a>
           ))}
         </div>
-      </div>
+      </CommonCard>
     </PageShell>
   )
 }
