@@ -40,8 +40,9 @@ export default function Home() {
 
   return (
     <PageShell>
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.75fr)_minmax(0,0.9fr)] lg:items-stretch">
-        <CommonCard>
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.95fr)_minmax(0,0.9fr)] lg:items-stretch">
+        <div className="order-2 lg:order-1">
+        <CommonCard className="text-center lg:text-left">
           <p className="text-2xl font-medium tracking-tight text-white/85 sm:text-3xl">
             Hello I&apos;m
           </p>
@@ -49,7 +50,7 @@ export default function Home() {
             Akindu Delgahagoda
           </p>
 
-          <div className="mt-6 flex items-start gap-2 text-sm font-medium text-white/75 sm:text-base">
+          <div className="mt-6 flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-white/75 sm:text-base">
             <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]" />
             <div className="min-h-[2rem]">
               <span className="text-white/60">Focused on </span>
@@ -68,40 +69,36 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mt-5 max-w-2xl text-sm leading-8 text-white/78 sm:text-base">
-            Engineering undergraduate specialized in robotics and distributed systems. Proficient in bridging embedded hardware and cloud services to create cohesive intelligent solutions. Passionate about Photo Editing, Photography, and Graphic Design.
-          </p>
+          <p className="mt-2 max-w-2xl text-sm leading-8 text-white/78 sm:text-base">
+             I enjoy creating intelligent and interactive systems by combining embedded hardware with modern software technologies. Outside of engineering, I spend time exploring photography, photo editing, and graphic design.
+            </p>
 
-          <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="mt-5 flex justify-center lg:justify-start">
             <a
               href="https://akinduid.github.io/my-cv/"
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center justify-center rounded-full bg-[#00FFFF] px-5 py-3 text-sm font-semibold text-slate-950 transition-transform duration-150 hover:-translate-y-0.5 hover:bg-[#b3f2ff]"
+              className="inline-flex w-[130px] items-center justify-center rounded-full bg-[#00FFFF]/80 px-5 py-3 text-sm font-semibold text-slate-950 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(0,255,255,0.75)]"
             >
               Download CV
             </a>
           </div>
         </CommonCard>
-
-        <div className="aspect-square h-full max-h-[22rem] w-full overflow-hidden rounded-[2rem] border border-white/10 bg-black/25 shadow-[0_18px_60px_rgba(0,0,0,0.24)] backdrop-blur-xl sm:max-h-[24rem] lg:max-h-none lg:max-w-[24rem]">
+        </div>
+        <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+        <div className="h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem] border border-white/10 bg-black/25 shadow-[0_18px_60px_rgba(0,0,0,0.24)]">
           <img
             src="/me.jpg"
             alt="Akindu Delgahagoda"
             className="h-full w-full object-cover object-center"
           />
         </div>
+        </div>
       </div>
 
-      <CommonCard className="mt-6">
-        <div className="mb-5 flex items-center gap-3">
-          <p className="text-sm font-medium uppercase tracking-[0.24em] text-white/55">
-            Connect
-          </p>
-          <div className="h-px flex-1 bg-white/10" />
-        </div>
+      <CommonCard className="mt-6 !p-4">
 
-        <div className="flex flex-nowrap gap-16 items-center justify-center overflow-x-auto pb-1">
+        <div className="grid grid-cols-4 lg:flex lg:flex-nowrap lg:gap-16 gap-6 items-center justify-items-center lg:justify-center">
           {connectItems.map(({ icon, title, link }) => (
             <a
               key={title}
