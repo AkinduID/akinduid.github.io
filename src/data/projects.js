@@ -8,6 +8,7 @@ import quot3d from "../assets/images/projects/quot3d.png"
 import infraportal from "../assets/images/projects/infraportal.png"
 import fazetrak from "../assets/images/projects/fazetrak.jpg"
 import aspiretrust from "../assets/images/projects/aspiretrust.png"
+import lseg from "../assets/images/projects/lseg.png"
 
 export const projects = [
   {
@@ -19,7 +20,18 @@ export const projects = [
       "Visual-inertial navigation system for autonomous UAV operation in GPS-denied environments. Assembled UAV platform with simulation-based testing for stable state estimation.",
     tags: ["Python", "C++", "ROS", "Computer Vision"],
     link: "https://github.com/team-vinsight",
-    category: "robotics ai",
+    category: "robotics",
+  },
+  {
+    title: "Flower Exchange System",
+    image: lseg,
+    date: "Feb 2026 - April 2026",
+    type: "Workshop Project | Team",
+    description:
+      "A simplified stock exchange and matching engine. The system reads buy and sell orders from a CSV file, processes them using an order matching engine, and generates execution reports.",
+    tags: ["C++", "CMake", "Github Actions"],
+    link: "https://github.com/AkinduID/LSEG-Flower-Exchange",
+    category: "software",
   },
   {
     title: "FPGA Audio Spectrum Analyzer",
