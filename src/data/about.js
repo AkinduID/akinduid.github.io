@@ -1,13 +1,13 @@
-import uomLogo from "../assets/institutes/University_of_Moratuwa_logo.png"
-import suslLogo from "../assets/institutes/Logo-SUSL.png"
-import sccLogo from "../assets/institutes/SCC Logo.png"
-import uomCseLogo from "../assets/institutes/uomcse-448x212.png"
-import wso2Logo from "../assets/institutes/WSO2_Software_Logo.png"
-import ieeeRasLogo from "../assets/organizations/RAS New Logo Color.png"
-import ieeeSbLogo from "../assets/organizations/IEEE STUDENT B LOGO.png"
-import moraLogo from "../assets/institutes/University_of_Moratuwa_logo.png"
-import sccAuLogo from "../assets/organizations/SCCAU Logo.png"
-import sccScoutLogo from "../assets/organizations/new logo SCCSG.png"
+import uomLogo from "../assets/logos/institutes/University_of_Moratuwa_logo.png"
+import suslLogo from "../assets/logos/institutes/Logo-SUSL.png"
+import sccLogo from "../assets/logos/institutes/SCC Logo.png"
+import uomCseLogo from "../assets/logos/institutes/uomcse-448x212.png"
+import wso2Logo from "../assets/logos/institutes/WSO2_Software_Logo.png"
+import ieeeRasLogo from "../assets/logos/organizations/RAS New Logo Color.png"
+import ieeeSbLogo from "../assets/logos/organizations/IEEE STUDENT B LOGO.png"
+import moraLogo from "../assets/logos/institutes/University_of_Moratuwa_logo.png"
+import sccAuLogo from "../assets/logos/organizations/SCCAU Logo.png"
+import sccScoutLogo from "../assets/logos/organizations/new logo SCCSG.png"
 
 export const educationItems = [
   {

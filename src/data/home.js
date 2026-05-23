@@ -1,11 +1,11 @@
-import email from "../assets/social/email.png"
-import linkedin from "../assets/social/linkedin.png"
-import github from "../assets/social/github.png"
-import instagram from "../assets/social/instagram.png"
-import twitter from "../assets/social/twitter.png"
-import behance from "../assets/social/behance.png"
-import facebook from "../assets/social/facebook.png"
-import discord from "../assets/social/discord.png"
+import email from "../assets/icons/social/email.png"
+import linkedin from "../assets/icons/social/linkedin.png"
+import github from "../assets/icons/social/github.png"
+import instagram from "../assets/icons/social/instagram.png"
+import twitter from "../assets/icons/social/twitter.png"
+import behance from "../assets/icons/social/behance.png"
+import facebook from "../assets/icons/social/facebook.png"
+import discord from "../assets/icons/social/discord.png"
 
 export const connectItems = [
   { icon: email, title: "Email", handle: "akinduid@gmail.com", link: "mailto:akinduid@gmail.com" },

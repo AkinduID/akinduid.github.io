@@ -70,7 +70,7 @@ export default function Home() {
           <CommonCard className="!p-0">
           {/* <div className="theme-card h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem]"> */}
             <img
-              src="/me.jpg"
+              src="src/assets/images/me.jpg"
               alt="Akindu Delgahagoda"
               className="h-full w-full object-cover object-center rounded-[2rem]"
             />

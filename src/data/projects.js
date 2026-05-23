@@ -1,13 +1,13 @@
-import medibox from "../assets/medibox.png"
-import minershield from "../assets/minershield.jpg"
-import nanoprocessor from "../assets/nanoprocessor.jpg"
-import audio_spectrum from "../assets/audio_spectrum_visualizer.png"
-import jetvio from "../assets/jetvio.jpg"
-import mechapulse from "../assets/mechapulse.png"
-import quot3d from "../assets/quot3d.png"
-import infraportal from "../assets/infraportal.png"
-import fazetrak from "../assets/fazetrak.jpg"
-import aspiretrust from "../assets/aspiretrust.png"
+import medibox from "../assets/images/projects/medibox.png"
+import minershield from "../assets/images/projects/minershield.jpg"
+import nanoprocessor from "../assets/images/projects/nanoprocessor.jpg"
+import audio_spectrum from "../assets/images/projects/audio_spectrum_visualizer.png"
+import jetvio from "../assets/images/projects/jetvio.jpg"
+import mechapulse from "../assets/images/projects/mechapulse.png"
+import quot3d from "../assets/images/projects/quot3d.png"
+import infraportal from "../assets/images/projects/infraportal.png"
+import fazetrak from "../assets/images/projects/fazetrak.jpg"
+import aspiretrust from "../assets/images/projects/aspiretrust.png"
 
 export const projects = [
   {
