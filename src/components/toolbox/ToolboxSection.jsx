@@ -99,7 +99,7 @@ const itemIcon = {
 
 export default function ToolboxSection({ title, items }) {
   return (
-    <CommonCard className="!p-5">
+    <CommonCard className="!p-5 !rounded-2xl">
       <h2 className="theme-kicker text-sm font-semibold tracking-[0.24em]">
         {title}
       </h2>

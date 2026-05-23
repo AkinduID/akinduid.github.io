@@ -44,7 +44,7 @@ export default function Navbar() {
       className="theme-nav-shell w-fit rounded-[1.75rem] p-2 lg:p-2"
     >
       <div className="mx-auto flex items-center justify-center gap-0.5 lg:gap-0.1 lg:px-0.5">
-        <div className="hidden items-center gap-0.5 theme-text-secondary lg:flex">
+        <div className="hidden items-center gap-1.5 theme-text-secondary lg:flex">
           {navItems.map(({ href, label, Icon }) => (
             <motion.div key={label} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink

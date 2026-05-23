@@ -11,7 +11,7 @@ export default function ProjectCard({
 }) {
   return (
     <article
-      className="project-card-enter theme-card theme-card-hover group overflow-hidden rounded-[1.5rem]"
+      className="project-card-enter theme-card theme-card-hover group overflow-hidden rounded-[1.0rem]"
       data-category={category}
       style={{ animationDelay: animationDelay }}
     >

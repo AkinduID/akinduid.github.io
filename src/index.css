@@ -46,7 +46,7 @@
     --sidebar-ring: #06b6d4;
     --theme-background: #f5f7fa;
     --theme-secondary-background: #e2e8f0;
-    --theme-card-background: #ffffff;
+    --theme-card-background: rgba(255, 255, 255, 0.1);
     --theme-text-primary: #111827;
     --theme-text-secondary: #475569;
     --theme-text-muted: #64748b;
@@ -57,13 +57,14 @@
     --theme-shadow: rgba(15, 23, 42, 0.08);
     --theme-shadow-strong: rgba(15, 23, 42, 0.12);
     --theme-glow: rgba(6, 182, 212, 0.15);
-    --theme-active-surface: rgba(6, 182, 212, 0.12);
+    --theme-active-surface: rgba(6, 182, 212, 0.2);
     --theme-active-border: rgba(6, 182, 212, 0.3);
-    --theme-hover-surface: rgba(255, 255, 255, 0.65);
+    --theme-hover-surface: rgba(6, 182, 212, 0.45);
     --theme-button-text: #ffffff;
     --theme-hero-gradient: linear-gradient(135deg, #22d3ee 0%, #f5f7fa 100%);
     --theme-page-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(245, 247, 250, 0.72) 100%);
     --theme-page-radial: radial-gradient(circle at top, rgba(6, 182, 212, 0.15), transparent 45%);
+    --theme-grid-color: rgba(15, 23, 42, 0.06);
   }
   .dark {
     --background: #000000;
@@ -99,7 +100,7 @@
     --sidebar-ring: #22d3ee;
     --theme-background: #000000;
     --theme-secondary-background: #0f172a;
-    --theme-card-background: #111827;
+    --theme-card-background: rgba(0, 0, 0, 0.1);
     --theme-text-primary: #ffffff;
     --theme-text-secondary: #cbd5e1;
     --theme-text-muted: #94a3b8;
@@ -110,13 +111,14 @@
     --theme-shadow: rgba(34, 211, 238, 0.15);
     --theme-shadow-strong: rgba(0, 0, 0, 0.35);
     --theme-glow: rgba(34, 211, 238, 0.15);
-    --theme-active-surface: rgba(34, 211, 238, 0.12);
+    --theme-active-surface: rgba(34, 211, 238, 0.2);
     --theme-active-border: rgba(34, 211, 238, 0.3);
-    --theme-hover-surface: rgba(255, 255, 255, 0.05);
+    --theme-hover-surface: rgba(34, 211, 238, 0.45);
     --theme-button-text: #000000;
     --theme-hero-gradient: linear-gradient(135deg, #06b6d4 0%, #0f172a 100%);
     --theme-page-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.82) 0%, rgba(15, 23, 42, 0.72) 100%);
     --theme-page-radial: radial-gradient(circle at top, rgba(34, 211, 238, 0.15), transparent 45%);
+    --theme-grid-color: rgba(255, 255, 255, 0.05);
   }
   * {
     box-sizing: border-box;
@@ -137,7 +139,31 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, transparent, transparent 78%, rgba(6, 182, 212, 0.04));
+    -webkit-mask-image: radial-gradient(circle at center, black 45%, transparent 100%);
+    mask-image: radial-gradient(circle at center, black 45%, transparent 100%);
+
+    background-image:
+      linear-gradient(
+        var(--theme-grid-color) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        var(--theme-grid-color) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        transparent,
+        transparent 78%,
+        rgba(6, 182, 212, 0.04)
+      );
+
+    background-size:
+      20px 20px,
+      20px 20px,
+      100% 100%;
+
     pointer-events: none;
     z-index: 0;
   }
@@ -191,11 +217,11 @@
   .theme-card-hover:hover {
     border-color: var(--theme-active-border);
     box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28), 0 0 0 1px var(--theme-active-border);
-    transform: translateY(-4px);
+    transform: scale(1.01);
   }
 
   .theme-section-divider {
-    border-top: 1px solid var(--theme-border);
+    border-top: 0px solid var(--theme-border);
   }
 
   .theme-nav-shell {

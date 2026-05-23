@@ -72,7 +72,7 @@ export function ExperienceCard({ logo, role, company, team, date, tasks, tags })
               <p className="mt-1 text-sm theme-text-secondary">{company}</p>
               <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[var(--theme-accent)]">{team}</p>
             </div>
-            <span className="theme-pill rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
+            <span className="theme-pill-active rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
               {date}
             </span>
           </div>

@@ -65,15 +65,19 @@ export default function Home() {
             </div>
           </CommonCard>
         </div>
+        
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-          <div className="theme-card h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem]">
+          <CommonCard className="!p-0">
+          {/* <div className="theme-card h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem]"> */}
             <img
               src="/me.jpg"
               alt="Akindu Delgahagoda"
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-center rounded-[2rem]"
             />
-          </div>
+          {/* </div> */}
+          </CommonCard>
         </div>
+        
       </div>
 
       <CommonCard className="mt-6 !p-4">
