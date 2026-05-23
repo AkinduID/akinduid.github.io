@@ -15,7 +15,7 @@ export default function Projects() {
   }, [filter])
 
   return (
-    <PageShell>
+    <PageShell description="Engineering projects I have built or contributed to, covering a range of technical domains.">
       <div className="space-y-6">
 
         <div className="flex flex-wrap justify-center gap-3">

@@ -16,7 +16,7 @@ export default function Gallery() {
   }, [filter])
 
   return (
-    <PageShell>
+    <PageShell description="A showcase of my design work and photography.">
       <div className="flex flex-wrap justify-center gap-3">
           {filters.map((item) => (
             <button

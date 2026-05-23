@@ -7,7 +7,7 @@ import { educationItems, experienceItems, achievementSections, certifications, v
 
 export default function About() {
   return (
-    <PageShell>
+    <PageShell description="Education, experience, achievements, and activities that define my journey and growth.">
       <div className="grid gap-4 theme-text-secondary">
         <div className="grid gap-4 lg:grid-cols-2">
           <EducationSection items={educationItems} certifications={certifications} />

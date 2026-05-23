@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <PageShell>
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.95fr)_minmax(0,0.9fr)] lg:items-stretch">
+      <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.95fr)_minmax(0,0.9fr)] lg:items-stretch">
         
         <div className="order-2 lg:order-1">
           <HeroCard activeFocus={activeFocus} />
