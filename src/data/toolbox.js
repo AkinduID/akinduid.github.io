@@ -4,52 +4,74 @@ import cLogo from "../assets/icons/programming/c.png"
 import cppLogo from "../assets/icons/programming/cpp.png"
 import javaLogo from "../assets/icons/programming/java.png"
 import csharpLogo from "../assets/icons/programming/csharp.png"
-import vhdlLogo from "../assets/icons/programming/vhdl.svg"
 import markdownLogo from "../assets/icons/programming/markdown.png"
 import typescriptLogo from "../assets/icons/programming/typescript.png"
 import powershellLogo from "../assets/icons/programming/powershell.png"
 import bashLogo from "../assets/icons/programming/bash.png"
 
-import numpyLogo from "../assets/icons/ml/numpy.svg"
-import pandasLogo from "../assets/icons/ml/pandas.svg"
-import matplotlibLogo from "../assets/icons/ml/matplotlib.svg"
+import numpyLogo from "../assets/icons/ml/NumPy.png"
+import pandasLogo from "../assets/icons/ml/pandas.png"
+import matplotlibLogo from "../assets/icons/ml/Matplotlib.png"
 import opencvLogo from "../assets/icons/ml/opencv.png"
 import mediapipeLogo from "../assets/icons/ml/mediapipe.png"
-import tensorflowLogo from "../assets/icons/ml/tensorflow.svg"
-import pytorchLogo from "../assets/icons/ml/pytorch.svg"
-
+import tensorflowLogo from "../assets/icons/ml/TensorFlow.png"
+import pytorchLogo from "../assets/icons/ml/PyTorch.png"
+import scikitleanLogo from "../assets/icons/ml/scikit-learn.png"
+import colabLogo from "../assets/icons/ml/colab.png"
+import onnxLogo from "../assets/icons/ml/onnx.png"
+import yoloLogo from "../assets/icons/ml/yolo.png"
 import jupyterLogo from "../assets/icons/ml/jupyter.png"
-import colabLogo from "../assets/icons/ides/colab.svg"
 
 import arduinoLogo from "../assets/icons/embedded/arduino.png"
-import raspberryPiLogo from "../assets/icons/embedded/raspberrypi.svg"
-import esp32Logo from "../assets/icons/embedded/esp32.svg"
-import platformioLogo from "../assets/icons/embedded/platformio.svg"
-import rosLogo from "../assets/icons/embedded/ros.svg"
-import gazeboLogo from "../assets/icons/embedded/gazebo.svg"
-import noderedLogo from "../assets/icons/frontend/nodered.svg"
+import raspberryPiLogo from "../assets/icons/embedded/Raspberry Pi.png"
+import esp32Logo from "../assets/icons/embedded/esp32.png"
+import platformioLogo from "../assets/icons/embedded/platformio.png"
+import rosLogo from "../assets/icons/embedded/ROS.png"
+import gazeboLogo from "../assets/icons/embedded/Gazebo.png"
+import noderedLogo from "../assets/icons/embedded/nodered.png"
+import mqttLogo from "../assets/icons/embedded/mqtt.png"
 
-import vivadoLogo from "../assets/icons/embedded/vivado.svg"
+import vivadoLogo from "../assets/icons/embedded/vivado.png"
+import vhdlLogo from "../assets/icons/embedded/vhdl.png"
+import verilogLogo from "../assets/icons/embedded/verilog.png"
+import basys3Logo from "../assets/icons/embedded/basys3.png"
+import cudaLogo from "../assets/icons/embedded/cuda.png"
 
-import gitLogo from "../assets/icons/devops/git.svg"
-import githubLogo from "../assets/icons/devops/github.svg"
-import dockerLogo from "../assets/icons/devops/docker.svg"
-import linuxLogo from "../assets/icons/devops/linux.svg"
+import gitLogo from "../assets/icons/devops/Git.png"
+import githubLogo from "../assets/icons/devops/Github.png"
+import githubpagesLogo from "../assets/icons/devops/github pages.png"
+import githubactionsLogo from "../assets/icons/devops/Github Actions.png"
+import dockerLogo from "../assets/icons/devops/Docker.png"
+import linuxLogo from "../assets/icons/devops/Linux.png"
 
 import htmlLogo from "../assets/icons/frontend/html5.png"
 import cssLogo from "../assets/icons/frontend/css3.png"
-import streamlitLogo from "../assets/icons/frontend/streamlit.svg"
-import pyqtLogo from "../assets/icons/frontend/pyqt.svg"
-import reactLogo from "../assets/icons/frontend/react.svg"
-import reduxLogo from "../assets/icons/frontend/redux.svg"
+import streamlitLogo from "../assets/icons/frontend/Streamlit.png"
+import pyqtLogo from "../assets/icons/frontend/Qt.png"
+import reactLogo from "../assets/icons/frontend/React.png"
+import reduxLogo from "../assets/icons/frontend/Redux.png"
+import viteLogo from "../assets/icons/frontend/Vite.js.png"
+import tailwindLogo from "../assets/icons/frontend/Tailwind CSS.png"
 
-import fastapiLogo from "../assets/icons/backend/fastapi.svg"
-import ballerinaLogo from "../assets/icons/backend/ballerina.svg"
-import mysqlLogo from "../assets/icons/backend/mysql.svg"
+import fastapiLogo from "../assets/icons/backend/FastAPI.png"
+import ballerinaLogo from "../assets/icons/backend/Ballerina.png"
+import mysqlLogo from "../assets/icons/backend/MySQL.png"
+import graphqlLogo from "../assets/icons/backend/GraphQL.png"
+import postmanLogo from "../assets/icons/backend/Postman.png"
+import restapiLogo from "../assets/icons/backend/restapi.png"
 
 import vscodeLogo from "../assets/icons/ides/vscode.png"
 import visualStudioLogo from "../assets/icons/ides/visualstudio.png"
-import datagripLogo from "../assets/icons/ides/datagrip.svg"
+import datagripLogo from "../assets/icons/ides/Datagrip.png"
+import latexLogo from "../assets/icons/ides/Latex.png"
+import cmakeLogo from "../assets/icons/ides/CMake.png"
+import windowsLogo from "../assets/icons/ides/Windows 11.png"
+import appleLogo from "../assets/icons/ides/Apple.png"
+import ubuntuLogo from "../assets/icons/ides/Ubuntu.png"
+
+import psLogo from "../assets/icons/design/PS.ico"
+import aiLogo from "../assets/icons/design/AI.ico"
+import figmaLogo from "../assets/icons/design/Figma.png"
 
 export const toolboxSections = [
   {
@@ -73,7 +95,7 @@ export const toolboxSections = [
       { name: "NumPy", icon: numpyLogo },
       { name: "Pandas", icon: pandasLogo },
       { name: "Matplotlib", icon: matplotlibLogo },
-      { name: "scikit-learn", icon: numpyLogo },
+      { name: "scikit-learn", icon: scikitleanLogo },
       { name: "Jupyter", icon: jupyterLogo },
       { name: "Google Colab", icon: colabLogo },
     ],
@@ -86,8 +108,8 @@ export const toolboxSections = [
       { name: "MediaPipe", icon: mediapipeLogo },
       { name: "TensorFlow", icon: tensorflowLogo },
       { name: "PyTorch", icon: pytorchLogo },
-      { name: "ONNX", icon: tensorflowLogo },
-      { name: "YOLO", icon: opencvLogo },
+      { name: "ONNX", icon: onnxLogo },
+      { name: "YOLO", icon: yoloLogo },
     ],
   },
 
@@ -101,7 +123,7 @@ export const toolboxSections = [
       { name: "ROS", icon: rosLogo },
       { name: "Gazebo", icon: gazeboLogo },
       { name: "Node-RED", icon: noderedLogo },
-      { name: "MQTT", icon: rosLogo },
+      { name: "MQTT", icon: mqttLogo },
     ],
   },
 
@@ -110,9 +132,9 @@ export const toolboxSections = [
     items: [
       { name: "Vivado", icon: vivadoLogo },
       { name: "VHDL", icon: vhdlLogo },
-      { name: "Verilog", icon: vivadoLogo },
-      { name: "CUDA", icon: vivadoLogo },
-      { name: "Basys3 FPGA", icon: vivadoLogo },
+      { name: "Verilog", icon: verilogLogo },
+      { name: "CUDA", icon: cudaLogo },
+      { name: "Basys3 FPGA", icon: basys3Logo },
     ],
   },
 
@@ -122,10 +144,9 @@ export const toolboxSections = [
       { name: "Git", icon: gitLogo },
       { name: "GitHub", icon: githubLogo },
       { name: "Docker", icon: dockerLogo },
-      { name: "GitHub Actions", icon: githubLogo },
-      { name: "GitHub Pages", icon: githubLogo },
+      { name: "GitHub Actions", icon: githubactionsLogo },
+      { name: "GitHub Pages", icon: githubpagesLogo },
       { name: "Linux", icon: linuxLogo },
-      { name: "Ubuntu", icon: linuxLogo },
     ],
   },
 
@@ -137,7 +158,8 @@ export const toolboxSections = [
       { name: "Streamlit", icon: streamlitLogo },
       { name: "PyQt", icon: pyqtLogo },
       { name: "React", icon: reactLogo },
-      { name: "Vite", icon: reactLogo },
+      { name: "Tailwind CSS", icon: tailwindLogo },
+      { name: "Vite", icon: viteLogo },
       { name: "Redux", icon: reduxLogo },
     ],
   },
@@ -147,10 +169,10 @@ export const toolboxSections = [
     items: [
       { name: "FastAPI", icon: fastapiLogo },
       { name: "Ballerina", icon: ballerinaLogo },
-      { name: "REST", icon: fastapiLogo },
-      { name: "GraphQL", icon: fastapiLogo },
+      { name: "REST", icon: restapiLogo },
+      { name: "GraphQL", icon: graphqlLogo },
       { name: "MySQL", icon: mysqlLogo },
-      { name: "Postman", icon: fastapiLogo },
+      { name: "Postman", icon: postmanLogo },
     ],
   },
 
@@ -159,32 +181,28 @@ export const toolboxSections = [
     items: [
       { name: "Visual Studio Code", icon: vscodeLogo },
       { name: "Visual Studio", icon: visualStudioLogo },
-      { name: "CMake", icon: vscodeLogo },
+      { name: "CMake", icon: cmakeLogo },
       { name: "DataGrip", icon: datagripLogo },
-      { name: "Jupyter", icon: jupyterLogo },
-      { name: "Google Colab", icon: colabLogo },
-      { name: "Ubuntu", icon: linuxLogo },
-      { name: "Windows", icon: visualStudioLogo },
-      { name: "macOS", icon: visualStudioLogo },
+      { name: "Ubuntu", icon: ubuntuLogo },
+      { name: "Windows", icon: windowsLogo },
+      { name: "macOS", icon: appleLogo },
     ],
   },
 
   {
     title: "Documentation",
     items: [
-      { name: "LaTeX", icon: markdownLogo },
+      { name: "LaTeX", icon: latexLogo },
       { name: "Markdown", icon: markdownLogo },
-      { name: "MkDocs", icon: markdownLogo },
-      { name: "Read the Docs", icon: markdownLogo },
-      { name: "Sphinx", icon: markdownLogo },
     ],
   },
 
   {
     title: "Graphic Design",
     items: [
-      { name: "Adobe Photoshop", icon: datagripLogo },
-      { name: "Adobe Illustrator", icon: datagripLogo },
+      { name: "Adobe Photoshop", icon: psLogo },
+      { name: "Adobe Illustrator", icon: aiLogo },
+      { name: "Figma", icon: figmaLogo },
     ],
   },
 ]
