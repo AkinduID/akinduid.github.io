@@ -4,6 +4,8 @@ import { Lightbulb } from "lucide-react"
 import PageShell from "../components/common/PageShell"
 import CommonCard from "../components/common/CommonCard"
 import {connectItems, focusAreas} from "../data/home"
+import darkPortrait from "../assets/images/me.jpg"
+import lightPortrait from "../assets/images/me2.jpg"
 
 export default function Home() {
   const [focusIndex, setFocusIndex] = useState(0)
@@ -69,10 +71,21 @@ export default function Home() {
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
           <CommonCard className="!p-0">
           {/* <div className="theme-card h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem]"> */}
-            <img
-              src="src/assets/images/me.jpg"
+            {/* <img
+              src={theme === "dark" ? darkPortrait : lightPortrait}
               alt="Akindu Delgahagoda"
               className="h-full w-full object-cover object-center rounded-[2rem]"
+            /> */}
+            <img
+              src={lightPortrait}
+              className="h-full w-full object-cover object-center block dark:hidden rounded-[2rem]"
+              alt=""
+            />
+
+            <img
+              src={darkPortrait}
+              className="h-full w-full object-cover object-center hidden dark:block rounded-[2rem]"
+              alt=""
             />
           {/* </div> */}
           </CommonCard>
