@@ -1,4 +1,4 @@
-import { cn } from "../lib/utils"
+import { cn } from "../../lib/utils"
 
 const baseClasses =
   "theme-card theme-card-hover flex h-full flex-col p-6 sm:p-8"

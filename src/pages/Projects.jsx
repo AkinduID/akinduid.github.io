@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
-import PageShell from "../components/PageShell"
-import ProjectCard from "../components/ProjectCard"
+import PageShell from "../components/common/PageShell"
+import ProjectCard from "../components/projects/ProjectCard"
 
 import medibox from "../assets/medibox.png"
 import minershield from "../assets/minershield.jpg"

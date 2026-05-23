@@ -1,4 +1,4 @@
-import PageShell from "../components/PageShell"
+import PageShell from "../components/common/PageShell"
 import uomLogo from "../assets/institutes/University_of_Moratuwa_logo.png"
 import suslLogo from "../assets/institutes/Logo-SUSL.png"
 import sccLogo from "../assets/institutes/SCC Logo.png"
@@ -9,10 +9,10 @@ import ieeeSbLogo from "../assets/organizations/IEEE STUDENT B LOGO.png"
 import moraLogo from "../assets/institutes/University_of_Moratuwa_logo.png"
 import sccAuLogo from "../assets/organizations/SCCAU Logo.png"
 import sccScoutLogo from "../assets/organizations/new logo SCCSG.png"
-import EducationSection from "../components/About/EducationSection"
-import ExperienceSection from "../components/About/ExperienceSection"
-import AchievementsSection from "../components/About/AchievementsSection"
-import VolunteeringSection from "../components/About/VolunteeringSection"
+import EducationSection from "../components/about/EducationSection"
+import ExperienceSection from "../components/about/ExperienceSection"
+import AchievementsSection from "../components/about/AchievementsSection"
+import VolunteeringSection from "../components/about/VolunteeringSection"
 
 const educationItems = [
   {

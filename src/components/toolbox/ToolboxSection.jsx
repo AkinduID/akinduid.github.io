@@ -1,4 +1,4 @@
-import CommonCard from "./CommonCard"
+import CommonCard from "../common/CommonCard"
 
 function createBadgeDataUri(label) {
   const initials = label
@@ -99,7 +99,7 @@ const itemIcon = {
 
 export default function ToolboxSection({ title, items }) {
   return (
-    <CommonCard>
+    <CommonCard className="!p-5">
       <h2 className="theme-kicker text-sm font-semibold tracking-[0.24em]">
         {title}
       </h2>

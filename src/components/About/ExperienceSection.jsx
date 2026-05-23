@@ -1,4 +1,4 @@
-import { SectionCard, ExperienceCard } from "./CommonSection"
+import { SectionCard, ExperienceCard } from "../common/CommonSection"
 
 export default function ExperienceSection({ items }) {
   return (

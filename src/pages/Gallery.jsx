@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import PageShell from "../components/PageShell"
+import PageShell from "../components/common/PageShell"
 
 import oneDayMore from "../assets/gallery/1 day more.png"
 import albumCover from "../assets/gallery/album cover.png"

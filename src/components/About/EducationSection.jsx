@@ -1,4 +1,4 @@
-import { SectionCard, EducationCard } from "./CommonSection"
+import { SectionCard, EducationCard } from "../common/CommonSection"
 
 function CompactCert({ title, meta }) {
   return (

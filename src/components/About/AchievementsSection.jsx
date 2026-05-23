@@ -1,4 +1,4 @@
-import { SectionCard, SectionHeading, MetaCard } from "./CommonSection"
+import { SectionCard, SectionHeading, MetaCard } from "../common/CommonSection"
 
 export default function AchievementsSection({ sections }) {
   return (

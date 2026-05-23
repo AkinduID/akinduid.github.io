@@ -1,4 +1,4 @@
-import { SectionCard, VolunteeringCard } from "./CommonSection"
+import { SectionCard, VolunteeringCard } from "../common/CommonSection"
 
 export default function VolunteeringSection({ sections }) {
   return (

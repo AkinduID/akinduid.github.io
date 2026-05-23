@@ -1,5 +1,5 @@
-import PageShell from "../components/PageShell"
-import ToolboxSection from "../components/ToolboxSection"
+import PageShell from "../components/common/PageShell"
+import ToolboxSection from "../components/toolbox/ToolboxSection"
 
 const toolboxSections = [
   {

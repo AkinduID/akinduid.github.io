@@ -1,5 +1,5 @@
-import TopHeader from "./components/TopHeader"
-import Footer from "./components/Footer"
+import TopHeader from "./components/common/TopHeader"
+import Footer from "./components/common/Footer"
 import { AnimatePresence, motion } from "framer-motion"
 import { Navigate, Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages/Home"

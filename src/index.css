@@ -170,6 +170,7 @@
     color: var(--theme-text-primary);
     border-radius: 2rem;
     box-shadow: 0 18px 60px var(--theme-shadow);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
   }
 
@@ -179,6 +180,7 @@
     color: var(--theme-text-primary);
     border-radius: 1.5rem;
     box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+    -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
   }
 
@@ -200,6 +202,7 @@
     border: 1px solid var(--theme-border);
     background: var(--theme-navbar);
     box-shadow: 0 14px 45px var(--theme-shadow-strong);
+    -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
   }
 
@@ -225,7 +228,7 @@
   .theme-nav-link-active {
     border-color: var(--theme-active-border);
     background: var(--theme-active-surface);
-    color: var(--theme-button-text);
+    color: var(--theme-text-primary);
     box-shadow: 0 0 0 1px var(--theme-active-border);
   }
 
@@ -248,7 +251,7 @@
   .theme-nav-icon-active {
     border-color: var(--theme-active-border);
     background: var(--theme-active-surface);
-    color: var(--theme-button-text);
+    color: var(--theme-text-primary);
     box-shadow: 0 0 0 1px var(--theme-active-border);
   }
 
@@ -261,6 +264,7 @@
     background: var(--theme-card-background);
     color: var(--theme-text-secondary);
     box-shadow: 0 10px 26px var(--theme-shadow);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
   }
@@ -304,7 +308,7 @@
   .theme-pill-active {
     border-color: var(--theme-active-border);
     background: var(--theme-active-surface);
-    color: var(--theme-button-text);
+    color: var(--theme-text-primary);
     box-shadow: 0 0 0 1px var(--theme-active-border);
   }
 

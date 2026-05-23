@@ -1,4 +1,4 @@
-import PageShell from "../components/PageShell"
+import PageShell from "../components/common/PageShell"
 
 export default function NotFound() {
   return (
