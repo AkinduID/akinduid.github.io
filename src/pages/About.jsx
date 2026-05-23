@@ -191,7 +191,7 @@ const volunteeringSections = [
 export default function About() {
   return (
     <PageShell>
-      <div className="grid gap-4 text-white/80">
+      <div className="grid gap-4 theme-text-secondary">
         <div className="grid gap-4 lg:grid-cols-2">
           <EducationSection items={educationItems} certifications={certifications} />
 

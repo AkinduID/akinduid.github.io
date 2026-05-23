@@ -1,4 +1,3 @@
-import React from "react"
 import { SectionCard, ExperienceCard } from "./CommonSection"
 
 export default function ExperienceSection({ items }) {

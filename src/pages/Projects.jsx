@@ -155,10 +155,8 @@ export default function Projects() {
               key={item.key}
               type="button"
               onClick={() => setFilter(item.key)}
-              className={`rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-xl transition-all duration-200 ${
-                filter === item.key
-                  ? "border-[#8be9ff]/60 bg-[#8be9ff]/15 text-[#dffcff] shadow-[0_0_0_1px_rgba(139,233,255,0.12)]"
-                  : "border-white/10 bg-white/5 text-white/72"
+              className={`theme-pill rounded-full px-4 py-2 text-sm font-medium backdrop-blur-xl transition-all duration-200 ${
+                filter === item.key ? "theme-pill-active" : ""
               }`}
             >
               {item.label}

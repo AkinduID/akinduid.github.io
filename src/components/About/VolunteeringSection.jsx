@@ -1,4 +1,3 @@
-import React from "react"
 import { SectionCard, VolunteeringCard } from "./CommonSection"
 
 export default function VolunteeringSection({ sections }) {

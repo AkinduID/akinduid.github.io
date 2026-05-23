@@ -13,8 +13,8 @@ function createBadgeDataUri(label) {
     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
       <defs>
         <linearGradient id="g" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#0ea5e9"/>
-          <stop offset="1" stop-color="#22c55e"/>
+          <stop stop-color="#06b6d4"/>
+          <stop offset="1" stop-color="#0f172a"/>
         </linearGradient>
       </defs>
       <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#g)"/>
@@ -100,7 +100,7 @@ const itemIcon = {
 export default function ToolboxSection({ title, items }) {
   return (
     <CommonCard>
-      <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#00ffff]/80">
+      <h2 className="theme-kicker text-sm font-semibold tracking-[0.24em]">
         {title}
       </h2>
 
@@ -113,7 +113,7 @@ export default function ToolboxSection({ title, items }) {
               className="h-12 w-12 shrink-0 object-contain"
               loading="lazy"
             />
-            <span className="min-w-0 text-sm font-semibold leading-tight text-gray-200/90">{item}</span>
+            <span className="min-w-0 text-sm font-semibold leading-tight theme-text-secondary">{item}</span>
           </li>
         ))}
       </ul>

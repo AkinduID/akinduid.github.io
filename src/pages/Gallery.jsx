@@ -47,17 +47,15 @@ export default function Gallery() {
               key={item.key}
               type="button"
               onClick={() => setFilter(item.key)}
-              className={`rounded-full border px-4 py-2 text-sm font-medium backdrop-blur-xl transition-all duration-200 ${
-                filter === item.key
-                  ? "border-[#8be9ff]/60 bg-[#8be9ff]/15 text-[#dffcff] shadow-[0_0_0_1px_rgba(139,233,255,0.12)]"
-                  : "border-white/10 bg-white/5 text-white/72"
+              className={`theme-pill rounded-full px-4 py-2 text-sm font-medium backdrop-blur-xl transition-all duration-200 ${
+                filter === item.key ? "theme-pill-active" : ""
               }`}
             >
               {item.label}
             </button>
           ))}
         </div>
-      <div className="mt-4 backdrop-blur-sm rounded-2xl border border-white/10 bg-black/20 p-5 text-sm leading-7 text-white/80">
+      <div className="theme-card mt-4 rounded-2xl p-5 text-sm leading-7">
 
         <div key={filter} className="columns-1 gap-5 sm:columns-1 md:columns-2 lg:columns-3">
           {filteredImages.map((img, idx) => (

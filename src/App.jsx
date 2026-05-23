@@ -29,10 +29,10 @@ export default function App() {
   const location = useLocation()
 
   return (
-    <div className="relative z-20 flex min-h-screen flex-col">
+    <div className="theme-page-root">
       <TopHeader />
 
-      <main className="relative z-10 flex-1 overflow-hidden">
+      <main className="theme-main">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}

@@ -31,28 +31,20 @@ const itemVariants = {
 
 export default function Navbar() {
   const linkClassName = ({ isActive }) =>
-    `inline-flex h-9 w-24 items-center justify-center gap-1.5 rounded-full text-sm font-semibold overflow-hidden transition-all duration-150 ${
-      isActive
-        ? "border border-[#00c8ff]/30 bg-[#00c8ff]/12 text-[#d9fbff] shadow-[0_0_0_1px_rgba(0,200,255,0.12)]"
-        : "border border-transparent text-gray-200/90 hover:border-white/10 hover:bg-white/5 hover:text-white"
-    }`
+    `theme-nav-link overflow-hidden text-sm font-semibold ${isActive ? "theme-nav-link-active" : ""}`
 
   const iconClassName = ({ isActive }) =>
-    `inline-flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-150 md:h-9 md:w-9 ${
-      isActive
-        ? "border-[#00c8ff]/30 bg-[#00c8ff]/12 text-[#d9fbff] shadow-[0_0_0_1px_rgba(0,200,255,0.12)]"
-        : "border-transparent text-gray-200/90 hover:border-white/10 hover:bg-white/5 hover:text-white"
-    }`
+    `theme-nav-icon h-8 w-8 border transition-all duration-150 md:h-9 md:w-9 ${isActive ? "theme-nav-icon-active" : ""}`
 
   return (
     <motion.nav
       variants={navVariants}
       initial="hidden"
       animate="show"
-      className="w-fit rounded-[1.75rem] p-2 lg:p-2 border border-transparent bg-transparent shadow-none ring-0 backdrop-blur-0 lg:border-white/10 lg:bg-white/5 lg:shadow-[0_14px_45px_rgba(0,0,0,0.35)] lg:ring-1 lg:ring-white/5 lg:backdrop-blur-3xl"
+      className="theme-nav-shell w-fit rounded-[1.75rem] p-2 lg:p-2"
     >
       <div className="mx-auto flex items-center justify-center gap-0.5 lg:gap-0.1 lg:px-0.5">
-        <div className="hidden items-center gap-0.5 text-gray-300 lg:flex">
+        <div className="hidden items-center gap-0.5 theme-text-secondary lg:flex">
           {navItems.map(({ href, label, Icon }) => (
             <motion.div key={label} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink
@@ -67,7 +59,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="mx-auto flex w-fit items-center gap-1 rounded-full border border-white/10 bg-white/5 text-gray-300 shadow-[0_10px_28px_rgba(0,0,0,0.25)] md:hidden">
+        <div className="theme-nav-shell mx-auto flex w-fit items-center gap-1 rounded-full md:hidden">
           {navItems.map(({ href, label, Icon }) => (
             <motion.div key={label} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink
@@ -82,7 +74,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="mx-auto hidden h-[2.625rem] w-fit items-center gap-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300 shadow-[0_12px_34px_rgba(0,0,0,0.28)] md:flex lg:hidden">
+        <div className="theme-nav-shell mx-auto hidden h-[2.625rem] w-fit items-center gap-1.5 rounded-full md:flex lg:hidden">
           {navItems.map(({ href, label, Icon }) => (
             <motion.div key={`${label}-md`} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink

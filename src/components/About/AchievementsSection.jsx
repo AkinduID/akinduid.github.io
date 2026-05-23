@@ -1,4 +1,3 @@
-import React from "react"
 import { SectionCard, SectionHeading, MetaCard } from "./CommonSection"
 
 export default function AchievementsSection({ sections }) {
@@ -21,7 +20,7 @@ export default function AchievementsSection({ sections }) {
               <div className="space-y-5">
                 {section.groups.map((group) => (
                   <div key={group.title} className="space-y-3">
-                    <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[#8be9ff]/80">{group.title}</h4>
+                    <h4 className="theme-kicker text-sm font-semibold tracking-[0.18em]">{group.title}</h4>
                     <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                       {group.items.map((item) => (
                         <MetaCard key={item.title} title={item.title} meta={item.meta} />

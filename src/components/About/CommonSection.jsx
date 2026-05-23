@@ -1,54 +1,52 @@
-import React from "react"
-
 export function SectionCard({ title, children, className = "" }) {
   return (
-    <section className={`rounded-3xl backdrop-blur-sm border border-white/10 bg-black/20 p-5 sm:p-6 ${className}`}>
-      <h2 className="text-lg font-semibold text-white">{title}</h2>
+    <section className={`theme-card rounded-3xl p-5 sm:p-6 ${className}`}>
+      <h2 className="text-lg font-semibold text-[var(--theme-text-primary)]">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
   )
 }
 
 export function SectionHeading({ title }) {
-  return <h3 className="text-base font-semibold text-white">{title}</h3>
+  return <h3 className="text-base font-semibold text-[var(--theme-text-primary)]">{title}</h3>
 }
 
 export function MetaCard({ title, meta }) {
   return (
-    <article className="rounded-2xl backdrop-blur-xl border border-white/10 bg-white/5 p-4">
-      <p className="text-sm font-semibold text-white">{title}</p>
-      <p className="mt-1 text-sm leading-6 text-white/76">{meta}</p>
+    <article className="theme-card-soft rounded-2xl p-4">
+      <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{title}</p>
+      <p className="mt-1 text-sm leading-6 theme-text-secondary">{meta}</p>
     </article>
   )
 }
 
 export function EducationCard({ logo, institution, degree, year, details }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-white/5 p-4">
+    <article className="theme-card-soft rounded-2xl p-4">
       <div className="flex items-start gap-4">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/10 p-2">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-secondary-background)] p-2">
           <img src={logo} alt={institution} className="h-full w-full object-contain" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-2">
             <div>
-              <p className="text-sm font-semibold text-white">{institution}</p>
-              <p className="mt-1 text-sm text-white/76">{degree}</p>
+              <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{institution}</p>
+              <p className="mt-1 text-sm theme-text-secondary">{degree}</p>
             </div>
-            <span className="rounded-full border border-[#8be9ff]/20 bg-[#8be9ff]/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-[#8be9ff]">
+            <span className="theme-pill-active rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
               {year}
             </span>
           </div>
 
-          <ul className="mt-4 space-y-2 text-sm leading-6 text-white/74">
+          <ul className="mt-4 space-y-2 text-sm leading-6 theme-text-secondary">
             {details.map((detail) => (
               <li key={typeof detail === "string" ? detail : detail.label} className="flex gap-3">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8be9ff]" />
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--theme-accent)]" />
                 {typeof detail === "string" ? (
                   <span>{detail}</span>
                 ) : (
                   <span>
-                    <strong className="text-[#8be9ff]">{detail.label}</strong> - {detail.value}
+                    <strong className="text-[var(--theme-accent)]">{detail.label}</strong> - {detail.value}
                   </span>
                 )}
               </li>
@@ -62,27 +60,27 @@ export function EducationCard({ logo, institution, degree, year, details }) {
 
 export function ExperienceCard({ logo, role, company, team, date, tasks, tags }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-white/5 p-4">
+    <article className="theme-card-soft rounded-2xl p-4">
       <div className="flex items-start gap-4">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/10 p-2">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-secondary-background)] p-2">
           <img src={logo} alt={company} className="h-full w-full object-contain" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-2">
             <div>
-              <p className="text-sm font-semibold text-white">{role}</p>
-              <p className="mt-1 text-sm text-white/76">{company}</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[#8be9ff]/80">{team}</p>
+              <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{role}</p>
+              <p className="mt-1 text-sm theme-text-secondary">{company}</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[var(--theme-accent)]">{team}</p>
             </div>
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-white/78">
+            <span className="theme-pill rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
               {date}
             </span>
           </div>
 
-          <ul className="mt-4 space-y-2 text-sm leading-6 text-white/74">
+          <ul className="mt-4 space-y-2 text-sm leading-6 theme-text-secondary">
             {tasks.map((task) => (
               <li key={task} className="flex gap-3">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8be9ff]" />
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--theme-accent)]" />
                 <span>{task}</span>
               </li>
             ))}
@@ -90,7 +88,7 @@ export function ExperienceCard({ logo, role, company, team, date, tasks, tags })
 
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <span key={tag} className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-white/72">
+              <span key={tag} className="theme-tag rounded-full px-3 py-1 text-xs">
                 {tag}
               </span>
             ))}
@@ -103,17 +101,17 @@ export function ExperienceCard({ logo, role, company, team, date, tasks, tags })
 
 export function VolunteeringCard({ logo, organization, details }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-white/5 p-4">
+    <article className="theme-card-soft rounded-2xl p-4">
       <div className="flex items-start gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 p-2">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--theme-secondary-background)] p-2">
           <img src={logo} alt={organization} className="h-full w-full object-contain" />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold text-white">{organization}</p>
-          <ul className="mt-3 space-y-2 text-sm leading-6 text-white/74">
+          <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{organization}</p>
+          <ul className="mt-3 space-y-2 text-sm leading-6 theme-text-secondary">
             {details.map((detail) => (
               <li key={detail} className="flex gap-3">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8be9ff]" />
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--theme-accent)]" />
                 <span>{detail}</span>
               </li>
             ))}

@@ -42,63 +42,63 @@ export default function Home() {
     <PageShell>
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.95fr)_minmax(0,0.9fr)] lg:items-stretch">
         <div className="order-2 lg:order-1">
-        <CommonCard className="text-center lg:text-left">
-          <p className="text-2xl font-medium tracking-tight text-white/85 sm:text-3xl">
-            Hello I&apos;m
-          </p>
-          <p className="mt-1 text-4xl font-semibold tracking-tight text-[#00FFFF] drop-shadow-[0_0_18px_rgba(139,233,255,0.45)] sm:text-5xl">
-            Akindu Delgahagoda
-          </p>
-
-          <div className="mt-6 flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-white/75 sm:text-base">
-            <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]" />
-            <div className="min-h-[2rem]">
-              <span className="text-white/60">Focused on </span>
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={activeFocus}
-                  initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
-                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-                  className="inline-block text-[#00FFFF]"
-                >
-                  {activeFocus}
-                </motion.span>
-              </AnimatePresence>
-            </div>
-          </div>
-
-          <p className="mt-2 max-w-2xl text-sm leading-8 text-white/78 sm:text-base">
-             I enjoy creating intelligent and interactive systems by combining embedded hardware with modern software technologies. Outside of engineering, I spend time exploring photography, photo editing, and graphic design.
+          <CommonCard className="text-center lg:text-left">
+            <p className="text-2xl font-medium tracking-tight theme-text-secondary sm:text-3xl">
+              Hello I&apos;m
+            </p>
+            <p className="theme-hero-accent mt-1 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Akindu Delgahagoda
             </p>
 
-          <div className="mt-5 flex justify-center lg:justify-start">
-            <a
-              href="https://akinduid.github.io/my-cv/"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex w-[130px] items-center justify-center rounded-full bg-[#00FFFF]/80 px-5 py-3 text-sm font-semibold text-slate-950 transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(0,255,255,0.75)]"
-            >
-              Download CV
-            </a>
+            <div className="mt-6 flex items-center justify-center gap-2 text-sm font-medium theme-text-secondary sm:text-base lg:justify-start">
+              <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-[var(--theme-text-primary)]" />
+              <div className="min-h-[2rem]">
+                <span className="text-[var(--theme-text-muted)]">Focused on </span>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={activeFocus}
+                    initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
+                    transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                    className="theme-accent inline-block"
+                  >
+                    {activeFocus}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+            </div>
+
+            <p className="theme-text-secondary mt-2 max-w-2xl text-sm leading-8 sm:text-base">
+              I enjoy creating intelligent and interactive systems by combining embedded hardware with modern software technologies. Outside of engineering, I spend time exploring photography, photo editing, and graphic design.
+            </p>
+
+            <div className="mt-5 flex justify-center lg:justify-start">
+              <a
+                href="https://akinduid.github.io/my-cv/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="theme-button inline-flex w-[130px] px-5 py-3 text-sm font-semibold transition-shadow duration-300"
+              >
+                Download CV
+              </a>
+            </div>
+          </CommonCard>
+        </div>
+        <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+          <div className="theme-card h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem]">
+            <img
+              src="/me.jpg"
+              alt="Akindu Delgahagoda"
+              className="h-full w-full object-cover object-center"
+            />
           </div>
-        </CommonCard>
-        </div>
-        <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-        <div className="h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem] border border-white/10 bg-black/25 shadow-[0_18px_60px_rgba(0,0,0,0.24)]">
-          <img
-            src="/me.jpg"
-            alt="Akindu Delgahagoda"
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
         </div>
       </div>
 
       <CommonCard className="mt-6 !p-4">
 
-        <div className="grid grid-cols-4 lg:flex lg:flex-nowrap lg:gap-16 gap-6 items-center justify-items-center lg:justify-center">
+        <div className="grid grid-cols-4 items-center justify-items-center gap-6 lg:flex lg:flex-nowrap lg:gap-16 lg:justify-center">
           {connectItems.map(({ icon, title, link }) => (
             <a
               key={title}
