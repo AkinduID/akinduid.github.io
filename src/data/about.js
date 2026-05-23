@@ -121,9 +121,6 @@ export const certifications = [
 ]
 
 export const volunteeringSections = [
-  {
-    title: "University of Moratuwa",
-    items: [
       {
         logo: ieeeRasLogo,
         organization: "IEEE Robotics and Automation Society, UoM",
@@ -159,11 +156,6 @@ export const volunteeringSections = [
           "Stridian 2024 Health Team | Jul – Sep 2024",
         ],
       },
-    ],
-  },
-  {
-    title: "Sivali Central College",
-    items: [
       {
         logo: sccAuLogo,
         organization: "Sivali Astronomy Union",
@@ -179,6 +171,4 @@ export const volunteeringSections = [
         organization: "Sivali Prefects Guild",
         details: ["Junior Prefect | Jan 2017 – Jan 2018"],
       },
-    ],
-  },
-]
+    ]

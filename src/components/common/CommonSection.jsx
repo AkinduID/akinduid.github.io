@@ -46,7 +46,7 @@ export function EducationCard({ logo, institution, degree, year, details }) {
                   <span>{detail}</span>
                 ) : (
                   <span>
-                    <strong className="text-[var(--theme-accent)]">{detail.label}</strong> - {detail.value}
+                    <strong>{detail.label}</strong> - {detail.value}
                   </span>
                 )}
               </li>
@@ -101,17 +101,29 @@ export function ExperienceCard({ logo, role, company, team, date, tasks, tags })
 
 export function VolunteeringCard({ logo, organization, details }) {
   return (
-    <article className="theme-card-soft rounded-2xl p-4">
+    <article className="theme-card-soft rounded-2xl p-5">
       <div className="flex items-start gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--theme-secondary-background)] p-2">
-          <img src={logo} alt={organization} className="h-full w-full object-contain" />
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-card-background)] p-2">
+          <img
+            src={logo}
+            alt={organization}
+            className="h-full w-full object-contain"
+          />
         </div>
+
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{organization}</p>
-          <ul className="mt-3 space-y-2 text-sm leading-6 theme-text-secondary">
+          <h3 className="text-base font-semibold text-[var(--theme-text-primary)]">
+            {organization}
+          </h3>
+
+          <ul className="mt-3 space-y-2">
             {details.map((detail) => (
-              <li key={detail} className="flex gap-3">
+              <li
+                key={detail}
+                className="flex items-start gap-3 text-sm leading-6 theme-text-secondary"
+              >
                 <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--theme-accent)]" />
+
                 <span>{detail}</span>
               </li>
             ))}
