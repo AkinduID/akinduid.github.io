@@ -4,13 +4,11 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-3 text-center sm:flex-row sm:text-left">
         
         <p className="text-xs theme-text-muted sm:text-sm">
-          © {new Date().getFullYear()} Akindu Delgahagoda. All rights reserved.
+          © {new Date().getFullYear()} / AkinduID / Portfolio
         </p>
 
         <div className="flex items-center gap-3 text-xs sm:text-sm">
-          <span className="theme-kicker text-[10px]">Portfolio</span>
-          <span className="h-1 w-1 rounded-full bg-[var(--theme-text-muted)] opacity-60" />
-          <span className="theme-text-muted">Built with React</span>
+          <span className="theme-text-muted">Built with React + Tailwind CSS</span>
         </div>
       </div>
     </footer>
