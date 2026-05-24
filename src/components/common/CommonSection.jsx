@@ -25,7 +25,7 @@ export function EducationCard({ logo, institution, degree, year, details }) {
     <article className="theme-card-soft rounded-2xl p-4">
       <div className="flex items-start gap-4">
         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-secondary-background)] p-2">
-          <img src={logo} alt={institution} className="h-full w-full object-contain" />
+          <img src={logo} alt={institution} loading="lazy" className="h-full w-full object-contain" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-2">
@@ -63,7 +63,7 @@ export function ExperienceCard({ logo, role, company, team, date, tasks, tags })
     <article className="theme-card-soft rounded-2xl p-4">
       <div className="flex items-start gap-4">
         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-secondary-background)] p-2">
-          <img src={logo} alt={company} className="h-full w-full object-contain" />
+          <img src={logo} alt={company} loading="lazy" className="h-full w-full object-contain" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-2">
@@ -107,6 +107,7 @@ export function VolunteeringCard({ logo, organization, details }) {
           <img
             src={logo}
             alt={organization}
+            loading="lazy"
             className="h-full w-full object-contain"
           />
         </div>
