@@ -1,6 +1,5 @@
 import { useMemo, useState } from "react"
 import PageShell from "../components/common/PageShell"
-import LazyImage from "../components/common/LazyImage"
 
 import {images} from "../data/gallery"
 
@@ -41,11 +40,11 @@ export default function Gallery() {
               className="project-card-enter mb-4 break-inside-avoid"
               style={{ animationDelay: `${Math.min(idx * 70, 280)}ms` }}
             >
-              <LazyImage
+              <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full rounded-lg object-cover shadow-md"
                 loading="lazy"
+                className="w-full rounded-lg object-cover shadow-md"
               />
             </figure>
           ))}

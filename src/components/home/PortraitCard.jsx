@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import CommonCard from "../common/CommonCard"
-import LazyImage from "../common/LazyImage"
 
 import darkPortrait from "../../assets/images/me.jpg"
 import lightPortrait from "../../assets/images/me2.jpg"
@@ -25,7 +24,7 @@ export default function PortraitCard() {
 
   return (
     <CommonCard className="rounded-3xl !p-0">
-      <LazyImage
+      <img
         src={portraitSrc}
         loading="lazy"
         className="block h-full w-full rounded-3xl object-cover object-center"

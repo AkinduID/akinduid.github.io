@@ -46,7 +46,7 @@
     --sidebar-ring: #06b6d4;
     --theme-background: #f5f7fa;
     --theme-secondary-background: #e2e8f0;
-    --theme-card-background: rgba(255, 255, 255, 0.1);
+    --theme-card-background: rgba(255, 255, 255, 0.2);
     --theme-text-primary: #111827;
     --theme-text-secondary: #475569;
     --theme-text-muted: #64748b;
@@ -101,7 +101,7 @@
     --sidebar-ring: #22d3ee;
     --theme-background: #000000;
     --theme-secondary-background: #0f172a;
-    --theme-card-background: rgba(0, 0, 0, 0.1);
+    --theme-card-background: rgba(0, 0, 0, 0.2);
     --theme-text-primary: #ffffff;
     --theme-text-secondary: #cbd5e1;
     --theme-text-muted: #94a3b8;
@@ -211,13 +211,13 @@
   }
 
   .theme-card {
-    border: 1px solid var(--theme-border);
+    border: 1px solid var(--theme-active-border);
     background: var(--theme-card-background);
     color: var(--theme-text-primary);
     border-radius: 2rem;
     box-shadow: 0 18px 60px var(--theme-shadow);
-    -webkit-backdrop-filter: blur(18px);
-    backdrop-filter: blur(18px);
+    /* -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px); */
   }
 
   .theme-card-soft {

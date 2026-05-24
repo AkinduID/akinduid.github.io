@@ -1,5 +1,4 @@
 import CommonCard from "../common/CommonCard"
-import LazyImage from "../common/LazyImage"
 
 function createBadgeDataUri(label) {
   const initials = label
@@ -52,7 +51,7 @@ export default function ToolboxSection({ title, items }) {
             key={item.name}
             className="flex flex-col items-center gap-2 text-center"
           >
-            <LazyImage
+            <img
               src={item.icon || createBadgeDataUri(item.name)}
               alt={item.name}
               className="h-12 w-12 shrink-0 object-contain"
