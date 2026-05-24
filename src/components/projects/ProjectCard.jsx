@@ -1,3 +1,5 @@
+import LazyImage from "../common/LazyImage"
+
 export default function ProjectCard({
   image,
   title,
@@ -16,7 +18,7 @@ export default function ProjectCard({
       style={{ animationDelay: animationDelay }}
     >
       <div className="relative aspect-[16/9] overflow-hidden bg-[var(--theme-secondary-background)]">
-        <img
+        <LazyImage
           src={image}
           alt={title}
           loading="lazy"

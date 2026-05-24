@@ -59,7 +59,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="theme-nav-shell mx-auto flex w-fit items-center gap-1 rounded-full md:hidden">
+        <div className="mx-auto h-[1.5rem] flex w-fit items-center gap-1 rounded-full md:hidden">
           {navItems.map(({ href, label, Icon }) => (
             <motion.div key={label} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink
@@ -68,13 +68,13 @@ export default function Navbar() {
                 title={label}
                 className={iconClassName}
               >
-                <Icon className="h-3.5 w-3.5" strokeWidth={2.25} />
+                <Icon className="h-[1.0rem] w-[1.0rem]" strokeWidth={2.25} />
               </NavLink>
             </motion.div>
           ))}
         </div>
 
-        <div className="theme-nav-shell mx-auto hidden h-[2.625rem] w-fit items-center gap-1.5 rounded-full md:flex lg:hidden">
+        <div className="mx-auto hidden h-[2rem] w-fit items-center gap-1.5 rounded-full md:flex lg:hidden">
           {navItems.map(({ href, label, Icon }) => (
             <motion.div key={`${label}-md`} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink
@@ -83,7 +83,7 @@ export default function Navbar() {
                 title={label}
                 className={iconClassName}
               >
-                <Icon className="h-4 w-4" strokeWidth={2.25} />
+                <Icon className="h-[1.1rem] w-[1.1rem]" strokeWidth={2.25} />
               </NavLink>
             </motion.div>
           ))}
