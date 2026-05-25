@@ -25,7 +25,7 @@ import jupyterLogo from "../assets/icons/ml/jupyter.png"
 import arduinoLogo from "../assets/icons/embedded/arduino.png"
 import raspberryPiLogo from "../assets/icons/embedded/Raspberry Pi.png"
 import esp32Logo from "../assets/icons/embedded/esp32.png"
-import platformioLogo from "../assets/icons/embedded/platformio.png"
+import platformioLogo from "../assets/icons/embedded/platformio.svg"
 import rosLogo from "../assets/icons/embedded/ROS.png"
 import gazeboLogo from "../assets/icons/embedded/Gazebo.png"
 import noderedLogo from "../assets/icons/embedded/nodered.png"
@@ -35,7 +35,7 @@ import vivadoLogo from "../assets/icons/embedded/vivado.png"
 import vhdlLogo from "../assets/icons/embedded/vhdl.png"
 import verilogLogo from "../assets/icons/embedded/verilog.png"
 import basys3Logo from "../assets/icons/embedded/basys3.png"
-import cudaLogo from "../assets/icons/embedded/cuda.png"
+import cudaLogo from "../assets/icons/embedded/nvidia.png"
 
 import gitLogo from "../assets/icons/devops/Git.png"
 import githubLogo from "../assets/icons/devops/GitHub.png"
@@ -69,8 +69,8 @@ import windowsLogo from "../assets/icons/ides/Windows 11.png"
 import appleLogo from "../assets/icons/ides/Apple.png"
 import ubuntuLogo from "../assets/icons/ides/Ubuntu.png"
 
-import psLogo from "../assets/icons/design/PS.ico"
-import aiLogo from "../assets/icons/design/AI.ico"
+import psLogo from "../assets/icons/design/ps.png"
+import aiLogo from "../assets/icons/design/ai.png"
 import figmaLogo from "../assets/icons/design/Figma.png"
 
 export const toolboxSections = [
@@ -145,7 +145,7 @@ export const toolboxSections = [
       { name: "GitHub", icon: githubLogo },
       { name: "Docker", icon: dockerLogo },
       { name: "GitHub Actions", icon: githubactionsLogo },
-      { name: "GitHub Pages", icon: githubpagesLogo },
+      { name: "GitHub Pages", icon: githubLogo },
       { name: "Linux", icon: linuxLogo },
     ],
   },
