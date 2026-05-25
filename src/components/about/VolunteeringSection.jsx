@@ -3,7 +3,7 @@ import { SectionCard, VolunteeringCard } from "../common/CommonSection"
 export default function VolunteeringSection({ sections }) {
   return (
     <SectionCard title="Volunteering and Extra-curricular Activities">
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 xl:grid-cols-2">
         {sections.map((section) => (
           <VolunteeringCard
             key={section.organization}

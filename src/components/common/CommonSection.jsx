@@ -1,7 +1,10 @@
 export function SectionCard({ title, children, className = "" }) {
   return (
     <section className={`theme-card rounded-3xl p-5 sm:p-6 ${className}`}>
-      <h2 className="text-lg font-semibold text-[var(--theme-text-primary)]">{title}</h2>
+      <div className="flex items-center gap-3">
+        <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--theme-accent)]" />
+        <h2 className="text-lg font-semibold text-[var(--theme-text-primary)]">{title}</h2>
+      </div>
       <div className="mt-4">{children}</div>
     </section>
   )
@@ -24,7 +27,7 @@ export function EducationCard({ logo, institution, degree, year, details }) {
   return (
     <article className="theme-card-soft rounded-2xl p-4">
       <div className="flex items-start gap-4">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-secondary-background)] p-2">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-card-background)] p-2">
           <img src={logo} alt={institution} loading="lazy" className="h-full w-full object-contain" />
         </div>
         <div className="min-w-0 flex-1">
@@ -62,7 +65,7 @@ export function ExperienceCard({ logo, role, company, team, date, tasks, tags })
   return (
     <article className="theme-card-soft rounded-2xl p-4">
       <div className="flex items-start gap-4">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-secondary-background)] p-2">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[var(--theme-card-background)] p-2">
           <img src={logo} alt={company} loading="lazy" className="h-full w-full object-contain" />
         </div>
         <div className="min-w-0 flex-1">
