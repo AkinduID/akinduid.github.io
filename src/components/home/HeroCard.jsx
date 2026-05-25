@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { Lightbulb } from "lucide-react"
-
+import { HiLightBulb } from "react-icons/hi";
 import CommonCard from "../common/CommonCard"
 
 export default function HeroCard({ activeFocus }) {
@@ -15,8 +14,9 @@ export default function HeroCard({ activeFocus }) {
       </p>
 
       <div className="mt-4 flex items-center justify-center gap-2 text-sm font-medium theme-text-secondary sm:text-base lg:justify-start">
-        <Lightbulb
-          className="h-4 w-4 shrink-0 text-yellow-400 drop-shadow-[0_0_6px_rgba(250,204,21,1)]"
+        <HiLightBulb
+          
+          className="h-5 w-5 shrink-0 text-[#a16207] drop-shadow-[0_0_6px_rgba(161,98,7,0.55)] dark:text-yellow-400/80 dark:drop-shadow-[0_0_6px_rgba(250,204,21,1)]"
         />
 
         <div className="flex min-h-[2rem] items-center">
