@@ -15,14 +15,14 @@ export default function About() {
           <ExperienceSection items={experienceItems} />
         </div>
 
-        <div className="h-px w-full bg-[var(--theme-border)] opacity-60" />
+        <div className="h-px w-full bg-[var(--theme-border)]" />
 
         <div className="grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
           <CertificationsSection certifications={certifications} />
           <AchievementsSection sections={achievementSections} />
         </div>
 
-        <div className="h-px w-full bg-[var(--theme-border)] opacity-60" />
+        <div className="h-px w-full bg-[var(--theme-border)]" />
 
         <div>
           <VolunteeringSection sections={volunteeringSections} />

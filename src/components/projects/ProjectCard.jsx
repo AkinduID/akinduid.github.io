@@ -28,8 +28,8 @@ export default function ProjectCard({
       <div className="flex h-full flex-col p-4">
         <div className="space-y-1.5">
           <h3 className="text-lg font-semibold tracking-tight text-[var(--theme-text-primary)]">{title}</h3>
-          <p className="theme-kicker text-xs font-medium tracking-[0.18em]">
-            {date} <span className="text-[var(--theme-text-muted)]">|</span> {type}
+          <p className="theme-hero-accent text-xs font-semibold">
+            {date} <span className="text-[var(--theme-text)]">|</span> {type}
           </p>
         </div>
 
