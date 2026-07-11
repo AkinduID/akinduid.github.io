@@ -25,9 +25,9 @@ export default function ExperienceSummaryCard({ experience }) {
                     <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[var(--theme-accent)]">{experience.team}</p>
                   )} */}
                 </div>
-                <span className="theme-pill-active rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
+                {/* <span className="theme-pill-active rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
                   {experience.date}
-                </span>
+                </span> */}
               </div>
 
               {/* <ul className="mt-4 space-y-2 text-sm leading-6 theme-text-secondary">

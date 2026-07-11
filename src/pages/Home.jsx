@@ -37,7 +37,7 @@ export default function Home() {
       <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.95fr)_minmax(0,0.9fr)] lg:items-stretch">
         
         <div className="order-2 lg:order-1">
-          <HeroCard activeFocus={activeFocus} />
+          <HeroCard activeFocus={activeFocus} connectItems={connectItems} />
         </div>
 
         <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
@@ -45,9 +45,7 @@ export default function Home() {
         </div>
 
       </div>
-
-      <ConnectCard connectItems={connectItems} />
-
+         {/* <ConnectCard connectItems={connectItems} /> */}
       <SummaryGrid
         experience={experienceItems[0]}
         project={projects[0]}

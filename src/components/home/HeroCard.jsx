@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { HiOutlineLightBulb } from "react-icons/hi";
 import CommonCard from "../common/CommonCard"
 
-export default function HeroCard({ activeFocus }) {
+export default function HeroCard({ activeFocus, connectItems }) {
   return (
     <CommonCard className="rounded-3xl text-center lg:text-left">
       <p className="text-2xl font-medium tracking-tight theme-text-secondary sm:text-3xl">
@@ -43,7 +43,7 @@ export default function HeroCard({ activeFocus }) {
         I enjoy creating intelligent and interactive systems by combining embedded hardware with modern software technologies. Outside of engineering, I spend time exploring photography, photo editing, and graphic design.
       </p>
 
-      <div className="mt-5 flex justify-center lg:justify-start">
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
         <a
           href="https://akinduid.github.io/my-cv/"
           target="_blank"
@@ -52,6 +52,21 @@ export default function HeroCard({ activeFocus }) {
         >
           Download CV
         </a>
+
+        <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
+          {connectItems.map(({ icon: Icon, title, link }) => (
+            <a
+              key={title}
+              href={link}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={title}
+              className="group flex h-11 w-11 items-center justify-center rounded-full transition-all duration-150 hover:-translate-y-0.5 hover:border-[var(--theme-accent)]"
+            >
+              <Icon className="h-5 w-5 text-[var(--theme-text-secondary)] transition-all duration-200 group-hover:text-[var(--theme-accent)] group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+            </a>
+          ))}
+        </div>
       </div>
     </CommonCard>
   )

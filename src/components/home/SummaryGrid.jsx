@@ -31,7 +31,7 @@ export default function SummaryGrid({
       </div>
 
       {/* Row 2: Project (Wide) | Skills (Narrow) */}
-      <div className="grid gap-6 sm:grid-cols-2 items-start">
+      {/* <div className="grid gap-6 sm:grid-cols-2 items-start">
         <div className="sm:col-span-1">
           <ProjectSummaryCard project={project} />
         </div>
@@ -39,22 +39,22 @@ export default function SummaryGrid({
         <div>
           <SkillsSummaryCard skills={skills} />
         </div>
-      </div>
+      </div> */}
 
       {/* Row 3: (Certification + Achievement + Volunteering) Layout | Gallery */}
-      <div className="grid gap-6 sm:grid-cols-3 items-start">
+      {/* <div className="grid gap-6 sm:grid-cols-3 items-start"> */}
         {/* Column 1: Certification, Achievement, and Volunteering stacked vertically */}
-        <div className="flex flex-col gap-6">
+        {/* <div className="flex flex-col gap-6">
           <CertificationSummaryCard certification={certification} />
           <AchievementSummaryCard achievement={achievement} />
           <VolunteeringSummaryCard volunteering={volunteering} />
-        </div>
+        </div> */}
 
         {/* Column 2-3: Gallery (Wider) */}
-        <div className="sm:col-span-2">
+        {/* <div className="sm:col-span-2">
           <GallerySummaryCard gallery={gallery} />
         </div>
-      </div>
+      </div> */}
 
     </div>
   )

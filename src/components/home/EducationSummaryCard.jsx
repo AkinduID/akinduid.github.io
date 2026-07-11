@@ -22,9 +22,9 @@ export default function EducationSummaryCard({ education }) {
                   <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{education.institution}</p>
                   <p className="mt-1 text-sm theme-text-secondary">{education.degree}</p>
                 </div>
-                <span className="theme-pill-active rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
+                {/* <span className="theme-pill-active rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
                   {education.year}
-                </span>
+                </span> */}
               </div>
 
               {/* <ul className="mt-4 space-y-2 text-sm leading-6 theme-text-secondary">
