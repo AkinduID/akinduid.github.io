@@ -1,26 +1,18 @@
-import { useEffect, useState } from "react"
 import { UserRound } from "lucide-react"
-import { SectionCard } from "../common/CommonSection"
+import SectionCard from "../common/SectionCard"
+import useIsDarkMode from "../../hooks/useIsDarkMode"
 
 import darkPortrait from "../../assets/images/me.jpg"
 import lightPortrait from "../../assets/images/me2.jpg"
 
+/**
+ * PersonalStatementSection renders the "About Me" introduction on the About
+ * page, pairing a short personal statement with a theme-aware portrait.
+ *
+ * @returns {JSX.Element}
+ */
 export default function PersonalStatementSection() {
-  const [isDark, setIsDark] = useState(() =>
-    document.documentElement.classList.contains("dark")
-  )
-
-  useEffect(() => {
-    const html = document.documentElement
-    const observer = new MutationObserver(() => {
-      setIsDark(html.classList.contains("dark"))
-    })
-
-    observer.observe(html, { attributes: true, attributeFilter: ["class"] })
-
-    return () => observer.disconnect()
-  }, [])
-
+  const isDark = useIsDarkMode()
   const portraitSrc = isDark ? darkPortrait : lightPortrait
 
   return (

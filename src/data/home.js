@@ -2,7 +2,8 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaFacebook, FaDiscord } f
 import { SiBehance } from "react-icons/si"
 import { FiMail } from "react-icons/fi"
 
-export const connectItems = [
+/** Social/contact links shown in the navbar footer and hero "connect" row. */
+export const SOCIAL_LINKS = [
   {
     icon: FiMail,
     title: "Email",
@@ -53,4 +54,5 @@ export const connectItems = [
   },
 ]
 
-export const focusAreas = ["Embedded System", "Robotics", "IoT", "Computer Vision", "Graphic Design", "Photo Editing"]
+/** Rotating list of focus areas displayed in the hero section. */
+export const FOCUS_AREAS = ["Embedded System", "Robotics", "IoT", "Computer Vision", "Graphic Design", "Photo Editing"]

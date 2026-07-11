@@ -1,8 +1,14 @@
 import { useMemo, useState } from "react"
 import PageShell from "../components/common/PageShell"
 import ProjectCard from "../components/projects/ProjectCard"
-import {projects, filters} from "../data/projects"
+import { projects, PROJECT_FILTERS } from "../data/projects"
 
+/**
+ * Projects renders the Projects page: a filterable grid of engineering
+ * project cards.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Projects() {
   const [filter, setFilter] = useState("all")
 
@@ -19,7 +25,7 @@ export default function Projects() {
       <div className="space-y-6">
 
         <div className="flex flex-wrap justify-center gap-3">
-          {filters.map((item) => (
+          {PROJECT_FILTERS.map((item) => (
             <button
               key={item.key}
               type="button"

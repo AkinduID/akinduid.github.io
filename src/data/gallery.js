@@ -1,3 +1,5 @@
+// Image entries for the Gallery page, tagged by category ("photography" or
+// "graphic-design") for client-side filtering.
 import oneDayMore from "../assets/gallery/1 day more.png"
 import albumCover from "../assets/gallery/album cover.png"
 import chameleon from "../assets/gallery/chameleon.png"

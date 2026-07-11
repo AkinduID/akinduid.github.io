@@ -23,9 +23,50 @@ A modern and responsive personal portfolio website built using React and Vite. T
 
 ## 📂 Project Structure
 
-- `src/components/`: Functional React components (Profile, Navbar, Achievements, etc.).
-- `src/assets/`: Static assets including images and resume.
-- `public/`: Public static files.
+```
+src/
+├── assets/        # Static images, icons, and logos, grouped by purpose
+├── components/    # Reusable React components, grouped by feature area
+│   ├── common/    # Shared UI shell: layout, nav, header/footer, cards
+│   ├── home/      # Components used only on the Home page
+│   ├── about/     # Components used only on the About page
+│   ├── projects/  # Components used only on the Projects page
+│   └── toolbox/   # Components used only on the Toolbox page
+├── data/          # Static content data, one file per page/domain area
+├── hooks/         # Reusable custom React hooks
+├── lib/           # Shared utility functions (kept as `lib/` for shadcn/ui
+│                  # tooling compatibility — see components.json)
+├── pages/         # Top-level route components, one per page
+├── App.jsx        # Root layout, routing, and page-transition animation
+└── main.jsx       # Application entry point
+```
+
+Vite's `@` path alias (configured in `vite.config.js` / `jsconfig.json`)
+resolves to `src/`, so imports can use `@/components/...` instead of long
+relative paths where convenient.
+
+## 📐 Codebase Standards
+
+- **Components** use PascalCase filenames matching their default export
+  (e.g. `EducationCard.jsx` exports `EducationCard`). Every component file
+  contains exactly one component.
+- **Hooks, utilities, and data files** use camelCase filenames (e.g.
+  `useIsDarkMode.js`).
+- **Static configuration arrays** (navigation links, filter options, social
+  links) use `UPPER_SNAKE_CASE` (e.g. `NAV_LINKS`, `SOCIAL_LINKS`,
+  `PROJECT_FILTERS`). Larger content datasets (project entries, education
+  history, gallery images) keep camelCase names, since they represent
+  page content rather than fixed configuration.
+- **JSDoc** comments document every component's props and every custom
+  hook/utility's parameters and return value, since the project uses plain
+  JavaScript rather than TypeScript.
+- Some summary card components under `src/components/home/`
+  (`ProjectSummaryCard`, `CertificationSummaryCard`, `AchievementSummaryCard`,
+  `VolunteeringSummaryCard`, `SkillsSummaryCard`, `GallerySummaryCard`) and
+  `ConnectCard` are not currently rendered by `SummaryGrid`/`Home` — they
+  were kept in place (with dead/commented-out code removed) in case they're
+  re-enabled later. Wire them into `SummaryGrid.jsx` or `Home.jsx` to bring
+  them back.
 
 ## 🛠️ Installation & Usage
 

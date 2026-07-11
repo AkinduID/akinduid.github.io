@@ -9,6 +9,7 @@ import Projects from "./pages/Projects"
 import Gallery from "./pages/Gallery"
 import NotFound from "./pages/NotFound"
 
+/** Shared framer-motion transition variants for animated route changes. */
 const pageVariants = {
   initial: { opacity: 0, y: 18, filter: "blur(6px)" },
   animate: {
@@ -25,6 +26,12 @@ const pageVariants = {
   },
 }
 
+/**
+ * App is the root component: it renders the persistent header/footer shell
+ * and animates transitions between routed pages.
+ *
+ * @returns {JSX.Element}
+ */
 export default function App() {
   const location = useLocation()
 

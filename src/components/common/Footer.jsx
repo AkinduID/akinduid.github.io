@@ -1,5 +1,11 @@
-import { connectItems } from "../../data/home"
+import { SOCIAL_LINKS } from "../../data/home"
 
+/**
+ * Footer renders the site-wide footer with a copyright notice and social
+ * links.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Footer() {
   return (
     <footer className="mt-0 border-t border-[var(--theme-border)] bg-[var(--theme-navbar)] backdrop-blur-xl">
@@ -11,7 +17,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-3 text-xs sm:text-sm">
           <div className="flex items-center gap-3">
-            {connectItems.map(({ icon: Icon, title, link }) => (
+            {SOCIAL_LINKS.map(({ icon: Icon, title, link }) => (
               <a
                 key={title}
                 href={link}

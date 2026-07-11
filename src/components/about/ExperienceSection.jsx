@@ -1,6 +1,15 @@
 import { Briefcase } from "lucide-react"
-import { SectionCard, ExperienceCard } from "../common/CommonSection"
+import SectionCard from "../common/SectionCard"
+import ExperienceCard from "../common/ExperienceCard"
 
+/**
+ * ExperienceSection renders the Experience block on the About page as a
+ * vertical list of ExperienceCard entries.
+ *
+ * @param {object} props
+ * @param {Array<object>} props.items - Experience entries to render (see ExperienceCard for shape).
+ * @returns {JSX.Element}
+ */
 export default function ExperienceSection({ items }) {
   return (
     <SectionCard title="Experience" icon={Briefcase}>

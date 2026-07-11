@@ -2,6 +2,12 @@ import Logo from "./Logo"
 import Navbar from "./Navbar"
 import ThemeToggle from "./ThemeToggle"
 
+/**
+ * TopHeader renders the sticky site header containing the logo, the main
+ * navigation, and the theme toggle.
+ *
+ * @returns {JSX.Element}
+ */
 export default function TopHeader() {
   return (
     <div className="sticky top-4 z-50 px-4">

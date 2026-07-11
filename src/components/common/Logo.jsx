@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom"
 import logo from "../../assets/images/logo.png"
 
+/**
+ * Logo renders the site logo as a link back to the home page.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Logo() {
   return (
     <NavLink

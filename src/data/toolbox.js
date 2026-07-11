@@ -1,10 +1,12 @@
+// Static content for the Toolbox page: tools/technologies grouped by
+// category, plus a curated `topSkills` list used by SkillsSummaryCard.
 import pythonLogo from "../assets/icons/programming/python.png"
 import javascriptLogo from "../assets/icons/programming/javascript.png"
 import cLogo from "../assets/icons/programming/c.png"
 import cppLogo from "../assets/icons/programming/cpp.png"
 import javaLogo from "../assets/icons/programming/java.png"
 import csharpLogo from "../assets/icons/programming/csharp.png"
-import markdownLogo from "../assets/icons/programming/markdown.png"
+import markdownLogo from "../assets/icons/programming/Markdown.png"
 import typescriptLogo from "../assets/icons/programming/typescript.png"
 import powershellLogo from "../assets/icons/programming/powershell.png"
 import bashLogo from "../assets/icons/programming/bash.png"
@@ -39,7 +41,6 @@ import cudaLogo from "../assets/icons/embedded/nvidia.png"
 
 import gitLogo from "../assets/icons/devops/Git.png"
 import githubLogo from "../assets/icons/devops/GitHub.png"
-import githubpagesLogo from "../assets/icons/devops/github pages.png"
 import githubactionsLogo from "../assets/icons/devops/GitHub Actions.png"
 import dockerLogo from "../assets/icons/devops/Docker.png"
 import linuxLogo from "../assets/icons/devops/Linux.png"

@@ -2,7 +2,8 @@ import { FolderKanban, Home, Images, Toolbox, UserRound } from "lucide-react"
 import { motion } from "framer-motion"
 import { NavLink } from "react-router-dom"
 
-const navItems = [
+/** Primary site navigation links, rendered in both desktop and mobile layouts. */
+const NAV_LINKS = [
   { href: "/", label: "Home", Icon: Home },
   { href: "/about", label: "About", Icon: UserRound },
   { href: "/toolbox", label: "Toolbox", Icon: Toolbox },
@@ -29,6 +30,13 @@ const itemVariants = {
   show: { opacity: 1, y: 0 },
 }
 
+/**
+ * Navbar renders the primary site navigation, adapting between a full
+ * labeled layout (desktop), icon-only layout (tablet), and compact
+ * icon-only layout (mobile).
+ *
+ * @returns {JSX.Element}
+ */
 export default function Navbar() {
   const linkClassName = ({ isActive }) =>
     `theme-nav-link overflow-hidden text-sm font-semibold ${isActive ? "theme-nav-link-active" : ""}`
@@ -45,7 +53,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex items-center justify-center gap-0.5 lg:gap-0.1 lg:px-0.5">
         <div className="hidden items-center gap-1.5 theme-text-secondary lg:flex">
-          {navItems.map(({ href, label, Icon }) => (
+          {NAV_LINKS.map(({ href, label, Icon }) => (
             <motion.div key={label} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink
                 to={href}
@@ -60,7 +68,7 @@ export default function Navbar() {
         </div>
 
         <div className="mx-auto h-[1.5rem] flex w-fit items-center gap-1 rounded-full md:hidden">
-          {navItems.map(({ href, label, Icon }) => (
+          {NAV_LINKS.map(({ href, label, Icon }) => (
             <motion.div key={label} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink
                 to={href}
@@ -75,7 +83,7 @@ export default function Navbar() {
         </div>
 
         <div className="mx-auto hidden h-[2rem] w-fit items-center gap-1.5 rounded-full md:flex lg:hidden">
-          {navItems.map(({ href, label, Icon }) => (
+          {NAV_LINKS.map(({ href, label, Icon }) => (
             <motion.div key={`${label}-md`} variants={itemVariants} transition={{ duration: 0.16 }}>
               <NavLink
                 to={href}

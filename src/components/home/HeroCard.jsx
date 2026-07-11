@@ -2,6 +2,16 @@ import { AnimatePresence, motion } from "framer-motion"
 import { HiOutlineLightBulb } from "react-icons/hi";
 import CommonCard from "../common/CommonCard"
 
+/**
+ * HeroCard renders the introductory hero content on the Home page: name,
+ * a rotating "focused on" area, a short bio, a CV download link, and
+ * social/contact links.
+ *
+ * @param {object} props
+ * @param {string} props.activeFocus - The currently displayed rotating focus area.
+ * @param {Array<{icon: React.ComponentType, title: string, link: string}>} props.connectItems - Social/contact links to display.
+ * @returns {JSX.Element}
+ */
 export default function HeroCard({ activeFocus, connectItems }) {
   return (
     <CommonCard className="rounded-3xl text-center lg:text-left">

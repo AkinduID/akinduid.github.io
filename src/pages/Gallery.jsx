@@ -1,13 +1,20 @@
 import { useMemo, useState } from "react"
 import PageShell from "../components/common/PageShell"
 
-import {images} from "../data/gallery"
+import { images } from "../data/gallery"
 
-const filters = [
+/** Filter pill options shown at the top of the Gallery page. */
+const GALLERY_FILTERS = [
   { key: "photography", label: "Photography" },
   { key: "graphic-design", label: "Graphic Design" },
 ]
 
+/**
+ * Gallery renders the Gallery page: a filterable masonry grid of
+ * photography and graphic design images.
+ *
+ * @returns {JSX.Element}
+ */
 export default function Gallery() {
   const [filter, setFilter] = useState("photography")
 
@@ -18,7 +25,7 @@ export default function Gallery() {
   return (
     <PageShell description="A showcase of my design work and photography.">
       <div className="flex flex-wrap justify-center gap-3">
-          {filters.map((item) => (
+          {GALLERY_FILTERS.map((item) => (
             <button
               key={item.key}
               type="button"

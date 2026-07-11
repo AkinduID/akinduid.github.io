@@ -1,6 +1,17 @@
 import { Trophy } from "lucide-react"
-import { SectionCard, SectionHeading, MetaCard } from "../common/CommonSection"
+import SectionCard from "../common/SectionCard"
+import SectionHeading from "../common/SectionHeading"
+import MetaCard from "../common/MetaCard"
 
+/**
+ * AchievementsSection renders the Achievements block on the About page.
+ * Each section entry may render either a flat list of items or nested
+ * groups of items with their own sub-heading.
+ *
+ * @param {object} props
+ * @param {Array<object>} props.sections - Achievement sections, each with a `title` and either `items` or `groups`.
+ * @returns {JSX.Element}
+ */
 export default function AchievementsSection({ sections }) {
   return (
     <SectionCard title="Achievements" icon={Trophy}>

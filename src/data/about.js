@@ -1,8 +1,13 @@
+// Static content for the About page: education history, work experience,
+// achievements, certifications, and volunteering/extra-curricular activity.
+// Each export is consumed by a matching section component under
+// src/components/about/.
 import uomLogo from "../assets/logos/institutes/University_of_Moratuwa_logo.png"
 import suslLogo from "../assets/logos/institutes/Logo-SUSL.png"
 import sccLogo from "../assets/logos/institutes/SCC Logo.png"
 import uomCseLogo from "../assets/logos/institutes/uomcse-448x212.png"
 import wso2Logo from "../assets/logos/institutes/WSO2_Software_Logo.png"
+import thakshanaLogo from "../assets/logos/institutes/thakshana.jpg"
 import ieeeRasLogo from "../assets/logos/organizations/RAS New Logo Color.png"
 import ieeeSbLogo from "../assets/logos/organizations/IEEE STUDENT B LOGO.png"
 import moraLogo from "../assets/logos/institutes/University_of_Moratuwa_logo.png"
@@ -47,6 +52,15 @@ export const educationItems = [
 ]
 
 export const experienceItems = [
+  {
+    logo: thakshanaLogo,
+    role: "Embedded Software Engineer",
+    company: "Thakshana Technologies (Pvt) Ltd",
+    team: "",
+    date: "Jul 2026 - Present",
+    tasks: [],
+    tags: [],
+  },
   {
     logo: uomCseLogo,
     role: "Teaching Assistant",

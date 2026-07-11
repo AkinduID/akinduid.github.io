@@ -1,5 +1,15 @@
 import CommonCard from "../common/CommonCard"
 
+/**
+ * ConnectCard renders a row of social/contact icon links inside a card.
+ *
+ * Note: this component is not currently rendered by the Home page — see
+ * the project README for details on re-enabling it.
+ *
+ * @param {object} props
+ * @param {Array<{icon: React.ComponentType, title: string, link: string}>} props.connectItems - Social/contact links to display.
+ * @returns {JSX.Element}
+ */
 export default function ConnectCard({ connectItems }) {
   return (
     <CommonCard className="mt-6 rounded-3xl !p-4">

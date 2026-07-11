@@ -1,7 +1,8 @@
 import { motion } from "framer-motion"
 import { UserRound, GraduationCap, Briefcase, Award, Trophy, HandHeart } from "lucide-react"
 
-const topics = [
+/** Anchor-link entries for jumping to each section of the About page. */
+const TOPIC_LINKS = [
   { id: "about-me", label: "About Me", Icon: UserRound },
   { id: "education", label: "Education", Icon: GraduationCap },
   { id: "experience", label: "Experience", Icon: Briefcase },
@@ -36,6 +37,12 @@ function handleClick(id) {
   }
 }
 
+/**
+ * TopicsSummary renders a sticky vertical nav used on the About page to
+ * quickly jump between sections (education, experience, etc.).
+ *
+ * @returns {JSX.Element}
+ */
 export default function TopicsSummary() {
   return (
     <motion.nav
@@ -45,7 +52,7 @@ export default function TopicsSummary() {
       className="theme-nav-shell w-fit min-w-14 rounded-[1.90rem] p-3"
     >
       <div className="flex flex-col items-center gap-2">
-        {topics.map(({ id, label, Icon }) => (
+        {TOPIC_LINKS.map(({ id, label, Icon }) => (
           <motion.div key={id} variants={itemVariants} transition={{ duration: 0.16 }}>
             <button
               onClick={() => handleClick(id)}

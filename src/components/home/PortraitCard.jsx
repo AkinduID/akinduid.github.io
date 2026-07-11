@@ -1,25 +1,18 @@
-import { useEffect, useState } from "react"
 import CommonCard from "../common/CommonCard"
+import useIsDarkMode from "../../hooks/useIsDarkMode"
 
 import darkPortrait from "../../assets/images/me.jpg"
 import lightPortrait from "../../assets/images/me2.jpg"
 
+/**
+ * PortraitCard displays the site owner's portrait photo, automatically
+ * swapping between a dark-theme and light-theme variant of the image based
+ * on the currently active theme.
+ *
+ * @returns {JSX.Element}
+ */
 export default function PortraitCard() {
-  const [isDark, setIsDark] = useState(() =>
-    document.documentElement.classList.contains("dark")
-  )
-
-  useEffect(() => {
-    const html = document.documentElement
-    const observer = new MutationObserver(() => {
-      setIsDark(html.classList.contains("dark"))
-    })
-
-    observer.observe(html, { attributes: true, attributeFilter: ["class"] })
-
-    return () => observer.disconnect()
-  }, [])
-
+  const isDark = useIsDarkMode()
   const portraitSrc = isDark ? darkPortrait : lightPortrait
 
   return (

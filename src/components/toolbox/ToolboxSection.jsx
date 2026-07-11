@@ -1,5 +1,14 @@
 import CommonCard from "../common/CommonCard"
 
+/**
+ * ToolboxSection renders a titled card containing a grid of tool/technology
+ * icons for a single toolbox category (e.g. "Programming Languages").
+ *
+ * @param {object} props
+ * @param {string} props.title - Category title.
+ * @param {Array<{name: string, icon: string}>} props.items - Tools to display in the grid.
+ * @returns {JSX.Element}
+ */
 export default function ToolboxSection({ title, items }) {
   return (
     <CommonCard className="!p-5 !rounded-2xl">

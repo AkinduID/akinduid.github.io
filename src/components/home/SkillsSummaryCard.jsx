@@ -1,6 +1,14 @@
 import CommonCard from "../common/CommonCard"
 import { topSkills } from "../../data/toolbox"
 
+/**
+ * SkillsSummaryCard shows the top 12 skills in a 4x3 icon grid.
+ *
+ * Note: this component is not currently rendered by SummaryGrid — see the
+ * project README for details on re-enabling it.
+ *
+ * @returns {JSX.Element}
+ */
 export default function SkillsSummaryCard() {
   // Take exactly 12 skills to fill a perfect 4x3 grid
   const displayedSkills = topSkills.slice(0, 12);

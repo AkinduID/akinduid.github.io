@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom"
-import { ArrowLeft, Home, AlertTriangle } from "lucide-react"
+import { AlertTriangle } from "lucide-react"
 
 import PageShell from "../components/common/PageShell"
 
+/**
+ * NotFound renders the 404 fallback page shown for unmatched routes.
+ *
+ * @returns {JSX.Element}
+ */
 export default function NotFound() {
   return (
     <PageShell>

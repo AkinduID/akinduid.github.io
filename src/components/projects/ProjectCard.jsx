@@ -1,3 +1,20 @@
+/**
+ * ProjectCard renders a single engineering project as a card with an image,
+ * title, date/type meta line, description, tags, and an optional external
+ * link.
+ *
+ * @param {object} props
+ * @param {string} props.image - Project image source.
+ * @param {string} props.title - Project title.
+ * @param {string} props.date - Date range text.
+ * @param {string} props.type - Project type/context text (e.g. "Final Year Project | Team").
+ * @param {string} props.description - Short project description.
+ * @param {string[]} props.tags - Technology tags associated with the project.
+ * @param {string} [props.link] - Optional external link (e.g. GitHub repo).
+ * @param {string} props.category - Category key used for filtering on the Projects page.
+ * @param {string} [props.animationDelay] - CSS animation-delay value for staggered entrance.
+ * @returns {JSX.Element}
+ */
 export default function ProjectCard({
   image,
   title,

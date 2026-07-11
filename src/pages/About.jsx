@@ -8,6 +8,13 @@ import AchievementsSection from "../components/about/AchievementsSection"
 import VolunteeringSection from "../components/about/VolunteeringSection"
 import { educationItems, experienceItems, achievementSections, certifications, volunteeringSections } from "../data/about"
 
+/**
+ * About renders the About page: a sticky section-jump nav alongside the
+ * personal statement, education, experience, certifications, achievements,
+ * and volunteering sections.
+ *
+ * @returns {JSX.Element}
+ */
 export default function About() {
   return (
     <PageShell description="Education, experience, achievements, and activities that define my journey and growth.">

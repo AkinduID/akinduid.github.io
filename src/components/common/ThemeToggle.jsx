@@ -3,6 +3,13 @@ import { useEffect, useState } from "react"
 
 const THEME_STORAGE_KEY = "portfolio-theme"
 
+/**
+ * ThemeToggle switches between light and dark theme, persisting the choice
+ * in localStorage and defaulting to the user's system preference on first
+ * visit.
+ *
+ * @returns {JSX.Element}
+ */
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
     const storedTheme = localStorage.getItem(THEME_STORAGE_KEY)

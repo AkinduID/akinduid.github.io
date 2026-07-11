@@ -1,5 +1,13 @@
 import CommonCard from "../common/CommonCard"
 
+/**
+ * EducationSummaryCard shows a condensed preview of the most recent
+ * education entry on the Home page summary grid.
+ *
+ * @param {object} props
+ * @param {{logo?: string, institution: string, degree: string}} props.education - Featured education entry to summarize.
+ * @returns {JSX.Element}
+ */
 export default function EducationSummaryCard({ education }) {
   return (
     <CommonCard className="rounded-3xl !p-5">
@@ -22,25 +30,7 @@ export default function EducationSummaryCard({ education }) {
                   <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{education.institution}</p>
                   <p className="mt-1 text-sm theme-text-secondary">{education.degree}</p>
                 </div>
-                {/* <span className="theme-pill-active rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
-                  {education.year}
-                </span> */}
               </div>
-
-              {/* <ul className="mt-4 space-y-2 text-sm leading-6 theme-text-secondary">
-                {education.details.map((detail) => (
-                  <li key={typeof detail === "string" ? detail : detail.label} className="flex gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--theme-accent)]" />
-                    {typeof detail === "string" ? (
-                      <span>{detail}</span>
-                    ) : (
-                      <span>
-                        <strong>{detail.label}</strong> - {detail.value}
-                      </span>
-                    )}
-                  </li>
-                ))}
-              </ul> */}
             </div>
           </div>
         </article>

@@ -2,8 +2,16 @@ import CommonCard from "../common/CommonCard"
 import { images } from "../../data/gallery"
 
 const featuredImage = images[2]
-const galleryCategories = [...new Set(images.map((image) => image.category))]
 
+/**
+ * GallerySummaryCard shows a single featured gallery image as a teaser for
+ * the full Gallery page.
+ *
+ * Note: this component is not currently rendered by SummaryGrid — see the
+ * project README for details on re-enabling it.
+ *
+ * @returns {JSX.Element}
+ */
 export default function GallerySummaryCard() {
   return (
     <CommonCard className="rounded-3xl !p-5">
@@ -30,29 +38,6 @@ export default function GallerySummaryCard() {
               </div>
             </figure>
           )}
-
-          {/* <div className="mt-4 flex items-start justify-between gap-3">
-            <div>
-              <p className="text-sm font-semibold text-[var(--theme-text-primary)]">
-                {featuredImage?.alt}
-              </p>
-              <p className="mt-1 text-xs leading-5 theme-text-secondary">
-                A quick look at photography and graphic design work.
-              </p>
-            </div>
-
-            <span className="theme-pill-active shrink-0 rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.18em]">
-              {images.length} items
-            </span>
-          </div>
-
-          <div className="mt-4 flex flex-wrap gap-2">
-            {galleryCategories.map((category) => (
-              <span key={category} className="theme-tag rounded-full px-3 py-1 text-xs font-medium">
-                {category.replace("-", " ")}
-              </span>
-            ))}
-          </div> */}
         </article>
       </div>
     </CommonCard>
