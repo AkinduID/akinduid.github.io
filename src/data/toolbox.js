@@ -206,3 +206,18 @@ export const toolboxSections = [
     ],
   },
 ]
+
+export const topSkills = [
+  { name: "Python", icon: pythonLogo },
+  { name: "C++", icon: cppLogo },
+  { name: "Git", icon: gitLogo },
+  { name: "GitHub", icon: githubLogo },
+  { name: "FastAPI", icon: fastapiLogo },
+  { name: "OpenCV", icon: opencvLogo },
+  { name: "MediaPipe", icon: mediapipeLogo },
+  { name: "Arduino", icon: arduinoLogo },
+  { name: "Raspberry Pi", icon: raspberryPiLogo },
+  { name: "ESP32", icon: esp32Logo },
+  { name: "ROS", icon: rosLogo },
+  { name: "Adobe Photoshop", icon: psLogo },
+]

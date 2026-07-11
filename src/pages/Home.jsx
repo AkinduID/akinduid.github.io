@@ -5,8 +5,17 @@ import PageShell from "../components/common/PageShell"
 import HeroCard from "../components/home/HeroCard"
 import PortraitCard from "../components/home/PortraitCard"
 import ConnectCard from "../components/home/ConnectCard"
+import SummaryGrid from "../components/home/SummaryGrid"
 
 import { connectItems, focusAreas } from "../data/home"
+import { projects } from "../data/projects"
+import {
+  educationItems,
+  experienceItems,
+  certifications,
+  achievementSections,
+  volunteeringSections,
+} from "../data/about"
 
 export default function Home() {
   const [focusIndex, setFocusIndex] = useState(0)
@@ -38,6 +47,15 @@ export default function Home() {
       </div>
 
       <ConnectCard connectItems={connectItems} />
+
+      <SummaryGrid
+        experience={experienceItems[0]}
+        project={projects[0]}
+        education={educationItems[0]}
+        certification={certifications.flatMap((g) => g.items)[0]}
+        achievement={achievementSections.flatMap((s) => s.items)[0]}
+        volunteering={volunteeringSections[0]}
+      />
     </PageShell>
   )
 }

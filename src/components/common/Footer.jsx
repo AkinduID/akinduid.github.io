@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-3 text-center sm:flex-row sm:text-left">
         
         <p className="text-xs theme-text-muted sm:text-sm">
-          © {new Date().getFullYear()} / AkinduID / Portfolio
+          © {new Date().getFullYear()} AkinduID. All rights reserved.
         </p>
 
         <div className="flex items-center gap-3 text-xs sm:text-sm">
