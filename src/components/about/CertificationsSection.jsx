@@ -1,3 +1,4 @@
+import { Award } from "lucide-react"
 import { SectionCard } from "../common/CommonSection"
 
 function CompactCertificationCard({ title, meta }) {
@@ -17,7 +18,7 @@ export default function CertificationsSection({ certifications = [] }) {
   }
 
   return (
-    <SectionCard title="Certifications">
+    <SectionCard title="Certifications" icon={Award}>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {items.map((item) => (
           <CompactCertificationCard key={item.title} title={item.title} meta={item.meta} />

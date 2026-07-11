@@ -1,8 +1,12 @@
-export function SectionCard({ title, children, className = "" }) {
+export function SectionCard({ title, icon: Icon, children, className = "" }) {
   return (
     <section className={`theme-card rounded-3xl p-5 sm:p-6 ${className}`}>
       <div className="flex items-center gap-3">
-        <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--theme-accent)]" />
+        {Icon ? (
+          <Icon className="h-5 w-5 shrink-0 text-[var(--theme-accent)]" strokeWidth={2.25} />
+        ) : (
+          <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--theme-accent)]" />
+        )}
         <h2 className="text-lg font-semibold text-[var(--theme-text-primary)]">{title}</h2>
       </div>
       <div className="mt-4">{children}</div>

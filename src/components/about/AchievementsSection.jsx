@@ -1,8 +1,9 @@
+import { Trophy } from "lucide-react"
 import { SectionCard, SectionHeading, MetaCard } from "../common/CommonSection"
 
 export default function AchievementsSection({ sections }) {
   return (
-    <SectionCard title="Achievements">
+    <SectionCard title="Achievements" icon={Trophy}>
       <div className="space-y-6">
         {sections.map((section) => (
           <div key={section.title} className="space-y-4">

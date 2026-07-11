@@ -1,4 +1,6 @@
 import PageShell from "../components/common/PageShell"
+import TopicsSummary from "../components/about/TopicsSummary"
+import PersonalStatementSection from "../components/about/PersonalStatementSection"
 import EducationSection from "../components/about/EducationSection"
 import ExperienceSection from "../components/about/ExperienceSection"
 import CertificationsSection from "../components/about/CertificationsSection"
@@ -9,23 +11,37 @@ import { educationItems, experienceItems, achievementSections, certifications, v
 export default function About() {
   return (
     <PageShell description="Education, experience, achievements, and activities that define my journey and growth.">
-      <div className="grid gap-4 theme-text-secondary">
-        <div className="grid gap-4 xl:grid-cols-[0.85fr_1.15fr]">
-          <EducationSection items={educationItems} />
-          <ExperienceSection items={experienceItems} />
+      <div className="xl:grid xl:gap-6 xl:grid-cols-[auto_1fr]">
+        {/* Left Column — Sticky Topics Summary */}
+        <div className="hidden xl:sticky xl:top-28 xl:self-start xl:block">
+          <TopicsSummary />
         </div>
 
-        <div className="h-px w-full bg-[var(--theme-border)]" />
+        {/* Right Column — All Sections */}
+        <div className="grid gap-6">
+          <div id="about-me" className="scroll-mt-28">
+            <PersonalStatementSection />
+          </div>
 
-        <div className="grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
-          <CertificationsSection certifications={certifications} />
-          <AchievementsSection sections={achievementSections} />
-        </div>
+          <div id="education" className="scroll-mt-28">
+            <EducationSection items={educationItems} />
+          </div>
 
-        <div className="h-px w-full bg-[var(--theme-border)]" />
+          <div id="experience" className="scroll-mt-28">
+            <ExperienceSection items={experienceItems} />
+          </div>
 
-        <div>
-          <VolunteeringSection sections={volunteeringSections} />
+          <div id="certifications" className="scroll-mt-28">
+            <CertificationsSection certifications={certifications} />
+          </div>
+
+          <div id="achievements" className="scroll-mt-28">
+            <AchievementsSection sections={achievementSections} />
+          </div>
+
+          <div id="volunteering" className="scroll-mt-28">
+            <VolunteeringSection sections={volunteeringSections} />
+          </div>
         </div>
       </div>
     </PageShell>
