@@ -1,3 +1,5 @@
+import { connectItems } from "../../data/home"
+
 export default function Footer() {
   return (
     <footer className="mt-0 border-t border-[var(--theme-border)] bg-[var(--theme-navbar)] backdrop-blur-xl">
@@ -8,7 +10,20 @@ export default function Footer() {
         </p>
 
         <div className="flex items-center gap-3 text-xs sm:text-sm">
-          <span className="theme-text-muted">Built with React + Tailwind CSS</span>
+          <div className="flex items-center gap-3">
+            {connectItems.map(({ icon: Icon, title, link }) => (
+              <a
+                key={title}
+                href={link}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label={title}
+                className="group flex h-8 w-8 items-center justify-center transition-all duration-150 hover:-translate-y-0.5"
+              >
+                <Icon className="h-5 w-5 text-[var(--theme-text-secondary)] transition-all duration-200 group-hover:text-[var(--theme-accent)]" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
