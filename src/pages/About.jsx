@@ -1,6 +1,5 @@
 import PageShell from "../components/common/PageShell"
 import TopicsSummary from "../components/about/TopicsSummary"
-import PersonalStatementSection from "../components/about/PersonalStatementSection"
 import EducationSection from "../components/about/EducationSection"
 import ExperienceSection from "../components/about/ExperienceSection"
 import CertificationsSection from "../components/about/CertificationsSection"
@@ -26,10 +25,6 @@ export default function About() {
 
         {/* Right Column — All Sections */}
         <div className="grid gap-6">
-          <div id="about-me" className="scroll-mt-28">
-            <PersonalStatementSection />
-          </div>
-
           <div id="education" className="scroll-mt-28">
             <EducationSection items={educationItems} />
           </div>
