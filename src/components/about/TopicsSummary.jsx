@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
-import { UserRound, GraduationCap, Briefcase, Award, Trophy, HandHeart } from "lucide-react"
+import { FileText, GraduationCap, Briefcase, Award, Trophy, HandHeart } from "lucide-react"
 
 /** Anchor-link entries for jumping to each section of the About page. */
 const TOPIC_LINKS = [
-  { id: "about-me", label: "About Me", Icon: UserRound },
+  { id: "about-me", label: "Personal Statement", Icon: FileText },
   { id: "education", label: "Education", Icon: GraduationCap },
   { id: "experience", label: "Experience", Icon: Briefcase },
   { id: "certifications", label: "Certifications", Icon: Award },
@@ -49,17 +49,18 @@ export default function TopicsSummary() {
       variants={navVariants}
       initial="hidden"
       animate="show"
-      className="theme-nav-shell w-fit min-w-14 rounded-[1.90rem] p-3"
+      className="theme-nav-shell w-fit min-w-[10rem] rounded-[1.65rem] p-3"
     >
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col gap-1.5">
         {TOPIC_LINKS.map(({ id, label, Icon }) => (
           <motion.div key={id} variants={itemVariants} transition={{ duration: 0.16 }}>
             <button
               onClick={() => handleClick(id)}
               title={label}
-              className="theme-nav-link flex h-14 !w-14 items-center justify-center rounded-xl !px-0"
+              className="theme-nav-link flex h-10 !w-full items-center justify-start rounded-2xl !px-3.5"
             >
-              <Icon className="h-7 w-7 shrink-0" strokeWidth={2} />
+              <Icon className="h-5 w-5 shrink-0" strokeWidth={2} />
+              <span className="text-[0.95rem] font-semibold leading-none">{label}</span>
             </button>
           </motion.div>
         ))}

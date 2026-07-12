@@ -1,4 +1,4 @@
-import { UserRound } from "lucide-react"
+import { FileText } from "lucide-react"
 import SectionCard from "../common/SectionCard"
 import useIsDarkMode from "../../hooks/useIsDarkMode"
 
@@ -16,7 +16,7 @@ export default function PersonalStatementSection() {
   const portraitSrc = isDark ? darkPortrait : lightPortrait
 
   return (
-    <SectionCard title="Personel Statement" icon={UserRound}>
+    <SectionCard title="Personal Statement" icon={FileText}>
       <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-start sm:gap-6">
         <img
           src={portraitSrc}
