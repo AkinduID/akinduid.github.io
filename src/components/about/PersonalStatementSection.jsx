@@ -30,8 +30,7 @@ export default function PersonalStatementSection() {
           </p>
 
           <p className="mt-3 text-sm leading-8 theme-text-secondary sm:text-base">
-            I enjoy creating intelligent and interactive systems by combining embedded hardware with modern software technologies. Outside of engineering, I spend time exploring photography, photo editing, and graphic design.
-          </p>
+           I build intelligent systems by combining embedded hardware, software, and AI technologies to bridge the physical and digital worlds. Outside engineering, I explore photography, design, and hiking.</p>
         </div>
       </div>
     </SectionCard>

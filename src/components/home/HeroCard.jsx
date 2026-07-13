@@ -49,9 +49,8 @@ export default function HeroCard({ activeFocus, connectItems }) {
         </div>
       </div>
 
-      <p className="theme-text-secondary mt-3 max-w-2xl text-sm leading-8 sm:text-base">
-        I enjoy creating intelligent and interactive systems by combining embedded hardware with modern software technologies. Outside of engineering, I spend time exploring photography, photo editing, and graphic design.
-      </p>
+      <p className="theme-text-secondary mt-3 text-sm leading-8 sm:text-base">
+        I build intelligent systems by combining embedded hardware, software, and AI technologies to bridge the physical and digital worlds. Outside engineering, I explore photography, design, and hiking.</p>
 
       <div className="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
         <a

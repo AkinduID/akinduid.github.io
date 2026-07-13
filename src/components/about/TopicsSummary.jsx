@@ -55,10 +55,10 @@ export default function TopicsSummary() {
       variants={navVariants}
       initial="hidden"
       animate="show"
-      className="theme-nav-shell h-auto w-full max-w-[15rem] rounded-[1.65rem] p-3"
+      className="theme-nav-shell h-auto w-full max-w-[15rem] rounded-[1.65rem] p-2"
     >
       {/* FIRST MAIN DIV: Profile & Personal Statement */}
-      <div className="mb-0 rounded-2xl p-4 flex flex-col gap-3.5">
+      <div className="mb-0 rounded-2xl p-4 flex flex-col gap-3">
         <div className="w-full">
           <p className="text-[1.05rem] font-semibold leading-tight text-[var(--theme-text-primary)]">
             Akindu Delgahagoda
@@ -74,10 +74,8 @@ export default function TopicsSummary() {
 
         {/* Decreased width using max-w-[90%] to give the text a tighter constraint */}
         <div className="w-full">
-          <p className="text-xs leading-relaxed theme-text-secondary">
-            I enjoy creating intelligent and interactive systems by combining embedded hardware with modern software technologies.
-          </p>
-        </div>
+          <p className="text-xs leading-tight theme-text-secondary">
+            An engineer passionate about building intelligent systems, exploring technology, and combining engineering with creativity.</p></div>
       </div>
 
       {/* SECOND MAIN DIV: Navigation Links */}
