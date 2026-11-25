@@ -15,7 +15,7 @@ export default function PortraitCard() {
   const portraitSrc = isDark ? darkPortrait : lightPortrait
 
   return (
-    <div className="relative inline-block h-48 w-48 sm:h-52 sm:w-52">
+    <div className="relative inline-block h-[clamp(13rem,16vw,18rem)] w-[clamp(13rem,16vw,18rem)]">
       <img src={portraitSrc} alt="Akindu Delgahagoda" className="op-avatar" />
     </div>
   )
