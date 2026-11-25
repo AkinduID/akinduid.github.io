@@ -1,13 +1,13 @@
-import { FileText } from "lucide-react"
-import SectionCard from "../common/SectionCard"
+import SectionBlock from "../common/SectionBlock"
 import useIsDarkMode from "../../hooks/useIsDarkMode"
 
 import darkPortrait from "../../assets/images/me.jpg"
 import lightPortrait from "../../assets/images/me2.jpg"
 
 /**
- * PersonalStatementSection renders the "About Me" introduction on the About
- * page, pairing a short personal statement with a theme-aware portrait.
+ * PersonalStatementSection renders an "About Me" introduction pairing a short
+ * personal statement with a theme-aware portrait. It is not currently wired
+ * into the About page (the sticky TopicsSummary shows the same identity block).
  *
  * @returns {JSX.Element}
  */
@@ -16,23 +16,23 @@ export default function PersonalStatementSection() {
   const portraitSrc = isDark ? darkPortrait : lightPortrait
 
   return (
-    <SectionCard title="Personal Statement" icon={FileText}>
-      <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-start sm:gap-6">
+    <SectionBlock title="Personal Statement">
+      <div className="flex flex-col items-center gap-5 pt-3 sm:flex-row sm:items-start">
         <img
           src={portraitSrc}
           alt="Akindu Delgahagoda"
-          className="h-28 w-28 shrink-0 rounded-2xl object-cover object-center sm:h-32 sm:w-32"
+          className="h-36 w-36 shrink-0 rounded-[20px] border border-[var(--op-border)] object-cover object-center sm:h-40 sm:w-40"
         />
 
         <div className="min-w-0 flex-1 text-center sm:text-left">
-          <p className="text-2xl font-semibold tracking-tight text-[var(--theme-text-primary)] sm:text-3xl">
-            Akindu Delgahagoda
+          <p className="text-xl font-bold tracking-tight text-[var(--op-fg)]">Akindu Delgahagoda</p>
+          <p className="mt-2 text-[0.8125rem] leading-7 text-[var(--op-muted)]">
+            I build intelligent systems by combining embedded hardware, software, and AI
+            technologies to bridge the physical and digital worlds. Outside engineering, I explore
+            photography, design, and hiking.
           </p>
-
-          <p className="mt-3 text-sm leading-8 theme-text-secondary sm:text-base">
-           I build intelligent systems by combining embedded hardware, software, and AI technologies to bridge the physical and digital worlds. Outside engineering, I explore photography, design, and hiking.</p>
         </div>
       </div>
-    </SectionCard>
+    </SectionBlock>
   )
 }

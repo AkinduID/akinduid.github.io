@@ -1,6 +1,6 @@
 /**
- * MetaCard renders a compact title/meta pair, used for lightweight list items
- * such as individual achievements.
+ * MetaCard renders a compact title/meta pair inside a hairline-bordered box,
+ * used for lightweight list items such as individual achievements.
  *
  * @param {object} props
  * @param {string} props.title - Primary label for the item.
@@ -9,9 +9,9 @@
  */
 export default function MetaCard({ title, meta }) {
   return (
-    <article className="theme-card-soft rounded-2xl p-4">
-      <p className="text-sm font-semibold text-[var(--theme-text-primary)]">{title}</p>
-      <p className="mt-1 text-sm leading-6 theme-text-secondary">{meta}</p>
+    <article className="rounded-[10px] border border-[var(--op-border)] p-3">
+      <p className="text-[0.8rem] font-semibold leading-snug text-[var(--op-fg)]">{title}</p>
+      <p className="mt-1 text-xs leading-5 text-[var(--op-muted)]">{meta}</p>
     </article>
   )
 }

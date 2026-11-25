@@ -1,10 +1,9 @@
-import { GraduationCap } from "lucide-react"
-import SectionCard from "../common/SectionCard"
+import SectionBlock from "../common/SectionBlock"
 import EducationCard from "../common/EducationCard"
 
 /**
- * EducationSection renders the Education block on the About page as a
- * vertical list of EducationCard entries.
+ * EducationSection renders the Education block on the About page as a list of
+ * EducationCard rows.
  *
  * @param {object} props
  * @param {Array<object>} props.items - Education entries to render (see EducationCard for shape).
@@ -12,12 +11,10 @@ import EducationCard from "../common/EducationCard"
  */
 export default function EducationSection({ items }) {
   return (
-    <SectionCard title="Education" icon={GraduationCap}>
-      <div className="space-y-4">
-        {items.map((item) => (
-          <EducationCard key={item.institution} {...item} />
-        ))}
-      </div>
-    </SectionCard>
+    <SectionBlock title="Education">
+      {items.map((item) => (
+        <EducationCard key={item.institution} {...item} />
+      ))}
+    </SectionBlock>
   )
 }

@@ -8,23 +8,28 @@ import VolunteeringSection from "../components/about/VolunteeringSection"
 import { educationItems, experienceItems, achievementSections, certifications, volunteeringSections } from "../data/about"
 
 /**
- * About renders the About page: a sticky section-jump nav alongside the
- * personal statement, education, experience, certifications, achievements,
- * and volunteering sections.
+ * About renders the About page: a sticky identity + table-of-contents column
+ * beside the education, experience, certifications, achievements, and
+ * volunteering sections. Sections are separated by hairlines, not cards.
  *
  * @returns {JSX.Element}
  */
 export default function About() {
   return (
-    <PageShell description="Education, experience, achievements, and activities that define my journey and growth.">
-      <div className="xl:grid xl:gap-6 xl:grid-cols-[auto_1fr]">
-        {/* Left Column — Sticky Topics Summary */}
-        <div className="hidden xl:sticky xl:top-28 xl:self-start xl:block">
+    <PageShell
+      eyebrow="About"
+      title="Education, experience & more"
+      description="Education, experience, achievements, and activities that define my journey and growth."
+      width="medium"
+    >
+      <div className="lg:grid lg:grid-cols-[11rem_minmax(0,1fr)] lg:gap-12">
+        {/* Left column: sticky identity block + table of contents (desktop only) */}
+        <aside className="hidden lg:sticky lg:top-28 lg:block lg:self-start">
           <TopicsSummary />
-        </div>
+        </aside>
 
-        {/* Right Column — All Sections */}
-        <div className="grid gap-6">
+        {/* Right column: all sections */}
+        <div className="grid gap-12">
           <div id="education" className="scroll-mt-28">
             <EducationSection items={educationItems} />
           </div>

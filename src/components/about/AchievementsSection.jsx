@@ -1,5 +1,4 @@
-import { Trophy } from "lucide-react"
-import SectionCard from "../common/SectionCard"
+import SectionBlock from "../common/SectionBlock"
 import SectionHeading from "../common/SectionHeading"
 import MetaCard from "../common/MetaCard"
 
@@ -14,14 +13,14 @@ import MetaCard from "../common/MetaCard"
  */
 export default function AchievementsSection({ sections }) {
   return (
-    <SectionCard title="Achievements" icon={Trophy}>
-      <div className="space-y-6">
+    <SectionBlock title="Achievements">
+      <div className="space-y-6 pt-3">
         {sections.map((section) => (
-          <div key={section.title} className="space-y-4">
+          <div key={section.title} className="space-y-3">
             {section.title === "Awards & Honors" ? null : <SectionHeading title={section.title} />}
 
             {section.items ? (
-              <div className="grid gap-4 grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2">
                 {section.items.map((item) => (
                   <MetaCard key={item.title} title={item.title} meta={item.meta} />
                 ))}
@@ -32,8 +31,8 @@ export default function AchievementsSection({ sections }) {
               <div className="space-y-5">
                 {section.groups.map((group) => (
                   <div key={group.title} className="space-y-3">
-                    <h4 className="theme-kicker text-sm font-semibold tracking-[0.18em]">{group.title}</h4>
-                    <div className="grid gap-4 grid-cols-2">
+                    <h4 className="op-eyebrow">{group.title}</h4>
+                    <div className="grid gap-3 sm:grid-cols-2">
                       {group.items.map((item) => (
                         <MetaCard key={item.title} title={item.title} meta={item.meta} />
                       ))}
@@ -45,6 +44,6 @@ export default function AchievementsSection({ sections }) {
           </div>
         ))}
       </div>
-    </SectionCard>
+    </SectionBlock>
   )
 }

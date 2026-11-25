@@ -1,28 +1,9 @@
-import { Award } from "lucide-react"
-import SectionCard from "../common/SectionCard"
-
-/**
- * CompactCertificationCard renders a single certification as a compact
- * title/meta pair, used only within CertificationsSection's dense grid.
- *
- * @param {object} props
- * @param {string} props.title - Certification title.
- * @param {string} props.meta - Supporting detail text (e.g. issuer, date).
- * @returns {JSX.Element}
- */
-function CompactCertificationCard({ title, meta }) {
-  return (
-    <article className="theme-card-soft rounded-2xl px-2.5 py-2">
-      <p className="text-xs font-semibold leading-4 text-[var(--theme-text-primary)]">{title}</p>
-      <p className="mt-0.5 text-[10px] leading-4 theme-text-secondary">{meta}</p>
-    </article>
-  )
-}
+import SectionBlock from "../common/SectionBlock"
 
 /**
  * CertificationsSection renders all certifications (flattened out of their
- * groups) in a dense responsive grid. Renders nothing if there are no
- * certifications to show.
+ * groups) as a compact list: certification title on the left, issuer and
+ * date on the right. Renders nothing if there are no certifications.
  *
  * @param {object} props
  * @param {Array<{items: Array<{title: string, meta: string}>}>} [props.certifications] - Certification groups, each containing an `items` array.
@@ -36,12 +17,18 @@ export default function CertificationsSection({ certifications = [] }) {
   }
 
   return (
-    <SectionCard title="Certifications" icon={Award}>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <SectionBlock title="Certifications">
+      <ul>
         {items.map((item) => (
-          <CompactCertificationCard key={item.title} title={item.title} meta={item.meta} />
+          <li
+            key={item.title}
+            className="flex flex-col gap-0.5 border-b border-[var(--op-hairline)] py-3 last:border-b-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+          >
+            <span className="text-[0.8125rem] font-medium text-[var(--op-fg)]">{item.title}</span>
+            <span className="shrink-0 text-xs text-[var(--op-faint)]">{item.meta}</span>
+          </li>
         ))}
-      </div>
-    </SectionCard>
+      </ul>
+    </SectionBlock>
   )
 }

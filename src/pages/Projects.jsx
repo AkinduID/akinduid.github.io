@@ -4,8 +4,8 @@ import ProjectCard from "../components/projects/ProjectCard"
 import { projects, PROJECT_FILTERS } from "../data/projects"
 
 /**
- * Projects renders the Projects page: a filterable grid of engineering
- * project cards.
+ * Projects renders the Projects page: a row of category filters above a
+ * list of engineering projects, each shown as a thumbnail + description row.
  *
  * @returns {JSX.Element}
  */
@@ -21,33 +21,33 @@ export default function Projects() {
   }, [filter])
 
   return (
-    <PageShell description="Engineering projects I have built or contributed to, covering a range of technical domains.">
-      <div className="space-y-6">
+    <PageShell
+      eyebrow="Work"
+      title="Projects"
+      description="Engineering projects I have built or contributed to, covering a range of technical domains."
+    >
+      <div className="mb-8 flex flex-wrap justify-center gap-1.5">
+        {PROJECT_FILTERS.map((item) => (
+          <button
+            key={item.key}
+            type="button"
+            onClick={() => setFilter(item.key)}
+            aria-pressed={filter === item.key}
+            className={`op-filter ${filter === item.key ? "op-filter-active" : ""}`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
-          {PROJECT_FILTERS.map((item) => (
-            <button
-              key={item.key}
-              type="button"
-              onClick={() => setFilter(item.key)}
-              className={`theme-pill rounded-full px-4 py-2 text-sm font-medium backdrop-blur-xl transition-all duration-200 ${
-                filter === item.key ? "theme-pill-active" : ""
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-
-        <div key={filter} className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={`${filter}-${project.title}`}
-              animationDelay={`${Math.min(filteredProjects.indexOf(project) * 70, 280)}ms`}
-              {...project}
-            />
-          ))}
-        </div>
+      <div key={filter}>
+        {filteredProjects.map((project, index) => (
+          <ProjectCard
+            key={`${filter}-${project.title}`}
+            animationDelay={`${Math.min(index * 60, 240)}ms`}
+            {...project}
+          />
+        ))}
       </div>
     </PageShell>
   )

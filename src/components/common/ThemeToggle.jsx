@@ -37,7 +37,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       title={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="theme-icon-button inline-flex h-10 w-10 transition-colors duration-150 md:h-[2.625rem] md:w-[2.625rem] lg:h-11 lg:w-11"
+      className="theme-icon-button inline-flex h-10 w-10"
     >
       {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </button>

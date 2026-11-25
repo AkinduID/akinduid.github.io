@@ -9,26 +9,16 @@ import Projects from "./pages/Projects"
 import Gallery from "./pages/Gallery"
 import NotFound from "./pages/NotFound"
 
-/** Shared framer-motion transition variants for animated route changes. */
+/** Route transition: a quick, subtle cross-fade (opacity only). */
 const pageVariants = {
-  initial: { opacity: 0, y: 18, filter: "blur(6px)" },
-  animate: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.32, ease: [0.22, 1, 0.36, 1] },
-  },
-  exit: {
-    opacity: 0,
-    y: -10,
-    filter: "blur(4px)",
-    transition: { duration: 0.18, ease: [0.4, 0, 1, 1] },
-  },
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.2, ease: "easeOut" } },
+  exit: { opacity: 0, transition: { duration: 0.12, ease: "easeIn" } },
 }
 
 /**
  * App is the root component: it renders the persistent header/footer shell
- * and animates transitions between routed pages.
+ * and cross-fades between routed pages.
  *
  * @returns {JSX.Element}
  */

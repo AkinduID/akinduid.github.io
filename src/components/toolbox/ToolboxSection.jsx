@@ -1,40 +1,32 @@
-import CommonCard from "../common/CommonCard"
+import SectionBlock from "../common/SectionBlock"
 
 /**
- * ToolboxSection renders a titled card containing a grid of tool/technology
- * icons for a single toolbox category (e.g. "Programming Languages").
+ * ToolboxSection renders one toolbox category (e.g. "Programming Languages")
+ * as a labelled section: each tool or technology is an outlined chip showing
+ * its icon and name.
  *
  * @param {object} props
  * @param {string} props.title - Category title.
- * @param {Array<{name: string, icon: string}>} props.items - Tools to display in the grid.
+ * @param {Array<{name: string, icon: string}>} props.items - Tools to display.
  * @returns {JSX.Element}
  */
 export default function ToolboxSection({ title, items }) {
   return (
-    <CommonCard className="!p-5 !rounded-2xl">
-      <h2 className="text-md font-semibold">
-        {title}
-      </h2>
-
-      <ul className="mt-4 grid grid-cols-3 gap-4">
+    <SectionBlock title={title}>
+      <ul className="flex flex-wrap gap-2 pt-3">
         {items.map((item) => (
-          <li
-            key={item.name}
-            className="flex flex-col items-center gap-2 text-center"
-          >
+          <li key={item.name} className="op-chip !text-xs !font-medium">
             <img
               src={item.icon}
-              alt={item.name}
-              className="h-12 w-12 shrink-0 object-contain"
+              alt=""
+              aria-hidden="true"
               loading="lazy"
+              className="h-4 w-4 shrink-0 object-contain"
             />
-
-            <span className="min-w-0 text-sm font-semibold leading-tight theme-text-secondary">
-              {item.name}
-            </span>
+            <span>{item.name}</span>
           </li>
         ))}
       </ul>
-    </CommonCard>
+    </SectionBlock>
   )
 }

@@ -1,82 +1,72 @@
-import { AnimatePresence, motion } from "framer-motion"
-import { HiOutlineLightBulb } from "react-icons/hi";
-import CommonCard from "../common/CommonCard"
+import { Link } from "react-router-dom"
+import PortraitCard from "./PortraitCard"
+import { FOCUS_AREAS } from "../../data/home"
 
 /**
- * HeroCard renders the introductory hero content on the Home page: name,
- * a rotating "focused on" area, a short bio, a CV download link, and
- * social/contact links.
+ * HeroCard renders the introductory hero content on the Home page as a
+ * centered single column: the avatar, name, focus-area chips, a short bio,
+ * call-to-action buttons and
+ * social/contact links. It sits directly on the page (no card container).
  *
  * @param {object} props
- * @param {string} props.activeFocus - The currently displayed rotating focus area.
  * @param {Array<{icon: React.ComponentType, title: string, link: string}>} props.connectItems - Social/contact links to display.
  * @returns {JSX.Element}
  */
-export default function HeroCard({ activeFocus, connectItems }) {
+export default function HeroCard({ connectItems }) {
   return (
-    <CommonCard className="rounded-3xl text-center lg:text-left">
-      <p className="text-2xl font-medium tracking-tight theme-text-secondary sm:text-3xl">
-        Hello I&apos;m
-      </p>
+    <div className="flex flex-col items-center text-center">
+      <h1 className="mb-5 text-3xl font-bold tracking-tight text-[var(--op-fg)] sm:text-4xl">
+        Hi, I&apos;m Akindu
+      </h1>
 
-      <p className="theme-hero-accent mt-1 text-4xl font-semibold tracking-tight sm:text-5xl">
-        Akindu Delgahagoda
-      </p>
+      <PortraitCard />
 
-      <div className="mt-4 flex items-center justify-center gap-2 text-sm font-medium theme-text-secondary sm:text-base lg:justify-start">
-        <HiOutlineLightBulb
-          
-          className="h-5 w-5 shrink-0 text-[#a16207] drop-shadow-[0_0_6px_rgba(161,98,7,1)] dark:text-yellow-400 dark:drop-shadow-[0_0_6px_rgba(250,204,21,1)]"
-        />
-
-        <div className="flex min-h-[2rem] items-center">
-          <span className="text-[var(--theme-text-muted)]">
-            Focused on&nbsp;
+      {/* <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+        {FOCUS_AREAS.map((focusArea) => (
+          <span
+            key={focusArea}
+            className={`op-chip op-focus-chip op-focus-chip-${focusArea.toLowerCase().replaceAll(" ", "-")}`}
+          >
+            {focusArea}
           </span>
+        ))}
+      </div> */}
 
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={activeFocus}
-              initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
-              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              className="theme-accent inline-block"
-            >
-              {activeFocus}
-            </motion.span>
-          </AnimatePresence>
-        </div>
-      </div>
+      <p className="mt-4 max-w-md text-[0.8125rem] leading-7 text-[var(--op-muted)]">
+        I build intelligent systems by combining embedded hardware, software, and AI technologies
+        to bridge the physical and digital worlds. Outside engineering, I explore photography,
+        design, and hiking.
+      </p>
 
-      <p className="theme-text-secondary mt-3 text-sm leading-8 sm:text-base">
-        I build intelligent systems by combining embedded hardware, software, and AI technologies to bridge the physical and digital worlds. Outside engineering, I explore photography, design, and hiking.</p>
-
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
+        <Link to="/about" className="op-btn op-btn-primary">
+          About me <span aria-hidden="true">→</span>
+        </Link>
         <a
           href="https://akinduid.github.io/my-cv/"
           target="_blank"
           rel="noreferrer noopener"
-          className="theme-button inline-flex w-[130px] px-5 py-3 text-sm font-semibold transition-shadow duration-300"
+          className="op-btn op-btn-secondary"
         >
           Download CV
         </a>
-
-        <div className="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
-          {connectItems.map(({ icon: Icon, title, link }) => (
-            <a
-              key={title}
-              href={link}
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label={title}
-              className="group flex h-11 w-11 items-center justify-center rounded-full transition-all duration-150 hover:-translate-y-0.5 hover:border-[var(--theme-accent)]"
-            >
-              <Icon className="h-5 w-5 text-[var(--theme-text-secondary)] transition-all duration-200 group-hover:text-[var(--theme-accent)] group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
-            </a>
-          ))}
-        </div>
       </div>
-    </CommonCard>
+
+      <div className="mt-5 flex max-w-sm flex-wrap items-center justify-center gap-2">
+        {connectItems.map(({ icon: Icon, title, link }) => (
+          <a
+            key={title}
+            href={link}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label={title}
+            title={title}
+            className="op-icon-link"
+          >
+            <Icon className="h-3.5 w-3.5" />
+          </a>
+        ))}
+      </div>
+    </div>
   )
 }

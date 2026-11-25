@@ -54,5 +54,5 @@ export const SOCIAL_LINKS = [
   },
 ]
 
-/** Rotating list of focus areas displayed in the hero section. */
-export const FOCUS_AREAS = ["Embedded System", "Robotics", "IoT", "Computer Vision", "Graphic Design", "Photo Editing"]
+/** Focus areas displayed as static chips in the hero section. */
+export const FOCUS_AREAS = ["Robotics", "IoT", "Computer Vision","Embedded Systems", "AI", "HPC"]

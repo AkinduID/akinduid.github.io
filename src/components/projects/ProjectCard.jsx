@@ -1,7 +1,7 @@
 /**
- * ProjectCard renders a single engineering project as a card with an image,
- * title, date/type meta line, description, tags, and an optional external
- * link.
+ * ProjectCard renders a single engineering project as a hairline-separated
+ * row: a small thumbnail beside the title, date/type meta line, description,
+ * technology tags, and an optional external link.
  *
  * @param {object} props
  * @param {string} props.image - Project image source.
@@ -12,7 +12,7 @@
  * @param {string[]} props.tags - Technology tags associated with the project.
  * @param {string} [props.link] - Optional external link (e.g. GitHub repo).
  * @param {string} props.category - Category key used for filtering on the Projects page.
- * @param {string} [props.animationDelay] - CSS animation-delay value for staggered entrance.
+ * @param {string} [props.animationDelay] - CSS animation-delay value for the staggered fade-in.
  * @returns {JSX.Element}
  */
 export default function ProjectCard({
@@ -28,36 +28,25 @@ export default function ProjectCard({
 }) {
   return (
     <article
-      className="project-card-enter theme-card theme-card-hover group overflow-hidden rounded-[1.0rem]"
+      className="project-card-enter grid gap-4 border-b border-[var(--op-hairline)] py-6 first:pt-0 last:border-b-0 sm:grid-cols-[7.5rem_minmax(0,1fr)] sm:gap-5"
       data-category={category}
-      style={{ animationDelay: animationDelay }}
+      style={{ animationDelay }}
     >
-      <div className="relative aspect-[16/9] overflow-hidden bg-[var(--theme-secondary-background)]">
-        <img
-          src={image}
-          alt={title}
-          loading="lazy"
-          className="h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent dark:from-slate-950/45" />
+      <div className="op-thumb aspect-[4/3] self-start">
+        <img src={image} alt={title} loading="lazy" />
       </div>
 
-      <div className="flex h-full flex-col p-4">
-        <div className="space-y-1.5">
-          <h3 className="text-lg font-semibold tracking-tight text-[var(--theme-text-primary)]">{title}</h3>
-          <p className="theme-hero-accent text-xs font-semibold">
-            {date} <span className="text-[var(--theme-text)]">|</span> {type}
-          </p>
-        </div>
+      <div className="min-w-0">
+        <h3 className="text-[0.9375rem] font-bold tracking-tight text-[var(--op-fg)]">{title}</h3>
+        <p className="mt-0.5 text-xs text-[var(--op-faint)]">
+          {date} · {type}
+        </p>
 
-        <p className="mt-3 text-sm leading-6 theme-text-secondary">{description}</p>
+        <p className="mt-2 text-[0.8125rem] leading-6 text-[var(--op-muted)]">{description}</p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-3 flex flex-wrap gap-1.5">
           {tags.map((tag) => (
-            <span
-              key={tag}
-              className="theme-tag rounded-full px-3 py-1 text-xs font-medium"
-            >
+            <span key={tag} className="op-chip op-chip-sm">
               {tag}
             </span>
           ))}
@@ -68,7 +57,7 @@ export default function ProjectCard({
             href={link}
             target="_blank"
             rel="noreferrer noopener"
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold theme-accent transition-colors duration-150 hover:text-[var(--theme-accent-hover)]"
+            className="op-text-link mt-3 inline-flex items-center gap-1.5"
           >
             View on GitHub
             <span aria-hidden="true">→</span>

@@ -1,22 +1,23 @@
 import { SOCIAL_LINKS } from "../../data/home"
 
 /**
- * Footer renders the site-wide footer with a copyright notice and social
- * links.
+ * Footer renders the site-wide footer: a hairline divider, copyright notice
+ * and social links.
  *
  * @returns {JSX.Element}
  */
 export default function Footer() {
   return (
-    <footer className="mt-0 border-t border-[var(--theme-border)] bg-[var(--theme-navbar)] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-3 text-center sm:flex-row sm:text-left">
-        
-        <p className="text-xs theme-text-muted sm:text-sm">
-          © {new Date().getFullYear()} AkinduID. All rights reserved.
-        </p>
+    <footer className="px-6 pb-10">
+      <div className="mx-auto max-w-[44rem]">
+        <div className="op-hairline" />
 
-        <div className="flex items-center gap-3 text-xs sm:text-sm">
-          <div className="flex items-center gap-3">
+        <div className="flex flex-col items-center justify-between gap-4 pt-6 sm:flex-row">
+          <p className="text-xs text-[var(--op-faint)]">
+            © {new Date().getFullYear()} AkinduID. All rights reserved.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-1">
             {SOCIAL_LINKS.map(({ icon: Icon, title, link }) => (
               <a
                 key={title}
@@ -24,9 +25,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={title}
-                className="group flex h-8 w-8 items-center justify-center transition-all duration-150 hover:-translate-y-0.5"
+                title={title}
+                className="flex h-8 w-8 items-center justify-center rounded-lg text-[var(--op-faint)] transition-colors duration-150 hover:text-[var(--op-fg)]"
               >
-                <Icon className="h-5 w-5 text-[var(--theme-text-secondary)] transition-all duration-200 group-hover:text-[var(--theme-accent)]" />
+                <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>

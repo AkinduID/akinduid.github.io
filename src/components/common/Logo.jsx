@@ -11,7 +11,7 @@ export default function Logo() {
     <NavLink
       to="/"
       aria-label="Go to home"
-      className="theme-icon-button inline-flex h-10 w-10 overflow-hidden md:h-[2.625rem] md:w-[2.625rem] lg:h-11 lg:w-11"
+      className="theme-icon-button inline-flex h-10 w-10 overflow-hidden"
     >
       <img
         src={logo}

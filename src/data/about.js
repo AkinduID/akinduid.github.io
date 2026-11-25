@@ -21,9 +21,18 @@ export const educationItems = [
     degree: "BSc Hons in Engineering",
     year: "2022-2026",
     details: [
-      "Specialization - Computer Science and Engineering",
-      "Stream - Integrated Computer Engineering",
-      "CGPA - 3.5",
+      {
+        label: "Specialization",
+        value: "Computer Science and Engineering",
+      },
+      {
+        label: "Stream",
+        value: "Integrated Computer Engineering",
+      },
+      {
+        label: "CGPA",
+        value: "3.53/4.0",
+      },
     ],
   },
   {
@@ -58,8 +67,8 @@ export const experienceItems = [
     company: "Thakshana Technologies (Pvt) Ltd",
     team: "",
     date: "Jul 2026 - Present",
-    tasks: [],
-    tags: [],
+    tasks: ["Developing a datalink layer for a satelite communication system"],
+    tags: ["C++17","Linux Networking","Cmake","DVB-RCS2","UDP","Distributed Systems","Multi-threading"],
   },
   {
     logo: uomCseLogo,
@@ -69,8 +78,8 @@ export const experienceItems = [
     date: "Feb 2026 - Jun 2026",
     tasks: [
       "Developed ROS/Gazebo/Nav2 lab series",
-      "Created H5P interactive tutorials",
-      "Authored quizzes to assess students",
+      "Created H5P interactive tutorials and quizzes",
+      "Mentored students on Robotics Projects",
     ],
     tags: ["ROS", "Gazebo", "Nav2", "GitHub", "GitHub Actions", "GitHub Classroom", "Ubuntu"],
   },
@@ -81,9 +90,8 @@ export const experienceItems = [
     team: "Digital Transformation Team",
     date: "Jan 2025 - Jun 2025",
     tasks: [
-      "Built Infra Portal (Ballerina, React, MySQL)",
-      "Integrated GitHub via GraphQL",
-      "Designed an extensible automation architecture",
+      "Built a fullstack web application for automating repository requesting and provisioning",
+      "Integrated GitHub API via GraphQL",
       "Implemented Asgardeo auth and deployed on Choreo",
     ],
     tags: ["Ballerina", "React", "MySQL", "GraphQL", "Docker", "Asgardeo", "Choreo"],
@@ -94,7 +102,7 @@ export const achievementSections = [
   {
     title: "Awards & Honors",
     items: [
-      { title: "Dean's List", meta: "University of Moratuwa | Semester 6" },
+      { title: "Dean's List", meta: "University of Moratuwa | Semester 6, 8" },
       { title: "Evolve IoT Mini Research Competition", meta: "1st Place" },
       { title: "SLIoT Challenge 2023", meta: "Semifinalists" },
       { title: "President's Scout Award", meta: "Issued in 2019" },

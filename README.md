@@ -10,7 +10,7 @@
 <a href="https://code.visualstudio.com/"><img src="https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=visualstudiocode&logoColor=white"/></a>
 <a href="https://pages.github.com/"/><img src = "https://img.shields.io/badge/GitHub%20Pages-121013?logo=github&logoColor=white"/></a>
 
-A modern and responsive personal portfolio website built using React and Vite. The project features a clean UI, smooth animations, dynamic content rendering, and automated deployment with GitHub Actions.
+A responsive personal portfolio website built using React and Vite, styled after the Once UI / Magic Portfolio aesthetic: quiet, typography-led, near-monochrome, with hairline dividers instead of boxed cards. It features dynamic content rendering and automated deployment with GitHub Actions.
 
 ## 🚀 Features
 
@@ -18,7 +18,7 @@ A modern and responsive personal portfolio website built using React and Vite. T
 - **Dark / Light Mode Toggle** — Seamless theme switching with custom color schemes.
 - **Interactive UI Components** — Includes sections for About, Experience, Skills, Projects, Achievements, and Volunteering.
 - **Dynamic Content Structure** — Easily maintain and update portfolio data through reusable components and centralized data files.
-- **Smooth Animations** — Enhanced user experience with subtle transitions and motion effects.
+- **Restrained Motion** — A short opacity cross-fade between routes and a gentle fade-in for lists; no blur, glow or parallax effects.
 - **Automated Deployment** — Continuous deployment to GitHub Pages using GitHub Actions.
 
 ## 📂 Project Structure
@@ -33,11 +33,11 @@ src/
 │   ├── projects/  # Components used only on the Projects page
 │   └── toolbox/   # Components used only on the Toolbox page
 ├── data/          # Static content data, one file per page/domain area
-├── hooks/         # Reusable custom React hooks
+├── hooks/         # Reusable custom React hooks (useIsDarkMode, useActiveSection)
 ├── lib/           # Shared utility functions (kept as `lib/` for shadcn/ui
 │                  # tooling compatibility — see components.json)
 ├── pages/         # Top-level route components, one per page
-├── App.jsx        # Root layout, routing, and page-transition animation
+├── App.jsx        # Root layout, routing, and route cross-fade
 └── main.jsx       # Application entry point
 ```
 
@@ -60,13 +60,29 @@ relative paths where convenient.
 - **JSDoc** comments document every component's props and every custom
   hook/utility's parameters and return value, since the project uses plain
   JavaScript rather than TypeScript.
-- Some summary card components under `src/components/home/`
-  (`ProjectSummaryCard`, `CertificationSummaryCard`, `AchievementSummaryCard`,
-  `VolunteeringSummaryCard`, `SkillsSummaryCard`, `GallerySummaryCard`) and
-  `ConnectCard` are not currently rendered by `SummaryGrid`/`Home` — they
-  were kept in place (with dead/commented-out code removed) in case they're
-  re-enabled later. Wire them into `SummaryGrid.jsx` or `Home.jsx` to bring
-  them back.
+- Some summary components under `src/components/home/` (`EducationSummaryCard`,
+  `CertificationSummaryCard`, `AchievementSummaryCard`, `VolunteeringSummaryCard`,
+  `SkillsSummaryCard`, `GallerySummaryCard`) and `ConnectCard` are not currently rendered.
+  They still use the legacy `theme-*` classes (kept in `index.css`, remapped to the flat
+  look) — restyle them with the `op-*` classes before wiring them into `SummaryList.jsx`.
+
+## 🎨 Design System (Once UI style)
+
+All styling lives in `src/index.css` as CSS variables plus a small set of component
+classes; Tailwind utilities are used for layout and spacing.
+
+- **Theming:** light and dark share one set of `--op-*` variables. The `.dark` class on
+  `<html>` (toggled by `ThemeToggle`) swaps them. Light surface `#fbfbfa`, dark surface
+  `#0e0e0d` (near-black, not pure black).
+- **Colour:** one neutral ramp (`--op-fg`, `--op-fg-2`, `--op-muted`, `--op-faint`) and no
+  accent colour. The only colour on the page is the green availability dot.
+- **Structure:** `SectionBlock` (uppercase label + hairline) and `.op-row` (logo + text, separated
+  by 1px hairlines) replace the old boxed cards. Chips (`.op-chip`) and filters (`.op-filter`)
+  use 8px radii; buttons use 10px; the avatar uses 20px.
+- **Layout widths:** `PageShell` takes `width="narrow" | "medium" | "wide"`
+  (44rem / 56rem / 64rem) — About uses medium, Gallery uses wide, the rest narrow.
+- **Hero copy:** the hero role line lives in `HERO_ROLE` and the rotating focus badge uses
+  `FOCUS_AREAS`, both in `src/data/home.js`.
 
 ## 🛠️ Installation & Usage
 
