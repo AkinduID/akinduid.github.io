@@ -16,6 +16,7 @@ const PAGE_WIDTHS = {
  * @param {string} [props.title] - Page heading.
  * @param {string} [props.description] - Optional muted intro line shown under the title.
  * @param {"narrow"|"medium"|"wide"} [props.width="narrow"] - Maximum content width.
+ * @param {boolean} [props.verticallyCenter=false] - Center the page content in the available height.
  * @returns {JSX.Element}
  */
 export default function PageShell({
@@ -24,11 +25,18 @@ export default function PageShell({
   title,
   description,
   width = "narrow",
+  verticallyCenter = false,
 }) {
   const hasHeader = Boolean(eyebrow || title || description)
 
   return (
-    <section className="relative z-10 px-6 pb-16 pt-14 sm:pt-16">
+    <section
+      className={
+        verticallyCenter
+          ? "relative z-10 flex flex-1 flex-col justify-center px-6 py-12"
+          : "relative z-10 px-6 pb-16 pt-14 sm:pt-16"
+      }
+    >
       <div className={`mx-auto w-full ${PAGE_WIDTHS[width]}`}>
         {hasHeader && (
           <header className="mb-10 text-center">

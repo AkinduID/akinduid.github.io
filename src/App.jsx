@@ -37,7 +37,7 @@ export default function App() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="min-h-full"
+            className="flex min-h-full flex-1 flex-col"
           >
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />

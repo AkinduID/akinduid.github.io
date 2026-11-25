@@ -12,7 +12,7 @@ import { SOCIAL_LINKS } from "../data/home"
  */
 export default function Home() {
   return (
-    <PageShell>
+    <PageShell verticallyCenter>
       <HeroCard connectItems={SOCIAL_LINKS} />
     </PageShell>
   )
